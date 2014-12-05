@@ -620,5 +620,9 @@ Aggressive Standby is a feature that stops apps from running in the background a
     <string name="dont_touch_headsup_title">Don\'t touch heads-up</string>
     <string name="dont_touch_headsup_summary">Avoid launching app after touching the heads-up notification</string>
 
+    <!-- Notification count -->
+    <string name="status_bar_notif_count_title">Show notification count</string>
+    <string name="status_bar_notif_count_summary">Display the number of pending notifications</string>
+
 </resources>
 
