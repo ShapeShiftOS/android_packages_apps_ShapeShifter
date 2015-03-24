@@ -25,6 +25,13 @@
        android:entryValues="@array/volume_panel_values"
        android:defaultValue="@string/volume_panel_stock_val" />
 
+    <!-- Volume Steps -->
+    <PreferenceScreen
+        android:key="volume_steps"
+        android:title="@string/volume_steps_title"
+        android:summary="@string/volume_steps_summary"
+        android:fragment="com.ssos.shapeshifter.fragments.system_misc.VolumeSteps" />
+
     <ListPreference
         android:dialogTitle="@string/volume_key_cursor_control_title"
         android:entries="@array/volume_key_cursor_control_entries"
