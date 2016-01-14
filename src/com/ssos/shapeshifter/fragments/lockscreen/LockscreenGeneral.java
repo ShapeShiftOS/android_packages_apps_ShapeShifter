@@ -19,6 +19,7 @@ package com.ssos.shapeshifter.fragments.lockscreen;
 import android.app.Activity;
 import android.content.Context;
 import android.content.ContentResolver;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.SystemProperties;
 import android.provider.SearchIndexableResource;
@@ -48,11 +49,16 @@ public class LockscreenGeneral extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener, Indexable {
 
     private static final String LOCK_FP_ICON = "lock_fp_icon";
+    private static final String FINGERPRINT_VIB = "fingerprint_success_vib";
+    private static final String FINGERPRINT_ERROR_VIB = "fingerprint_error_vib";
 
     private SystemSettingSwitchPreference mLockFPIcon;
 
     private boolean mHasFod;
     private ContentResolver mResolver;
+    private FingerprintManager mFingerprintManager;
+    private SwitchPreference mFingerprintVib;
+    private SwitchPreference mFingerprintErrorVib;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -62,6 +68,7 @@ public class LockscreenGeneral extends SettingsPreferenceFragment implements
         PreferenceCategory overallPreferences = (PreferenceCategory) findPreference("fod_category");
         mResolver = getActivity().getContentResolver();
         Context mContext = getContext();
+        final PackageManager mPm = getActivity().getPackageManager();
 
         boolean enableScreenOffFOD = getContext().getResources().
                 getBoolean(com.android.internal.R.bool.config_supportScreenOffFod);
@@ -95,9 +102,51 @@ public class LockscreenGeneral extends SettingsPreferenceFragment implements
             mLockFPIcon.setSummary(getString(R.string.lock_fp_icon_summary));
             mLockFPIcon.setEnabled(true);
         }
+
+        mFingerprintManager = (FingerprintManager) getActivity().getSystemService(Context.FINGERPRINT_SERVICE);
+        mFingerprintVib = (SwitchPreference) findPreference(FINGERPRINT_VIB);
+        if (mPm.hasSystemFeature(PackageManager.FEATURE_FINGERPRINT) &&
+                 mFingerprintManager != null) {
+            if (!mFingerprintManager.isHardwareDetected()){
+                prefScreen.removePreference(mFingerprintVib);
+            } else {
+                mFingerprintVib.setChecked((Settings.System.getInt(getContentResolver(),
+                        Settings.System.FINGERPRINT_SUCCESS_VIB, 1) == 1));
+                mFingerprintVib.setOnPreferenceChangeListener(this);
+            }
+        } else {
+        prefScreen.removePreference(mFingerprintVib);
+        }
+
+        mFingerprintManager = (FingerprintManager) getActivity().getSystemService(Context.FINGERPRINT_SERVICE);
+        mFingerprintErrorVib = (SwitchPreference) findPreference(FINGERPRINT_ERROR_VIB);
+        if (mPm.hasSystemFeature(PackageManager.FEATURE_FINGERPRINT) &&
+                 mFingerprintManager != null) {
+            if (!mFingerprintManager.isHardwareDetected()){
+                prefScreen.removePreference(mFingerprintErrorVib);
+            } else {
+                mFingerprintErrorVib.setChecked((Settings.System.getInt(getContentResolver(),
+                        Settings.System.FINGERPRINT_ERROR_VIB, 1) == 1));
+                mFingerprintErrorVib.setOnPreferenceChangeListener(this);
+            }
+        } else {
+            prefScreen.removePreference(mFingerprintErrorVib);
+        }
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
+        ContentResolver resolver = getActivity().getContentResolver();
+    if (preference == mFingerprintVib) {
+            boolean value = (Boolean) newValue;
+            Settings.System.putInt(resolver,
+                    Settings.System.FINGERPRINT_SUCCESS_VIB, value ? 1 : 0);
+            return true;
+        } else if (preference == mFingerprintErrorVib) {
+            boolean value = (Boolean) newValue;
+            Settings.System.putInt(resolver,
+                    Settings.System.FINGERPRINT_ERROR_VIB, value ? 1 : 0);
+            return true;
+        }
         return false;
     }
 
