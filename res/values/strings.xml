@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2020 ShapeShiftOS
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- ShapeShiftOS dashboard -->
+    <string name="shapeshifter_title">ShapeShifter</string>
+    <string name="shapeshiftos_title">ShapeShiftOS Settings</string>
+
+    <!-- Bottom Tabs -->
+    <string name="navigation_actions_title">Actions</string>
+    <string name="navigation_interface_title">Interface</string>
+    <string name="navigation_statusbar_title">Statusbar</string>
+    <string name="navigation_lockscreen_title">Lockscreen</string>
+    <string name="navigation_system_title">System/Misc</string>
+    <string name="accessibility_description">Screen menu</string>
+    <string name="accessibility_item_description">%1$s menu item</string>
+
+<!-- CATEGORIES -->
+    <!-- Actions -->
+    <string name="powerbutton_title">Power button</string>
+    <string name="powerbutton_summary">Configure additional options &amp; actions</string>
+    <string name="navigationbar_title">Navigation</string>
+    <string name="navigationbar_summary">Configure system navigation options</string>
+    <string name="gesture_options_title">Gestures</string>
+    <string name="gesture_options_summary">Enable/disable device specific user actions</string>
+    <string name="volume_rocker_title">Volume rocker</string>
+    <string name="volume_rocker_summary">Set default behavior and actions for vol +/- keys</string>
+    <string name="hw_keys_title">Hardware keys</string>
+    <string name="hw_keys_summary">Assign actions for physical navigation buttons</string>
+
+    <!-- Interface -->
+    <string name="quick_settings_title">Quick settings</string>
+    <string name="quick_settings_summary">Customize the overall view &amp; functionality</string>
+    <string name="headsup_title">Heads-up</string>
+    <string name="headsup_summary">Configure Heads-up options</string>
+    <string name="recents_title">Recents</string>
+    <string name="recents_summary">Configure look &amp; feel of recent apps view</string>
+    <string name="themer_title">Themer</string>
+    <string name="themer_summary">Browse and select installed themes</string>
+
+    <!-- Statusbar -->
+    <string name="battery_options_title">Battery options</string>
+    <string name="battery_options_summary">Customize how battery is displayed</string>
+    <string name="clock_options_title">Clock options</string>
+    <string name="clock_options_summary">Set view options of time &amp; date in statusbar</string>
+    <string name="traffic_title">Network indicator</string>
+    <string name="traffic_summary">Enable &amp; configure network indicator in statusbar</string>
+    <string name="status_bar_items_title">Statusbar items</string>
+    <string name="status_bar_items_summary">Configure statusbar indicators</string>
+
+    <!-- Lockscreen -->
+    <string name="lockscreen_aosp_title">Native controls</string>
+    <string name="lockscreen_aosp_summary">Configure AOSP options for lockscreen &amp; ambient display</string>
+    <string name="lockscreen_general_title">General options</string>
+    <string name="lockscreen_general_summary">Add or remove visual elements of your lockscreen</string>
+    <string name="lockscreen_tuner_title">Lockscreen tuner</string>
+    <string name="lockscreen_tuner_summary">Add or remove tuner parts of your lockscreen</string>
+    <string name="lockscreen_weather_title">Weather options</string>
+    <string name="lockscreen_weather_summary">Configure lockscreen weather</string>
+
+    <!-- System/ Misc -->
+    <string name="animations_category_title">Animations</string>
+    <string name="animations_category_summary">Set custom animations for certain transitions</string>
+    <string name="general_notifications_title">General notifications</string>
+    <string name="general_notifications_summary">Miscellaneous notification controls</string>
+    <string name="miscellaneous_title">Miscellaneous</string>
+    <string name="miscellaneous_summary">Uncategorized options</string>
+    <string name="changelog_title">Changelog</string>
+    <string name="changelog_summary">List of recent commits added to ShapeShiftOS</string>
+    <string name="led_settings_title">LED settings</string>
+    <string name="led_settings_summary">Configure the LED light for supported options</string>
+
+<!-- OTHER -->
+    <!-- Empty Preference Screen (if applicable) -->
+    <string name="empty_category_title">No extra features yet...</string>
+    <string name="empty_category_description">However, new features may be added here soon. Check back after future updates!</string>
+    <string name="dummy_string"> </string>
+
+    <!-- Sub-Categorized XMLs - DO NOT REMOVE -->
+    <string name="active_edge_title">Active Edge</string>
+    <string name="ambient_music_display">Music ticker</string>
+    <string name="aware_settings_title">Motion Sense</string>
+    <string name="battery_style_statusbar">Statusbar battery</string>
+    <string name="battery_style_qs">Quick panel battery</string>
+    <string name="brightness_control_category">Brightness control</string>
+    <string name="custom_header_title">Custom header</string>
+    <string name="led_notifications_title">LED notifications</string>
+    <string name="led_battery_title">Battery LED</string>
+    <string name="lockscreen_visualizer_enable">Music Visualizer</string>
+    <string name="qs_panel_layout_category">QS panel layout</string>
+    <string name="smart_pixels_title">Smart Pixels</string>
+    <string name="volume_steps_title">Volume steps</string>
+    <string name="power_menu_category">Power menu</string>
+    <string name="pulse_settings">Pulse</string>
+
+    <!-- About ShapeShiftOS -->
+    <string name="shapeshiftos_about_title">About ShapeShiftOS</string>
+    <string name="shapeshiftos_about_summary">A little info about the team</string>
+
+    <!-- ShapeShiftOS device info settings -->
+    <string name="shapeshiftos_version">ShapeShiftOS version</string>
+    <string name="shapeshiftos_version_default">Unknown</string>
+
+    <!-- Reusable strings -->
+    <string name="advanced_behavior_title">Advanced behavior</string>
+    <string name="appearance_category">APPEARANCE</string>
+    <string name="behavior_category">BEHAVIOR</string>
+    <string name="enable_first">Please enable first</string>
+
+    <!-- SystemUI Restart -->
+    <string name="systemui_restart_title">SystemUI restart required</string>
+    <string name="systemui_restart_message">For all changes to take effect, a SystemUI restart is required. Restart SystemUI now?</string>
+
+<!-- FEATURES -->
+
+</resources>
