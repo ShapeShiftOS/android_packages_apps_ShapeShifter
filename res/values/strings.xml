@@ -319,6 +319,9 @@
     <string name="horizon_light_enabled_summary">Keep showing horizon light on AOD</string>
     <string name="horizon_light_hide_aod_title">Hide AOD content</string>
     <string name="horizon_light_hide_aod_summary">Hide AOD content when edges are lighted</string>
+    <string name="horizon_light_layout_title">Light view</string>
+    <string name="horizon_light_layout_solid">Solid</string>
+    <string name="horizon_light_layout_faded">Faded</string>
     <string name="horizon_light_duration_title">Duration</string>
     <string name="horizon_light_duration_summary">Time it takes for each animation to complete</string>
     <string name="horizon_light_repeats_title">Repeats</string>

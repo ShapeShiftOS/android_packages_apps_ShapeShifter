@@ -59,6 +59,13 @@
         android:defaultValue="0" />
 
     <com.ssos.support.preferences.SystemSettingListPreference
+        android:key="ambient_light_layout"
+        android:title="@string/horizon_light_layout_title"
+        android:entries="@array/horizon_light_layout_entries"
+        android:entryValues="@array/horizon_light_layout_values"
+        android:defaultValue="0" />
+
+    <com.ssos.support.preferences.SystemSettingListPreference
         android:key="ambient_notification_color_mode"
         android:title="@string/horizon_color_mode_title"
         android:entries="@array/horizon_color_mode_entries"
