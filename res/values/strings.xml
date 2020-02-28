@@ -312,6 +312,8 @@
     <!-- Horizon light -->
     <string name="horizon_light_title">Horizon light</string>
     <string name="horizon_light_summary">Light ambient edges for pulsing notifications</string>
+    <string name="horizon_light_show_always_title">Show for all doze events</string>
+    <string name="horizon_light_show_always_summary">Show lights for all doze events and not just notifications</string>
     <string name="horizon_light_enabled_title">Show on AOD</string>
     <string name="aod_disabled">AOD is disabled</string>
     <string name="horizon_light_enabled_summary">Keep showing horizon light on AOD</string>
