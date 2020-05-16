@@ -326,6 +326,9 @@
     <string name="horizon_light_duration_summary">Time it takes for each animation to complete</string>
     <string name="horizon_light_repeats_title">Repeats</string>
     <string name="horizon_light_repeats_summary">Amount of times the animation should show\n0 for infinite</string>
+    <string name="horizon_light_repeat_direction_title">Light repeat mode</string>
+    <string name="horizon_light_repeat_direction_restart">Restart</string>
+    <string name="horizon_light_repeat_direction_reverse">Reverse</string>
     <string name="horizon_light_timeout_title">Timeout</string>
     <string name="horizon_light_timeout_forever">Forever</string>
     <string name="horizon_light_timeout_half_minute">30 seconds</string>
