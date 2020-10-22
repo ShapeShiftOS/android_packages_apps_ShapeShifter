@@ -107,13 +107,24 @@
     <string name="power_menu_category">Power menu</string>
     <string name="pulse_settings">Pulse</string>
 
-    <!-- About ShapeShiftOS -->
-    <string name="shapeshiftos_about_title">About ShapeShiftOS</string>
-    <string name="shapeshiftos_about_summary">A little info about the team</string>
-
     <!-- ShapeShiftOS device info settings -->
     <string name="shapeshiftos_version">ShapeShiftOS version</string>
     <string name="shapeshiftos_version_default">Unknown</string>
+
+    <!-- About ShapeShiftOS -->
+    <string name="shapeshiftos_about_title">About ShapeShiftOS</string>
+    <string name="shapeshiftos_about_summary">A little info about the team</string>
+    <string name="shapeshiftos_telegram_title">ShapeShiftOS Telegram Community</string>
+    <string name="shapeshiftos_telegram_summary"><a href="https://t.me/s/shapeshiftos">Join our wonderful community here!</a></string>
+    <string name="shapeshiftos_github_title">ShapeShiftOS Github</string>
+    <string name="shapeshiftos_github_summary"><a href="https://www.github.com/ShapeShiftOS">See the ShapeShiftOS source code here!</a></string>
+    <string name="shapeshiftos_about_info_summary">ShapeShiftOS is a new custom ROM that aims to offer a clean experience. We are an AOSP based custom ROM, twisted with the latest features from all over the Android development community. Quality and stability is our first priority as we are dedicated to bringing you the very best that Android has to offer.</string>
+    <string name="shapeshiftos_about_team">ShapeShiftOS team</string>
+    <string name="shapeshiftos_about_ashutosh" translatable="false">AshutoshSundresh (surfaceflinger)</string>
+    <string name="shapeshiftos_about_ashutosh_summary" translatable="false">Lead Developer</string>
+    <string name="about_maintainer">Maintainer</string>
+    <string name="shapeshiftos_about_maintainer">The maintainer for your device is</string>
+    <string name="shapeshiftos_about_maintainer_summary" translatable="false">Too lazy to fill this up</string>
 
     <!-- Reusable strings -->
     <string name="advanced_behavior_title">Advanced behavior</string>
