@@ -154,4 +154,9 @@
     <string name="pixel_navbar_anim_title">Pixel animation</string>
     <string name="pixel_navbar_anim_summary">Toggle home button animation</string>
 
+    <!-- Quicksettings -->
+    <string name="qs_tiles_title">Quicksettings tiles</string>
+    <string name="qs_tile_title_visibility_title">Show tiles title</string>
+    <string name="qs_tile_title_visibility_summary">Show a label under each quicksettings title</string>
+
 </resources>
