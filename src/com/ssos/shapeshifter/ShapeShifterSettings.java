@@ -19,6 +19,7 @@ package com.ssos.shapeshifter;
 import android.app.ActionBar;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.util.TypedValue;
 import android.view.Menu;
@@ -27,6 +28,8 @@ import android.view.MenuItem;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 import androidx.viewpager.widget.ViewPager;
 
 import androidx.fragment.app.Fragment;
@@ -58,8 +61,15 @@ public class ShapeShifterSettings extends SettingsPreferenceFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
+        Resources res = getResources();
+        Window win = getActivity().getWindow();
         mContext = getActivity();
         View view = inflater.inflate(R.layout.shapeshifter, container, false);
+
+        win.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+        win.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
+        win.setNavigationBarColor(res.getColor(R.color.shapeshifter_navbar_color));
+        win.setNavigationBarDividerColor(res.getColor(R.color.shapeshifter_navbar_color));
 
         ActionBar actionBar = getActivity().getActionBar();
         if (actionBar != null) {
