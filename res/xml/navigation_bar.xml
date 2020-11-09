@@ -32,4 +32,10 @@
             <intent android:action="com.android.settings.action.NAV_BAR_TUNER" />
     </Preference>
 
+
+    <com.ssos.support.preferences.SecureSettingSwitchPreference
+        android:key="sysui_nav_bar_inverse"
+        android:title="@string/navbar_invert_layout_title"
+        android:defaultValue="false" />
+
 </PreferenceScreen>
