@@ -25,13 +25,6 @@
         android:fragment="com.android.settings.gestures.SystemNavigationGestureSettings"
         settings:controller="com.android.settings.gestures.SystemNavigationPreferenceController" />
 
-    <Preference
-        android:title="@string/navigation_tuner_title"
-        android:summary="@string/navigation_tuner_summary"
-        android:key="nav_bar_tuner">
-            <intent android:action="com.android.settings.action.NAV_BAR_TUNER" />
-    </Preference>
-
     <com.ssos.support.preferences.SecureSettingSwitchPreference
         android:key="sysui_nav_bar_inverse"
         android:title="@string/navigation_bar_invert_layout_title"
