@@ -131,6 +131,7 @@
     <string name="appearance_category">APPEARANCE</string>
     <string name="behavior_category">BEHAVIOR</string>
     <string name="enable_first">Please enable first</string>
+    <string name="ok_string">Ok</string>
 
     <!-- SystemUI Restart -->
     <string name="systemui_restart_title">SystemUI restart required</string>
