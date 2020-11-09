@@ -132,6 +132,7 @@
     <string name="behavior_category">BEHAVIOR</string>
     <string name="enable_first">Please enable first</string>
     <string name="ok_string">Ok</string>
+    <string name="unsupported_gestures">Enable two button or three button navigation to use this feature</string>
 
     <!-- SystemUI Restart -->
     <string name="systemui_restart_title">SystemUI restart required</string>
