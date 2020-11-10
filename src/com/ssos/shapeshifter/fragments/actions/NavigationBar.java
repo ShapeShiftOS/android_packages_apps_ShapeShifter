@@ -44,9 +44,11 @@ public class NavigationBar extends SettingsPreferenceFragment implements
 
     private static final String PIXEL_ANIMATION_NAVIGATION = "pixel_nav_animation";
     private static final String INVERT_NAVIGATION = "sysui_nav_bar_inverse";
+    private static final String BACK_ARROW_GESTURE = "show_back_arrow_gesture";
 
     private SystemSettingSwitchPreference mPixelAnimationNavigation;
     private SecureSettingSwitchPreference mInvertNavigation;
+    private SecureSettingSwitchPreference mShowBackArrowGesture;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -55,20 +57,26 @@ public class NavigationBar extends SettingsPreferenceFragment implements
 
         mPixelAnimationNavigation = findPreference(PIXEL_ANIMATION_NAVIGATION);
         mInvertNavigation = findPreference(INVERT_NAVIGATION);
+        mShowBackArrowGesture = findPreference(BACK_ARROW_GESTURE);
         // On three button nav
         if (com.android.internal.util.ssos.Utils.isThemeEnabled("com.android.internal.systemui.navbar.threebutton")) {
             mPixelAnimationNavigation.setSummary(getString(R.string.pixel_navbar_anim_summary));
             mInvertNavigation.setSummary(getString(R.string.navigation_bar_invert_layout_summary));
+            mShowBackArrowGesture.setSummary(getString(R.string.unsupported_gestures_nav));
+            mShowBackArrowGesture.setEnabled(false);
         // On two button nav
         } else if (com.android.internal.util.ssos.Utils.isThemeEnabled("com.android.internal.systemui.navbar.twobutton")) {
             mPixelAnimationNavigation.setSummary(getString(R.string.pixel_navbar_anim_summary));
             mInvertNavigation.setSummary(getString(R.string.navigation_bar_invert_layout_summary));
+            mShowBackArrowGesture.setSummary(getString(R.string.unsupported_gestures_nav));
+            mShowBackArrowGesture.setEnabled(false);
         // On gesture nav
         } else {
             mPixelAnimationNavigation.setSummary(getString(R.string.unsupported_gestures));
             mInvertNavigation.setSummary(getString(R.string.unsupported_gestures));
             mPixelAnimationNavigation.setEnabled(false);
             mInvertNavigation.setEnabled(false);
+            mShowBackArrowGesture.setSummary(getString(R.string.gesture_back_arrow_summary));
         }
     }
 

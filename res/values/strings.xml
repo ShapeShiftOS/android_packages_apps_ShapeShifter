@@ -167,4 +167,9 @@
     <string name="qs_columns_portrait_title">Tiles columns on portrait</string>
     <string name="qs_columns_landscape_title">Tiles columns on landscape</string>
 
+    <!-- Gesture back arrow -->
+    <string name="gesture_back_arrow_title">Back arrow on gestures</string>
+    <string name="gesture_back_arrow_summary">Show a back arrow while swiping from the sides</string>
+    <string name="unsupported_gestures_nav">Enable gesture navigation to use this feature</string>
+
 </resources>

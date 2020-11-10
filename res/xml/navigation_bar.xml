@@ -25,6 +25,12 @@
         android:fragment="com.android.settings.gestures.SystemNavigationGestureSettings"
         settings:controller="com.android.settings.gestures.SystemNavigationPreferenceController" />
 
+    <com.ssos.support.preferences.SecureSettingSwitchPreference
+        android:key="show_back_arrow_gesture"
+        android:title="@string/gesture_back_arrow_title"
+        android:summary="@string/gesture_back_arrow_summary"
+        android:defaultValue="true" />
+
     <com.ssos.support.preferences.SystemSettingSwitchPreference
         android:key="pixel_nav_animation"
         android:title="@string/pixel_navbar_anim_title"
