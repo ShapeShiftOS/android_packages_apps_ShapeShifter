@@ -31,7 +31,6 @@ import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.Utils;
 
 import com.android.internal.logging.nano.MetricsProto;
-import com.android.internal.util.ssos.Utils;
 
 import com.ssos.support.preferences.SystemSettingSwitchPreference;
 import com.ssos.support.preferences.SecureSettingSwitchPreference;
@@ -56,12 +55,15 @@ public class NavigationBar extends SettingsPreferenceFragment implements
 
         mPixelAnimationNavigation = findPreference(PIXEL_ANIMATION_NAVIGATION);
         mInvertNavigation = findPreference(INVERT_NAVIGATION);
-        if (Utils.isThemeEnabled("com.android.internal.systemui.navbar.threebutton")) {
+        // On three button nav
+        if (com.android.internal.util.ssos.Utils.isThemeEnabled("com.android.internal.systemui.navbar.threebutton")) {
             mPixelAnimationNavigation.setSummary(getString(R.string.pixel_navbar_anim_summary));
             mInvertNavigation.setSummary(getString(R.string.navigation_bar_invert_layout_summary));
-        } else if (Utils.isThemeEnabled("com.android.internal.systemui.navbar.twobutton")) {
+        // On two button nav
+        } else if (com.android.internal.util.ssos.Utils.isThemeEnabled("com.android.internal.systemui.navbar.twobutton")) {
             mPixelAnimationNavigation.setSummary(getString(R.string.pixel_navbar_anim_summary));
             mInvertNavigation.setSummary(getString(R.string.navigation_bar_invert_layout_summary));
+        // On gesture nav
         } else {
             mPixelAnimationNavigation.setSummary(getString(R.string.unsupported_gestures));
             mInvertNavigation.setSummary(getString(R.string.unsupported_gestures));
