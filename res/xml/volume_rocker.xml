@@ -18,6 +18,12 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/volume_rocker_title" >
 
+    <Preference
+        android:key="gesture_volume_skiptrack_summary"
+        android:title="@string/volume_skiptrack_screen_title"
+        android:fragment="com.android.settings.gestures.VolumeSkipTrackSettings"
+        settings:controller="com.android.settings.gestures.VolumeSkipTrackPreferenceController" />
+
     <com.ssos.support.preferences.SystemSettingSwitchPreference
        android:key="volume_rocker_wake"
        android:summary="@string/volume_rocker_wake_summary"
