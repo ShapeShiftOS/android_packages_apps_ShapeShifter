@@ -212,4 +212,9 @@
     <string name="charging_animation_title">Charging animation</string>
     <string name="charging_animation_summary">Display an animation when the device is plugged in</string>
 
+    <!-- Headset ringtone audio focus -->
+    <string name="ringtone_focus_mode_title">When headset connected, incoming call plays on</string>
+    <string name="ringtone_focus_mode_dynamic">Headset only if music is active</string>
+    <string name="ringtone_focus_mode_stock">Both speaker and headset</string>
+
 </resources>
