@@ -30,4 +30,10 @@
        android:title="@string/volume_rocker_wake_title"
        android:defaultValue="false" />
 
+    <com.ssos.support.preferences.SystemSettingSwitchPreference
+       android:key="swap_volume_buttons"
+       android:title="@string/swap_volume_buttons_title"
+       android:summary="@string/swap_volume_buttons_summary"
+       android:defaultValue="false" />
+
 </PreferenceScreen>
