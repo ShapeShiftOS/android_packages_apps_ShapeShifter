@@ -49,4 +49,10 @@
         android:summary="@string/status_bar_battery_text_charging_summary"
         android:defaultValue="true" />
 
+    <Preference
+        android:key="battery_bar_category"
+        android:title="@string/battery_bar_title"
+        android:summary="@string/battery_bar_summary"
+        android:fragment="com.ssos.shapeshifter.fragments.statusbar.BatteryBarSettings" />
+
 </PreferenceScreen>
