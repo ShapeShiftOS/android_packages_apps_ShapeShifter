@@ -60,7 +60,7 @@
         android:entryValues="@array/horizon_color_mode_values"
         android:defaultValue="0" />
 
-    <com.ssos.support.preferences.colorpicker.ColorPickerPreference
+    <net.margaritov.preference.colorpicker.ColorPickerPreference
         android:key="ambient_notification_light_color"
         android:title="@string/horizon_light_color_title" />
 

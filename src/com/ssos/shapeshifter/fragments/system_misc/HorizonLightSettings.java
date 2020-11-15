@@ -30,7 +30,7 @@ import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
-import com.ssos.support.colorpicker.ColorPickerPreference;
+import net.margaritov.preference.colorpicker.ColorPickerPreference;
 import com.ssos.support.preferences.CustomSeekBarPreference;
 import com.ssos.support.preferences.SystemSettingListPreference;
 import com.ssos.support.preferences.SystemSettingSwitchPreference;
