@@ -18,12 +18,12 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/general_notifications_title" >
 
-    <!-- Pulse notifications lightning -->
+    <!-- Horizon notifications light -->
     <com.ssos.support.preferences.SystemSettingMasterSwitchPreference
         android:key="pulse_ambient_light"
-        android:title="@string/pulse_ambient_light_title"
-        android:summary="@string/pulse_ambient_light_summary"
-        android:fragment="com.ssos.shapeshifter.fragments.system_misc.EdgeLightningSettings"
+        android:title="@string/horizon_light_title"
+        android:summary="@string/horizon_light_summary"
+        android:fragment="com.ssos.shapeshifter.fragments.system_misc.HorizonLightSettings"
         android:defaultValue="false" />
 
 </PreferenceScreen>
