@@ -18,4 +18,12 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/general_notifications_title" >
 
+    <!-- Pulse notifications lightning -->
+    <com.ssos.support.preferences.SystemSettingMasterSwitchPreference
+        android:key="pulse_ambient_light"
+        android:title="@string/pulse_ambient_light_title"
+        android:summary="@string/pulse_ambient_light_summary"
+        android:fragment="com.ssos.shapeshifter.fragments.system_misc.EdgeLightningSettings"
+        android:defaultValue="false" />
+
 </PreferenceScreen>
