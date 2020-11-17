@@ -163,6 +163,10 @@
     <string name="qs_tile_title_visibility_title">Show tiles title</string>
     <string name="qs_tile_title_visibility_summary">Show a label under each quicksettings title</string>
 
+    <!-- Notification headers -->
+    <string name="notification_headers_title">Notification Headers</string>
+    <string name="notification_headers_summary">Show headers in the notification shade\nRequires a SystemUI restart</string>
+
     <!-- QS rows and columns -->
     <string name="qs_columns_rows_category_title">QS columns and rows</string>
     <string name="qs_rows_columns_title">QS rows and columns</string>

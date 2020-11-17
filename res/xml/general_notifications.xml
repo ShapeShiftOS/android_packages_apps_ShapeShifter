@@ -41,6 +41,13 @@
     <PreferenceCategory
         android:title="@string/notification_headers_section_title">
 
+
+    <com.ssos.support.preferences.SecureSettingSwitchPreference
+           android:key="notification_headers"
+           android:title="@string/notification_headers_title"
+           android:summary="@string/notification_headers_summary"
+           android:defaultValue="true" />
+
     </PreferenceCategory>
 
 </PreferenceScreen>
