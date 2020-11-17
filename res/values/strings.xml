@@ -286,7 +286,8 @@
     <string name="heads_up_snooze_20min">20 minutes</string>
 
     <!-- Battery mode -->
-    <string name="battery_percentage_title">Battery percentage</string>
+    <string name="qs_battery_percentage_title">Quicksettings battery percentage</string>
+    <string name="battery_percentage_title">Statusbar battery percentage</string>
     <string name="battery_percentage_off">Disabled</string>
     <string name="battery_percentage_next">Enabled</string>
     <string name="battery_percentage_inside">Enabled (inside icon)</string>
