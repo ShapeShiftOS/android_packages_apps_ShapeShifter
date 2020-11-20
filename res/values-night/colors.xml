@@ -51,5 +51,26 @@
     <color name="shapeshifter_recents_background">@*android:color/accent_device_default_dark</color>
     <color name="shapeshifter_statusbar_items_background">@*android:color/accent_device_default_dark</color>
     <color name="shapeshifter_volume_rocker_background">@*android:color/accent_device_default_dark</color>
+    <color name="accent_preview_background">#0fffffff</color>
+    <color name="accent_text_color">#DCDCDC</color>
 
+    <!--  theme color codes   -->
+
+    <color name="colorShapeShifter">#B5A9FC</color>
+    <color name="colorTeal">#ff80cbc4</color>
+    <color name="colorSuperNova">#f7de8a</color>
+    <color name="colorPixelBlue">#ff8ab3f8</color>
+    <color name="colorTangerine">#F19D7D</color>
+    <color name="colorAquamarine">#1AFFCB</color>
+    <color name="colorBlack">#D7DEE6</color>
+    <color name="colorGreen">#84C188</color>
+    <color name="colorOcean">#28BDD7</color>
+    <color name="colorSpace">#99ACCC</color>
+    <color name="colorDodgerBlue">#2196f3</color>
+    <color name="colorTorchRed">#fb9481</color>
+    <color name="colorMagenta">#ffd20082</color>
+    <color name="colorOrchid">#E68AED</color>
+    <color name="colorPurple">#B5A9FC</color>
+    <color name="colorRed">#ffeb0028</color>
+    <color name="colorCheese">#ffFFD955</color>
 </resources>

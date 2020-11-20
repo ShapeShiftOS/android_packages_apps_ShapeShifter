@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-     Copyright (C) 2020 ProjectFluid
+<!-- Copyright (C) 2020 ShapeShiftOS
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
      You may obtain a copy of the License at
@@ -12,7 +11,17 @@
      limitations under the License.
 -->
 
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:color="?android:attr/colorAccent"
-        android:alpha="0.21" />
-</selector>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+    android:title="@string/prebuilt_accents_title" >
+
+    <PreferenceScreen
+        android:layout="@layout/accentPreviewThemed"
+        android:key="ssos_themer_preview" />
+
+    <ListPreference
+       android:key="android.theme.customization.accent_color"
+       android:title="@string/theme_customization_accent_color_title"/>
+
+</PreferenceScreen>
