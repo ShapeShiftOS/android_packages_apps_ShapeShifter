@@ -18,6 +18,13 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/general_notifications_title" >
 
+    <!-- Supress notifications if screen is on -->
+    <com.ssos.support.preferences.SystemSettingSwitchPreference
+       android:key="notification_sound_vib_screen_on"
+       android:title="@string/notification_sound_vib_screen_on_title"
+       android:summary="@string/notification_sound_vib_screen_on_summary"
+       android:defaultValue="true" />
+
     <!-- Horizon notifications light -->
     <com.ssos.support.preferences.SystemSettingMasterSwitchPreference
         android:key="pulse_ambient_light"
