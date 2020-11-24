@@ -106,6 +106,7 @@
     <string name="volume_steps_title">Volume steps</string>
     <string name="power_menu_category">Power menu</string>
     <string name="pulse_settings">Pulse</string>
+    <string name="flashlight_category">Flashlight</string>
 
     <!-- ShapeShiftOS device info settings -->
     <string name="shapeshiftos_version">ShapeShiftOS version</string>
@@ -393,7 +394,8 @@
     <string name="listview_fold">Fold</string>
     <string name="listview_translate_left">Translate (left)</string>
     <string name="listview_translate_right">Translate (right)</string>
-     <!-- ListView interpolator -->
+
+    <!-- ListView interpolator -->
     <string name="listview_interpolator_title">ListView interpolator</string>
     <string name="listview_accelerate_interpolator">Accelerate</string>
     <string name="listview_decelerate_interpolator">Decelerate</string>
@@ -453,5 +455,17 @@
     <!-- Supress notifications if screen is on -->
     <string name="notification_sound_vib_screen_on_title">Notification sound if active</string>
     <string name="notification_sound_vib_screen_on_summary">Play sound and vibration for notifications when screen is on</string>
+
+    <!-- Blink flashlight for incoming calls -->
+    <string name="flashlight_on_call_title">Blink Flashlight for incoming call</string>
+    <string name="flashlight_on_call_disabled">Disabled</string>
+    <string name="flashlight_on_call_ringer">When ringing</string>
+    <string name="flashlight_on_call_no_ringer">When ringer is silent</string>
+    <string name="flashlight_on_call_silent">When entirely silent (no ringer or vibrator)</string>
+    <string name="flashlight_on_call_always">Always</string>
+    <string name="flashlight_on_call_ignore_dnd_title">Ignore DND</string>
+    <string name="flashlight_on_call_ignore_dnd_summary">Whether to flash when in Do Not Disturb mode</string>
+    <string name="flashlight_on_call_rate_title">Rate</string>
+    <string name="flashlight_on_call_rate_summary">Flashlight on call blink rate</string>
 
 </resources>
