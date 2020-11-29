@@ -108,6 +108,7 @@
     <string name="power_menu_category">Power menu</string>
     <string name="pulse_settings">Pulse</string>
     <string name="flashlight_category">Flashlight</string>
+    <string name="lockscreen_fod_category">Fingerprint On Display</string>
 
     <!-- ShapeShiftOS device info settings -->
     <string name="shapeshiftos_version">ShapeShiftOS version</string>
@@ -453,5 +454,9 @@
     <string name="flashlight_on_call_ignore_dnd_summary">Whether to flash when in Do Not Disturb mode</string>
     <string name="flashlight_on_call_rate_title">Rate</string>
     <string name="flashlight_on_call_rate_summary">Flashlight on call blink rate</string>
+
+    <!-- Screen off fod -->
+    <string name="fod_gesture_title">Screen off FOD</string>
+    <string name="fod_gesture_summary">Allows unlocking the device without having to wake up the screen first</string>
 
 </resources>
