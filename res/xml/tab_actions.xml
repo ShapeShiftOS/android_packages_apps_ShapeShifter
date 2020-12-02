@@ -19,7 +19,7 @@
 
     <com.android.settings.widget.CardPreference
         android:key="powerbutton_category"
-        android:fragment="com.ssos.shapeshifter.fragments.actions.PowerButton"
+        android:fragment="com.android.settings.gestures.PowerMenuSettings"
         android:icon="@drawable/ic_powerbutton_background"
         android:title="@string/powerbutton_title"
         android:summary="@string/powerbutton_summary" />
