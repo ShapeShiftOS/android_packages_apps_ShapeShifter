@@ -26,6 +26,18 @@
         settings:controller="com.android.settings.gestures.SystemNavigationPreferenceController" />
 
     <com.ssos.support.preferences.SystemSettingSwitchPreference
+        android:key="assist_lock_handles"
+        android:title="@string/assist_lock_handles_title"
+        android:summary="@string/assist_lock_handles_summary"
+        android:defaultValue="@*android:bool/config_supportsInDisplayFingerprint" />
+
+    <com.ssos.support.preferences.SystemSettingSwitchPreference
+        android:key="assist_global_handles"
+        android:title="@string/assist_global_handles_title"
+        android:summary="@string/assist_global_handles_summary"
+        android:defaultValue="true" />
+
+    <com.ssos.support.preferences.SystemSettingSwitchPreference
         android:key="pixel_nav_animation"
         android:title="@string/pixel_navbar_anim_title"
         android:summary="@string/pixel_navbar_anim_summary"

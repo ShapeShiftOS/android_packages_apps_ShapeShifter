@@ -44,7 +44,11 @@ public class NavigationBar extends SettingsPreferenceFragment implements
 
     private static final String PIXEL_ANIMATION_NAVIGATION = "pixel_nav_animation";
     private static final String INVERT_NAVIGATION = "sysui_nav_bar_inverse";
+    private static final String ASSIST_LOCK_HANDLES = "assist_lock_handles";
+    private static final String ASSIST_GLOBAL_HANDLES = "assist_global_handles";
 
+    private SystemSettingSwitchPreference mAssistGlobalHandles;
+    private SystemSettingSwitchPreference mAssistLockHandles;
     private SystemSettingSwitchPreference mPixelAnimationNavigation;
     private SecureSettingSwitchPreference mInvertNavigation;
 
@@ -53,18 +57,30 @@ public class NavigationBar extends SettingsPreferenceFragment implements
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.navigation_bar);
 
+        mAssistGlobalHandles = findPreference(ASSIST_GLOBAL_HANDLES);
+        mAssistLockHandles = findPreference(ASSIST_LOCK_HANDLES);
         mPixelAnimationNavigation = findPreference(PIXEL_ANIMATION_NAVIGATION);
         mInvertNavigation = findPreference(INVERT_NAVIGATION);
         // On three button nav
         if (com.android.internal.util.ssos.Utils.isThemeEnabled("com.android.internal.systemui.navbar.threebutton")) {
             mPixelAnimationNavigation.setSummary(getString(R.string.pixel_navbar_anim_summary));
             mInvertNavigation.setSummary(getString(R.string.navigation_bar_invert_layout_summary));
+            mAssistLockHandles.setSummary(getString(R.string.unsupported_navigation_bar));
+            mAssistGlobalHandles.setSummary(getString(R.string.unsupported_navigation_bar));
+            mAssistGlobalHandles.setEnabled(false);
+            mAssistLockHandles.setEnabled(false);
         // On two button nav
         } else if (com.android.internal.util.ssos.Utils.isThemeEnabled("com.android.internal.systemui.navbar.twobutton")) {
             mPixelAnimationNavigation.setSummary(getString(R.string.pixel_navbar_anim_summary));
             mInvertNavigation.setSummary(getString(R.string.navigation_bar_invert_layout_summary));
+            mAssistLockHandles.setSummary(getString(R.string.unsupported_navigation_bar));
+            mAssistGlobalHandles.setSummary(getString(R.string.unsupported_navigation_bar));
+            mAssistGlobalHandles.setEnabled(false);
+            mAssistLockHandles.setEnabled(false);
         // On gesture nav
         } else {
+            mAssistLockHandles.setSummary(getString(R.string.assist_lock_handles_summary));
+            mAssistGlobalHandles.setSummary(getString(R.string.assist_global_handles_summary));
             mPixelAnimationNavigation.setSummary(getString(R.string.unsupported_gestures));
             mInvertNavigation.setSummary(getString(R.string.gesture_invert_layout_summary));
             mPixelAnimationNavigation.setEnabled(false);
