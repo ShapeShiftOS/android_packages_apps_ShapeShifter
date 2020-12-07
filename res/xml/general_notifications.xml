@@ -18,6 +18,9 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/general_notifications_title" >
 
+    <PreferenceCategory
+        android:title="@string/general_notifications_title">
+
     <!-- Supress notifications if screen is on -->
     <com.ssos.support.preferences.SystemSettingSwitchPreference
        android:key="notification_sound_vib_screen_on"
@@ -32,5 +35,12 @@
         android:summary="@string/horizon_light_summary"
         android:fragment="com.ssos.shapeshifter.fragments.system_misc.HorizonLightSettings"
         android:defaultValue="false" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/notification_headers_section_title">
+
+    </PreferenceCategory>
 
 </PreferenceScreen>

@@ -77,6 +77,7 @@
     <string name="animations_category_summary">Set custom animations for certain transitions</string>
     <string name="general_notifications_title">General notifications</string>
     <string name="general_notifications_summary">Miscellaneous notification controls</string>
+    <string name="notification_headers_section_title">Notification headers</string>
     <string name="miscellaneous_title">Miscellaneous</string>
     <string name="miscellaneous_summary">Uncategorized options</string>
     <string name="changelog_title">Changelog</string>
