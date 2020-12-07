@@ -41,13 +41,13 @@
     <PreferenceCategory
         android:title="@string/notification_headers_section_title">
 
-        <com.ssos.support.preferences.SecureSettingSwitchPreference
+        <com.ssos.support.preferences.SystemSettingSwitchPreference
            android:key="notification_headers"
            android:title="@string/notification_headers_title"
            android:summary="@string/notification_headers_summary"
            android:defaultValue="true" />
 
-        <com.ssos.support.preferences.SecureSettingSwitchPreference
+        <com.ssos.support.preferences.SystemSettingSwitchPreference
            android:key="center_notification_headers"
            android:title="@string/center_notification_headers_title"
            android:summary="@string/center_notification_headers_summary"
