@@ -47,8 +47,8 @@ public class NavigationBar extends SettingsPreferenceFragment implements
     private static final String ASSIST_LOCK_HANDLES = "assist_lock_handles";
     private static final String ASSIST_GLOBAL_HANDLES = "assist_global_handles";
 
-    private SystemSettingSwitchPreference mAssistGlobalHandles;
-    private SystemSettingSwitchPreference mAssistLockHandles;
+    private SecureSettingSwitchPreference mAssistGlobalHandles;
+    private SecureSettingSwitchPreference mAssistLockHandles;
     private SystemSettingSwitchPreference mPixelAnimationNavigation;
     private SecureSettingSwitchPreference mInvertNavigation;
 
