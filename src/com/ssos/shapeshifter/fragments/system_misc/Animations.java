@@ -64,6 +64,7 @@ public class Animations extends SettingsPreferenceFragment
     private static final String WALLPAPER_CLOSE = "wallpaper_close";
     private static final String WALLPAPER_INTRA_OPEN = "wallpaper_intra_open";
     private static final String WALLPAPER_INTRA_CLOSE = "wallpaper_intra_close";
+    private static final String KEY_SCREEN_OFF_ANIMATION = "screen_off_animation";
 
     private static final String PREF_TILE_ANIM_STYLE = "qs_tile_animation_style";
     private static final String PREF_TILE_ANIM_DURATION = "qs_tile_animation_duration";
@@ -89,6 +90,7 @@ public class Animations extends SettingsPreferenceFragment
     ListPreference mWallpaperIntraOpen;
     ListPreference mWallpaperIntraClose;
 
+    private ListPreference mScreenOffAnimation;
     private ListPreference mScrollingCachePref;
     private ListPreference mToastAnimation;
     private ListPreference mListViewAnimation;
@@ -241,6 +243,12 @@ public class Animations extends SettingsPreferenceFragment
         mListViewInterpolator.setEnabled(listviewanimation > 0);
         mListViewInterpolator.setOnPreferenceChangeListener(this);
 
+        mScreenOffAnimation = (ListPreference) findPreference(KEY_SCREEN_OFF_ANIMATION);
+        int screenOffAnimation = Settings.System.getInt(getContentResolver(),
+                Settings.System.SCREEN_OFF_ANIMATION, 0);
+        mScreenOffAnimation.setValue(Integer.toString(screenOffAnimation));
+        mScreenOffAnimation.setSummary(mScreenOffAnimation.getEntry());
+        mScreenOffAnimation.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -361,6 +369,12 @@ public class Animations extends SettingsPreferenceFragment
             if (newValue != null) {
                 SystemProperties.set(SCROLLINGCACHE_PERSIST_PROP, (String) newValue);
             }
+            return true;
+        } else if (preference == mScreenOffAnimation) {
+            int value = Integer.valueOf((String) newValue);
+            int index = mScreenOffAnimation.findIndexOfValue((String) newValue);
+            mScreenOffAnimation.setSummary(mScreenOffAnimation.getEntries()[index]);
+            Settings.System.putInt(getContentResolver(), Settings.System.SCREEN_OFF_ANIMATION, value);
             return true;
         }
         return false;

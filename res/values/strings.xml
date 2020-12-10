@@ -473,4 +473,11 @@
     <string name="assist_global_handles_title">Hide assistant handles on homescreen</string>
     <string name="assist_global_handles_summary">Allows hiding white grab handles on corners of the screen to active assistant on homescreen</string>
 
+    <!-- Screen off animation -->
+    <string name="screen_off_animation_fade">Simple fade</string>
+    <string name="screen_off_animation_color">Color fade</string>
+    <string name="screen_off_animation_crt">CRT</string>
+    <string name="screen_off_animation_scale">Scale</string>
+    <string name="screen_off_animation_title">Screen off animation</string>
+
 </resources>
