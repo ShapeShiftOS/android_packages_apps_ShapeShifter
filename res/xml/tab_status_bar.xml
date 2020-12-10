@@ -40,10 +40,9 @@
 
     <com.android.settings.widget.CardPreference
         android:key="status_bar"
+        android:fragment="com.ssos.shapeshifter.fragments.statusbar.StatusBarItems"
         android:icon="@drawable/ic_status_bar_items_background"
         android:title="@string/status_bar_items_title"
-        android:summary="@string/status_bar_items_summary">
-            <intent android:action="com.android.settings.action.STATUS_BAR_TUNER" />
-    </com.android.settings.widget.CardPreference>
+        android:summary="@string/status_bar_items_summary" />
 
 </PreferenceScreen>

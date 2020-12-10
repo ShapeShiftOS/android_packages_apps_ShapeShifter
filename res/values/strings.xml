@@ -480,4 +480,8 @@
     <string name="screen_off_animation_scale">Scale</string>
     <string name="screen_off_animation_title">Screen off animation</string>
 
+    <!-- Status bar tuner-->
+    <string name="statusbar_title">Icons</string>
+    <string name="statusbar_items_summary">Add or remove status bar icons</string>
+
 </resources>
