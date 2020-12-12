@@ -142,6 +142,44 @@
                 android:textSize="14sp" />
 
             <TextView
+                android:id="@+id/mezzTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="12dp"
+                android:text="@string/shapeshiftos_about_mezz"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/mezzSummary"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:text="@string/shapeshiftos_about_mezz_summary"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/sanTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="12dp"
+                android:text="@string/shapeshiftos_about_san"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/sanSummary"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:text="@string/shapeshiftos_about_san_summary"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="14sp" />
+
+            <TextView
                 android:id="@+id/maintainerCat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
