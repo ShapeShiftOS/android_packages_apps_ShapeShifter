@@ -143,6 +143,7 @@
     <string name="default_string">Default</string>
     <string name="unsupported_gestures">Enable two button or three button navigation to use this feature</string>
     <string name="unsupported_navigation_bar">Enable gesture navigation to use this feature</string>
+    <string name="unsupported_feature_summary">This feature is unsupported by your device</string>
 
     <!-- AICP SU libs -->
     <string name="selinux_permissive_toast_title">Selinux set to permissive!</string>
@@ -526,5 +527,13 @@
     <string name="vowifi_icon_simple1">Simple Icon</string>
     <string name="vowifi_icon_simple2">Syberia Icon</string>
     <string name="vowifi_icon_simple3">Classic Icon</string>
+
+    <!-- Lock FP icon -->
+    <string name="lock_fp_icon_title">Fingerprint icon on lockscreen</string>
+    <string name="lock_fp_icon_summary">Display a fingerprint icon under the clock date when it is possible to unlock using fingerprint</string>
+    <string name="lock_fp_icon_fod_summary">This feature is unsupported on FOD-equipped devices</string>
+    <string name="lock_fp_icon_no_fp_summary">This feature is unsupported on devices without a fingerprint sensor</string>
+    <string name="lock_fp_icon_rart_user_summary">This feature is unsupported on devices without enrolled fingerprints</string>
+
 
 </resources>
