@@ -19,6 +19,12 @@
     android:title="@string/gesture_options_title" >
 
     <Preference
+        android:key="gesture_double_tap"
+        android:title="@string/double_tap_title"
+        android:summary="@string/double_tap_summary"
+        android:fragment="com.ssos.shapeshifter.fragments.actions.DoubleTapSettings" />
+
+    <Preference
         android:key="gesture_assist_input_summary"
         android:title="@string/assist_gesture_title"
         android:fragment="com.android.settings.gestures.AssistGestureSettings"

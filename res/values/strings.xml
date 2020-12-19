@@ -544,6 +544,13 @@ Aggressive Battery Saver helps you increase battery life by using your device le
 
 Aggressive Standby is a feature that stops apps from running in the background as much."</string>
 
+    <!-- Gestures -->
+    <string name="double_tap_title">Double tap</string>
+    <string name="double_tap_summary">Power display on and off with tap gestures</string>
+    <string name="double_tap_sleep_gesture">Double tap to sleep on status bar</string>
+    <string name="double_tap_sleep_gesture_summary">Power display off by double tapping on status bar</string>
+    <string name="double_tap_sleep_lockscreen">Double tap to sleep on lockscreen</string>
+    <string name="double_tap_sleep_lockscreen_summary">Power display off by double tapping on lockscreen</string>
 
 </resources>
 
