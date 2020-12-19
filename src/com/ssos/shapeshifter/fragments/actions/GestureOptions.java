@@ -54,6 +54,7 @@ public class GestureOptions extends GestureSettings implements
     private static final String KEY_GESTURE_GLOBAL_ACTIONS_PANEL = "gesture_global_actions_panel_summary";
     private static final String KEY_GESTURE_ADAPTIVE_PLAYBACK = "gesture_adaptive_playback_summary";
     private static final String KEY_VOLUME_SKIP_TRACK = "gesture_volume_skiptrack_summary";
+    private static final String KEY_POWER_BUTTON_TORCH_SUMMARY = "power_button_torch_summary";
 
     private ContentResolver mContentResolver;
 
@@ -102,6 +103,7 @@ public class GestureOptions extends GestureSettings implements
                     keys.add(KEY_GESTURE_GLOBAL_ACTIONS_PANEL);
                     keys.add(KEY_GESTURE_ADAPTIVE_PLAYBACK);
                     keys.add(KEY_VOLUME_SKIP_TRACK);
+                    keys.add(KEY_POWER_BUTTON_TORCH_SUMMARY);
                     return keys;
                 }
             };
