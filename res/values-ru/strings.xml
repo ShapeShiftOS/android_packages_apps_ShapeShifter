@@ -120,9 +120,6 @@
     <string name="ok_string">Ок</string>
     <string name="default_string">По умолчанию</string>
     <string name="unsupported_gestures">Включите две или три кнопки навигации для использования этой функции</string>
-    <!-- SystemUI Restart -->
-    <string name="systemui_restart_title">Требуется перезагрузка SystemUI</string>
-    <string name="systemui_restart_message">Чтобы все изменения вступили в силу, требуется перезагрузка SystemUI. Перезапустить его прямо сейчас?</string>
     <!-- FEATURES -->
     <!-- Navbar Entries -->
     <string name="navigation_tuner_title">Настройки навигационной панели</string>
@@ -229,28 +226,9 @@
     <string name="profile_choose_app">Выберите приложение</string>
     <string name="dialog_delete_title">Удалить</string>
     <string name="dialog_delete_message">Удалить выбранный элемент?</string>
-    <!-- Heads up timeout -->
-    <string name="heads_up_time_out_title">Тайм-аут</string>
-    <string name="heads_up_time_out_summary">Всплывающие уведомления будут отображаться <xliff:g id="number">%d</xliff:g> секунд</string>
-    <string name="heads_up_time_out_2sec">2 секунды</string>
-    <string name="heads_up_time_out_4sec">4 секунды</string>
-    <string name="heads_up_time_out_5sec">5 секунд</string>
-    <string name="heads_up_time_out_6sec">6 секунд</string>
-    <string name="heads_up_time_out_8sec">8 секунд</string>
-    <string name="heads_up_time_out_10sec">10 секунд</string>
-    <!-- Heads up snooze -->
-    <string name="heads_up_snooze_title">Таймер повтора</string>
-    <string name="heads_up_snooze_summary_one_minute">Свайп вверх по всплывающему уведомлению отложит всплывающие уведомления от этого приложения на одну минуту</string>
-    <string name="heads_up_snooze_summary">Свайп вверх по всплывающему уведомлению отложит всплывающие уведомления от этого приложения на <xliff:g id="number">%d</xliff:g> минут(ы)</string>
-    <string name="heads_up_snooze_disabled_summary">Таймер повтора отключен</string>
-    <string name="heads_up_snooze_1min">1 минута</string>
-    <string name="heads_up_snooze_5min">5 минут</string>
-    <string name="heads_up_snooze_10min">10 минут</string>
-    <string name="heads_up_snooze_15min">15 минут</string>
-    <string name="heads_up_snooze_20min">20 минут</string>
     <!-- Battery Bar -->
     <string name="battery_bar_title">Ползунок заряда батареи</string>
-    <string name="battery_bar_summary">Отображать и настроить строку батареи рядом со строкой состояния или панелью навигации</string>
+    <string name="battery_bar_summary">Отображать и настроить строку батареи рядом со строкой состояния</string>
     <string name="battery_bar_no_navbar">Расположение полосы батареи</string>
     <string name="battery_bar_location_hide">Скрыть</string>
     <string name="battery_bar_location_statusbar">Строка состояния</string>

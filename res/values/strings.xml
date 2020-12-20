@@ -286,7 +286,7 @@
 
     <!-- Battery Bar -->
     <string name="battery_bar_title">Battery bar</string>
-    <string name="battery_bar_summary">Display and customize battery bar near status bar or navigation bar</string>
+    <string name="battery_bar_summary">Display and customize battery bar near status bar</string>
     <string name="battery_bar_no_navbar">Battery bar location</string>
     <string name="battery_bar_location_hide">Hide</string>
     <string name="battery_bar_location_statusbar">Statusbar</string>
@@ -484,7 +484,6 @@
 
     <!-- Screen off animation -->
     <string name="screen_off_animation_fade">Simple fade</string>
-    <string name="screen_off_animation_color">Color fade</string>
     <string name="screen_off_animation_crt">CRT</string>
     <string name="screen_off_animation_scale">Scale</string>
     <string name="screen_off_animation_title">Screen off animation</string>
@@ -537,9 +536,7 @@
 
     <!-- Aggressive battery -->
     <string name="aggressive_battery_saver_title">Aggressive Battery Saver</string>
-    <string name="aggressive_battery_saver_explainer">"Further extend your battery in critical moments when you need to make it last.
-
-Aggressive Battery Saver helps you increase battery life by using your device less. Aggressive Idle is a feature that makes the device idle constants more aggressive and ignores device motion when entering doze mode.
+    <string name="aggressive_battery_saver_explainer">"Aggressive Idle is a feature that makes the device idle constants more aggressive and ignores device motion when entering doze mode.
 
 Aggressive Standby is a feature that stops apps from running in the background as much."</string>
 
