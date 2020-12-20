@@ -52,7 +52,7 @@
            android:title="@string/center_notification_headers_title"
            android:summary="@string/center_notification_headers_summary"
            android:dependency="notification_headers"
-           android:defaultValue="true" />
+           android:defaultValue="false" />
 
     </PreferenceCategory>
 
