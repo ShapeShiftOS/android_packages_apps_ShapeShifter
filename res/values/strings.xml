@@ -109,6 +109,8 @@
     <string name="pulse_settings">Pulse</string>
     <string name="flashlight_category">Flashlight</string>
     <string name="lockscreen_fod_category">Fingerprint On Display</string>
+    <string name="navigation_navigation_bar_category">Navigation</string>
+    <string name="gestures_navigation_bar_category">Gestures</string>
 
     <!-- ShapeShiftOS device info settings -->
     <string name="shapeshiftos_version">ShapeShiftOS version</string>
