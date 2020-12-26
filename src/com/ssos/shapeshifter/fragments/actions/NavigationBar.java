@@ -42,11 +42,15 @@ import java.util.List;
 public class NavigationBar extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener, Indexable {
 
+    private static final String BACK_GESTURE_HAPTIC = "back_gesture_haptic";
+    private static final String SHOW_BACK_ARROW_GESTURE = "show_back_arrow_gesture";
     private static final String PIXEL_ANIMATION_NAVIGATION = "pixel_nav_animation";
     private static final String INVERT_NAVIGATION = "sysui_nav_bar_inverse";
     private static final String ASSIST_LOCK_HANDLES = "assist_lock_handles";
     private static final String ASSIST_GLOBAL_HANDLES = "assist_global_handles";
 
+    private SecureSettingSwitchPreference mShowBackArrowGesture;
+    private SystemSettingSwitchPreference mBackGestureHaptic;
     private SecureSettingSwitchPreference mAssistGlobalHandles;
     private SecureSettingSwitchPreference mAssistLockHandles;
     private SystemSettingSwitchPreference mPixelAnimationNavigation;
@@ -61,6 +65,8 @@ public class NavigationBar extends SettingsPreferenceFragment implements
         mAssistLockHandles = findPreference(ASSIST_LOCK_HANDLES);
         mPixelAnimationNavigation = findPreference(PIXEL_ANIMATION_NAVIGATION);
         mInvertNavigation = findPreference(INVERT_NAVIGATION);
+        mBackGestureHaptic = findPreference(BACK_GESTURE_HAPTIC);
+        mShowBackArrowGesture = findPreference(SHOW_BACK_ARROW_GESTURE);
         // On three button nav
         if (com.android.internal.util.ssos.Utils.isThemeEnabled("com.android.internal.systemui.navbar.threebutton")) {
             mPixelAnimationNavigation.setSummary(getString(R.string.pixel_navbar_anim_summary));
@@ -69,6 +75,10 @@ public class NavigationBar extends SettingsPreferenceFragment implements
             mAssistGlobalHandles.setSummary(getString(R.string.unsupported_navigation_bar));
             mAssistGlobalHandles.setEnabled(false);
             mAssistLockHandles.setEnabled(false);
+            mShowBackArrowGesture.setSummary(getString(R.string.unsupported_navigation_bar));
+            mBackGestureHaptic.setSummary(getString(R.string.unsupported_navigation_bar));
+            mShowBackArrowGesture.setEnabled(false);
+            mBackGestureHaptic.setEnabled(false);
         // On two button nav
         } else if (com.android.internal.util.ssos.Utils.isThemeEnabled("com.android.internal.systemui.navbar.twobutton")) {
             mPixelAnimationNavigation.setSummary(getString(R.string.pixel_navbar_anim_summary));
@@ -77,8 +87,14 @@ public class NavigationBar extends SettingsPreferenceFragment implements
             mAssistGlobalHandles.setSummary(getString(R.string.unsupported_navigation_bar));
             mAssistGlobalHandles.setEnabled(false);
             mAssistLockHandles.setEnabled(false);
+            mShowBackArrowGesture.setSummary(getString(R.string.unsupported_navigation_bar));
+            mBackGestureHaptic.setSummary(getString(R.string.unsupported_navigation_bar));
+            mShowBackArrowGesture.setEnabled(false);
+            mBackGestureHaptic.setEnabled(false);
         // On gesture nav
         } else {
+            mShowBackArrowGesture.setSummary(getString(R.string.back_gesture_arrow_summary));
+            mBackGestureHaptic.setSummary(getString(R.string.back_gesture_haptic_summary));
             mAssistLockHandles.setSummary(getString(R.string.assist_lock_handles_summary));
             mAssistGlobalHandles.setSummary(getString(R.string.assist_global_handles_summary));
             mPixelAnimationNavigation.setSummary(getString(R.string.unsupported_gestures));
