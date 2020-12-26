@@ -565,5 +565,9 @@ Aggressive Standby is a feature that stops apps from running in the background a
     <string name="back_gesture_haptic_title">Haptic feedback</string>
     <string name="back_gesture_haptic_summary">Enable haptic tick effect on back gesture</string>
 
+    <!-- Pocket judge -->
+    <string name="pocket_judge_title">Pocket detection</string>
+    <string name="pocket_judge_summary">Block screen inputs when device is in pocket</string>
+
 </resources>
 
