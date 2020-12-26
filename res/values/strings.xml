@@ -569,5 +569,9 @@ Aggressive Standby is a feature that stops apps from running in the background a
     <string name="pocket_judge_title">Pocket detection</string>
     <string name="pocket_judge_summary">Block screen inputs when device is in pocket</string>
 
+    <!-- Heads up options -->
+    <string name="less_boring_heads_up_title">Less boring heads up</string>
+    <string name="less_boring_heads_up_summary">Show heads up only for dialer, messaging and alarm app</string>
+
 </resources>
 
