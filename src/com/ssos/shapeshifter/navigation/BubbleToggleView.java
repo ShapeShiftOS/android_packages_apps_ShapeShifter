@@ -287,7 +287,7 @@ public class BubbleToggleView extends RelativeLayout {
             lpTitle.addRule(RelativeLayout.RIGHT_OF, iconView.getId());
         titleView.setLayoutParams(lpTitle);
         titleView.setSingleLine(true);
-        titleView.setTextColor(Utils.getColorAttr(context, android.R.attr.textColorPrimary));
+        titleView.setTextColor(Utils.getColorAttr(context, android.R.attr.colorAccent));
         titleView.setText(bubbleToggleItem.getTitle());
         titleView.setTextSize(TypedValue.COMPLEX_UNIT_PX, bubbleToggleItem.getTitleSize());
         //get the current measured title width
