@@ -75,4 +75,6 @@
     <color name="colorPurple">#725AFF</color>
     <color name="colorRed">#ffeb0028</color>
     <color name="colorCheese">#ffFFD955</color>
+
+    <color name="rgb_icon_tint_color">@*android:color/accent_device_default_dark</color>
 </resources>
