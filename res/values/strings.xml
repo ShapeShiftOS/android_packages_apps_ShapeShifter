@@ -584,5 +584,8 @@ Aggressive Standby is a feature that stops apps from running in the background a
     <string name="battery_percent_inside_title">Show percent inside</string>
     <string name="battery_percent_inside_summary">Show percent inside the icon</string>
 
+    <!-- Accent color picker -->
+    <string name="accent_color_title">RGB accent color picker</string>
+
 </resources>
 
