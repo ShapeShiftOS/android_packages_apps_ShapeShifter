@@ -436,22 +436,6 @@
     <string name="disable_transition_animations_title">Disable transition animations</string>
     <string name="disable_transition_animations_summary">Force disable all transition animations</string>
 
-    <!-- Network traffic -->
-    <string name="network_traffic_state_title">Network traffic display</string>
-    <string name="network_traffic_location">Traffic indicator placement</string>
-    <string name="traffic_disabled">Disabled</string>
-    <string name="traffic_statusbar">Statusbar</string>
-    <string name="traffic_expanded_statusbar">Expanded header</string>
-    <string name="network_traffic_autohide_threshold_title">Net activity autohide threshold (KB/s)</string>
-    <string name="network_traffic_arrow">Show arrows</string>
-    <string name="network_traffic_arrow_summary">Show the network traffic indicator arrows</string>
-    <string name="network_traffic_type">Select net activity type</string>
-    <string name="show_network_traffic_dynamic">Dynamic</string>
-    <string name="show_network_traffic_up">Upload</string>
-    <string name="show_network_traffic_down">Download</string>
-    <string name="show_network_traffic_all">Upload &amp; download</string>
-    <string name="nettraf_font_size">Single net font size (dp)</string>
-
     <!-- Supress notifications if screen is on -->
     <string name="notification_sound_vib_screen_on_title">Notification sound if active</string>
     <string name="notification_sound_vib_screen_on_summary">Play sound and vibration for notifications when screen is on</string>
@@ -590,6 +574,5 @@ Aggressive Standby is a feature that stops apps from running in the background a
     <!-- Data disabled icon -->
     <string name="data_disabled_icon_title">Show data disabled icon</string>
     <string name="data_disabled_icon_summary">Display the cross sign next to signal bar when data is disabled</string>
-
 </resources>
 
