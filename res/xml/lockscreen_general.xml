@@ -19,6 +19,12 @@
     android:title="@string/lockscreen_general_title" >
 
     <com.ssos.support.preferences.SystemSettingSwitchPreference
+        android:key="lockscreen_lock_icon"
+        android:title="@string/lockscreen_lock_icon_title"
+        android:summary="@string/lockscreen_lock_icon_summary"
+        android:defaultValue="true" />
+
+    <com.ssos.support.preferences.SystemSettingSwitchPreference
         android:key="lock_fp_icon"
         android:title="@string/lock_fp_icon_title"
         android:summary="@string/lock_fp_icon_summary"
