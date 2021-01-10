@@ -44,6 +44,7 @@ public class GestureOptions extends GestureSettings implements
 
     private static final String KEY_ASSIST = "gesture_assist_input_summary";
     private static final String KEY_SWIPE_DOWN = "gesture_swipe_down_fingerprint_input_summary";
+    private static final String KEY_SWIPE_TO_SCREENSHOT = "swipe_to_screenshot_summary";
     private static final String KEY_DOUBLE_TAP_POWER = "gesture_double_tap_power_input_summary";
     private static final String KEY_DOUBLE_TWIST = "gesture_double_twist_input_summary";
     private static final String KEY_NAVIGATION_INPUT = "gesture_system_navigation_input_summary";
@@ -93,6 +94,7 @@ public class GestureOptions extends GestureSettings implements
                     // Duplicates in summary and details pages.
                     keys.add(KEY_ASSIST);
                     keys.add(KEY_SWIPE_DOWN);
+                    keys.add(KEY_SWIPE_TO_SCREENSHOT);
                     keys.add(KEY_DOUBLE_TAP_POWER);
                     keys.add(KEY_DOUBLE_TWIST);
                     keys.add(KEY_NAVIGATION_INPUT);
