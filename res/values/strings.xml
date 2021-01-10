@@ -604,5 +604,18 @@ Aggressive Standby is a feature that stops apps from running in the background a
     <string name="network_traffic_refresh_interval_title">Refresh interval</string>
     <string name="network_traffic_refresh_interval_summary">Duration after which speed is remeasured</string>
     <string name="unit_seconds">seconds</string>
+
+    <!-- Volume Panel Plugin -->
+    <string name="volume_panel">Volume panel style</string>
+    <string name="volume_panel_aosp">AOSP</string>
+    <string name="volume_panel_compact">Compact</string>
+    <string name="volume_panel_oreo">Oreo</string>
+    <string name="volume_panel_tiled">Tiled</string>
+
+    <!-- Volume Panel Plugin Values -->
+    <string name="volume_panel_aosp_val" translatable="false">co.potatoproject.plugin.volume.aosp</string>
+    <string name="volume_panel_compact_val" translatable="false">co.potatoproject.plugin.volume.compact</string>
+    <string name="volume_panel_oreo_val" translatable="false">co.potatoproject.plugin.volume.oreo</string>
+    <string name="volume_panel_tiled_val" translatable="false">co.potatoproject.plugin.volume.tiled</string>
 </resources>
 
