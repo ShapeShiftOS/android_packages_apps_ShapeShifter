@@ -617,5 +617,9 @@ Aggressive Standby is a feature that stops apps from running in the background a
     <string name="volume_panel_compact_val" translatable="false">co.potatoproject.plugin.volume.compact</string>
     <string name="volume_panel_oreo_val" translatable="false">co.potatoproject.plugin.volume.oreo</string>
     <string name="volume_panel_tiled_val" translatable="false">co.potatoproject.plugin.volume.tiled</string>
+
+    <!-- Brightness control -->
+    <string name="status_bar_toggle_brightness">Brightness Control</string>
+    <string name="status_bar_toggle_brightness_summary">Adjust brightness by sliding finger across the statusbar</string>
 </resources>
 

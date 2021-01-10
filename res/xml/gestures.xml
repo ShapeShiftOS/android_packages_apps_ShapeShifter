@@ -25,6 +25,12 @@
         android:fragment="com.ssos.shapeshifter.fragments.actions.DoubleTapSettings" />
 
     <Preference
+        android:key="status_bar_brightness_control"
+        android:title="@string/status_bar_toggle_brightness"
+        android:summary="@string/status_bar_toggle_brightness_summary"
+        android:fragment="com.ssos.shapeshifter.fragments.actions.StatusBarBrightnessSettings" />
+
+    <Preference
         android:key="gesture_assist_input_summary"
         android:title="@string/assist_gesture_title"
         android:fragment="com.android.settings.gestures.AssistGestureSettings"
