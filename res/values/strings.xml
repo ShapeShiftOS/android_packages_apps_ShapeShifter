@@ -662,5 +662,9 @@ Aggressive Standby is a feature that stops apps from running in the background a
     <string name="volume_steps_7">7</string>
     <string name="volume_steps_5">5</string>
 
+    <!-- Signature Spoofing -->
+    <string name="allow_signature_fake">Allow signature spoofing</string>
+    <string name="allow_signature_fake_summary">Allow apps to bypass security systems by pretending to be a different app</string>
+
 </resources>
 

@@ -36,6 +36,12 @@
         android:summary="@string/pocket_judge_summary"
         android:defaultValue="false" />
 
+    <com.ssos.support.preferences.GlobalSettingSwitchPreference
+        android:key="allow_signature_fake"
+        android:title="@string/allow_signature_fake"
+        android:summary="@string/allow_signature_fake_summary"
+        android:defaultValue="false" />
+
     <com.ssos.support.preferences.SystemSettingSwitchPreference
         android:key="charging_animation"
         android:title="@string/charging_animation_title"
