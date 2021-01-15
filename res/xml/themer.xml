@@ -33,8 +33,13 @@
         android:key="accent_color"
         android:title="@string/accent_color_title"
         android:defaultValue="0xFF725AFF"
-        settings:showReset="true"  
+        settings:showReset="false"  
         android:persistent="false" />
+
+    <Preference
+        android:key="reset"
+        android:title="@string/accent_reset"
+        android:summary="@string/accent_reset_summary" />
 
     <ListPreference
        android:key="android.theme.customization.adaptive_icon_shape"

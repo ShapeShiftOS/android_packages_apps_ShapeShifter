@@ -16,9 +16,17 @@
 
 package com.ssos.shapeshifter.fragments.ui;
 
+import android.app.AlertDialog;
+import android.app.ActionBar;
+import android.app.Activity;
+import android.app.Dialog;
+import android.app.DialogFragment;
 import android.content.ContentResolver;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.os.SystemProperties;
+import android.os.Bundle;
+import android.os.UserHandle;
 import androidx.preference.*;
 import android.provider.SearchIndexableResource;
 import android.provider.Settings;
@@ -43,8 +51,43 @@ import java.util.ArrayList;
 import java.util.List;
 
 @SearchIndexable
-public class Themer extends DashboardFragment implements Indexable  {
+public class Themer extends DashboardFragment implements Indexable {
     private static final String TAG = "Themer";
+
+    private static final String RESET = "reset";
+    static final int DEFAULT_ACCENT_COLOR = 0xff725aff;
+
+    private Preference mReset;
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        final ContentResolver resolver = getActivity().getContentResolver();
+
+        mReset = (Preference) findPreference(RESET);
+    }
+
+    @Override
+    public boolean onPreferenceTreeClick(final Preference preference) {
+        if (preference == mReset) {
+            AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
+            alertDialog.setTitle(getString(R.string.accent_reset));
+            alertDialog.setMessage(getString(R.string.accent_reset_message_warning_summary));
+            alertDialog.setPositiveButton(getString(android.R.string.ok),
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int whichButton) {
+                        Settings.System.putIntForUser(getContext().getContentResolver(),
+                        Settings.System.ACCENT_COLOR, DEFAULT_ACCENT_COLOR,
+                        UserHandle.USER_CURRENT);
+                    }
+                });
+            alertDialog.setNegativeButton(getString(android.R.string.cancel), null);
+            alertDialog.show();
+        } else {
+          super.onPreferenceTreeClick(preference);
+        }
+        return true;
+    }
 
     @Override
     public int getMetricsCategory() {
