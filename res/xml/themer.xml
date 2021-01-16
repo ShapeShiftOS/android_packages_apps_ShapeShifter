@@ -33,7 +33,7 @@
         android:key="accent_color"
         android:title="@string/accent_color_title"
         android:defaultValue="0xFF725AFF"
-        settings:showReset="false"  
+        settings:showReset="false"
         android:persistent="false" />
 
     <Preference
@@ -48,13 +48,6 @@
     <ListPreference
        android:key="android.theme.customization.icon_pack"
        android:title="@string/theme_customization_sysui_icons_title"/>
-
-    <com.ssos.support.preferences.SystemSettingListPreference
-       android:key="systemui_plugin_volume"
-       android:title="@string/volume_panel"
-       android:entries="@array/volume_panel_entries"
-       android:entryValues="@array/volume_panel_values"
-       android:defaultValue="@string/volume_panel_stock_val" />
 
     <ListPreference
        android:layout="@layout/themes_font_preview"

@@ -18,6 +18,13 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/volume_rocker_title" >
 
+    <com.ssos.support.preferences.SystemSettingListPreference
+       android:key="systemui_plugin_volume"
+       android:title="@string/volume_panel"
+       android:entries="@array/volume_panel_entries"
+       android:entryValues="@array/volume_panel_values"
+       android:defaultValue="@string/volume_panel_stock_val" />
+
     <ListPreference
         android:dialogTitle="@string/volume_key_cursor_control_title"
         android:entries="@array/volume_key_cursor_control_entries"
