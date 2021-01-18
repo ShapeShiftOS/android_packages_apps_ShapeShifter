@@ -31,12 +31,12 @@ public class LockScreenTab extends SettingsPreferenceFragment implements
 
     private static final String LOCKSCREEN_AOSP_CATEGORY = "lockscreen_aosp_category";
     private static final String LOCKSCREEN_GENERAL_CATEGORY = "lockscreen_general_category";
-//    private static final String LOCKSCREEN_TUNER_CATEGORY = "lockscreen_tuner_category";
+    private static final String LOCKSCREEN_TUNER_CATEGORY = "lockscreen_tuner_category";
     private static final String LOCKSCREEN_WEATHER_CATEGORY = "lockscreen_weather";
 
     private CardPreference mLockscreenAosp;
     private CardPreference mLockscreenGeneral;
-//    private CardPreference mLockscreenTuner;
+    private CardPreference mLockscreenTuner;
     private CardPreference mLockscreenWeather;
 
     @Override
@@ -57,14 +57,14 @@ public class LockScreenTab extends SettingsPreferenceFragment implements
         } else {
             mLockscreenGeneral = (CardPreference) findPreference(LOCKSCREEN_GENERAL_CATEGORY);
         }
-/** Uncomment once Tuner is added
+
         CardPreference mLockscreenTuner = findPreference("lockscreen_tuner_category");
         if (!getResources().getBoolean(R.bool.lockscreen_tuner_category_isVisible)) {
             getPreferenceScreen().removePreference(mLockscreenTuner);
         } else {
             mLockscreenTuner = (CardPreference) findPreference(LOCKSCREEN_TUNER_CATEGORY);
         }
-*/
+
         CardPreference mLockscreenWeather = findPreference("lockscreen_weather");
         if (!getResources().getBoolean(R.bool.lockscreen_weather_category_isVisible)) {
             getPreferenceScreen().removePreference(mLockscreenWeather);
