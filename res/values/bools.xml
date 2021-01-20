@@ -45,7 +45,7 @@
     <bool name="lockscreen_general_category_isVisible">true</bool>
 
     <!-- System/Misc tab -->
-    <bool name="animations_category_isVisible">true</bool>
+    <bool name="animations_category_isVisible">false</bool>
     <bool name="general_notifications_category_isVisible">true</bool>
     <bool name="miscellaneous_category_isVisible">true</bool>
     <bool name="changelog_category_isVisible">true</bool>
