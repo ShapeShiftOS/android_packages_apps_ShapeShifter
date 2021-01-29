@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2020 ShapeShiftOS
+ * Copyright (C) 2021 ShapeShiftOS
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,12 +16,20 @@
 
 package com.ssos.shapeshifter.fragments.ui;
 
+import android.content.ContentResolver;
 import android.content.Context;
 import android.os.Bundle;
+import android.os.UserHandle;
 import android.provider.SearchIndexableResource;
 import android.provider.Settings;
+
 import androidx.preference.Preference;
+import androidx.preference.PreferenceGroup;
+import androidx.preference.PreferenceScreen;
+import androidx.preference.PreferenceCategory;
 import androidx.preference.Preference.OnPreferenceChangeListener;
+import androidx.preference.PreferenceFragment;
+import androidx.preference.SwitchPreference;
 
 import com.android.settings.R;
 import com.android.settings.search.BaseSearchIndexProvider;
@@ -32,6 +40,8 @@ import com.android.settings.Utils;
 
 import com.android.internal.logging.nano.MetricsProto;
 
+import com.ssos.support.preferences.SystemSettingSwitchPreference;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -39,13 +49,32 @@ import java.util.List;
 public class QuickSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener, Indexable {
 
+    private static final String QS_MEDIA_PLAYER = "qs_media_player";
+
+    private SystemSettingSwitchPreference mQSMediaPlayer;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.quick_settings);
+        PreferenceScreen prefScreen = getPreferenceScreen();
+        final ContentResolver resolver = getActivity().getContentResolver();
+
+        mQSMediaPlayer = findPreference(QS_MEDIA_PLAYER);
+        mQSMediaPlayer.setChecked((Settings.System.getInt(resolver,
+                Settings.System.QS_MEDIA_PLAYER, 1) == 1));
+        mQSMediaPlayer.setOnPreferenceChangeListener(this);
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
+        ContentResolver resolver = getActivity().getContentResolver();
+        if (preference == mQSMediaPlayer) {
+            boolean value = (Boolean) newValue;
+            Settings.System.putInt(resolver,
+                    Settings.System.QS_MEDIA_PLAYER, value ? 1 : 0);
+            com.ssos.shapeshifter.utils.Utils.showSystemUiRestartDialog(getContext());
+            return true;
+        }
         return false;
     }
 
