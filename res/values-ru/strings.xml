@@ -179,9 +179,6 @@
     <string name="clock_date_right">Справа от времени</string>
     <string name="clock_date_left">Слева от времени</string>
     <string name="clock_date_position">Расположение даты</string>
-    <!-- Volume rocker wake -->
-    <string name="volume_rocker_wake_title">Пробуждение кнопками громкости</string>
-    <string name="volume_rocker_wake_summary">Нажатие кнопок громкости разбудит ваше устройство</string>
     <!-- Language options - Volume rocker cursor control -->
     <string name="cursor_section_header">Курсор</string>
     <string name="volume_key_cursor_control_title">Управление курсором кнопками громкости</string>
