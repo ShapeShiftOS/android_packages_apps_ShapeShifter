@@ -19,6 +19,12 @@
     android:title="@string/miscellaneous_title" >
 
     <Preference
+        android:key="smart_pixels"
+        android:fragment="com.ssos.shapeshifter.fragments.system_misc.SmartPixels"
+        android:title="@string/smart_pixels_title"
+        android:summary="@string/smart_pixels_summary" />
+
+    <Preference
         android:key="default_usb_configuration"
         android:fragment="com.android.settings.connecteddevice.usb.UsbDefaultFragment"
         android:title="@string/usb_default_config_title"

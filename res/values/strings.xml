@@ -103,7 +103,6 @@
     <string name="led_battery_title">Battery LED</string>
     <string name="lockscreen_visualizer_enable">Music Visualizer</string>
     <string name="qs_panel_layout_category">QS panel layout</string>
-    <string name="smart_pixels_title">Smart Pixels</string>
     <string name="volume_steps_title">Volume steps</string>
     <string name="power_menu_category">Power menu</string>
     <string name="pulse_settings">Pulse</string>
@@ -629,6 +628,14 @@ Aggressive Standby is a feature that stops apps from running in the background a
     <!-- Lockscreen charging animation -->
     <string name="lockscreen_charging_animation_title">Lockscreen charging animation</string>
     <string name="lockscreen_charging_animation_summary">Display a fancy animation when the device is charging</string>
+
+    <!-- Smart Pixels -->
+    <string name="smart_pixels_title">Smart Pixels</string>
+    <string name="smart_pixels_summary">Save battery by shutting off extra pixels</string>
+    <string name="smart_pixels_on_power_save_title">Auto-enable on battery saver</string>
+    <string name="smart_pixels_on_power_save_summary">Enable with battery saver to increase power savings</string>
+    <string name="smart_pixels_percent">Percent of pixels to disable</string>
+    <string name="smart_pixels_shift">Burn-in protection interval</string>
 
 </resources>
 
