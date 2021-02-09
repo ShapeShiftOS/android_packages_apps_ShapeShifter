@@ -18,10 +18,14 @@ package com.ssos.shapeshifter.fragments.actions;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.UserHandle;
 import android.provider.SearchIndexableResource;
 import android.provider.Settings;
+
 import androidx.preference.Preference;
 import androidx.preference.Preference.OnPreferenceChangeListener;
+import androidx.preference.SwitchPreference;
 
 import com.android.settings.R;
 import com.android.settings.search.BaseSearchIndexProvider;
@@ -31,6 +35,7 @@ import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.Utils;
 
 import com.android.internal.logging.nano.MetricsProto;
+import com.android.internal.util.hwkeys.ActionUtils;
 
 import com.ssos.support.preferences.SystemSettingSwitchPreference;
 import com.ssos.support.preferences.SecureSettingSwitchPreference;
@@ -40,7 +45,7 @@ import java.util.List;
 
 @SearchIndexable
 public class NavigationBar extends SettingsPreferenceFragment implements
-        Preference.OnPreferenceChangeListener, Indexable {
+        OnPreferenceChangeListener, Indexable {
 
     private static final String BACK_GESTURE_HAPTIC = "back_gesture_haptic";
     private static final String SHOW_BACK_ARROW_GESTURE = "show_back_arrow_gesture";
@@ -48,13 +53,18 @@ public class NavigationBar extends SettingsPreferenceFragment implements
     private static final String INVERT_NAVIGATION = "sysui_nav_bar_inverse";
     private static final String ASSIST_LOCK_HANDLES = "assist_lock_handles";
     private static final String ASSIST_GLOBAL_HANDLES = "assist_global_handles";
+    private static final String NAVBAR_VISIBILITY = "navbar_visibility";
 
+    private SwitchPreference mNavbarVisibility;
     private SecureSettingSwitchPreference mShowBackArrowGesture;
     private SystemSettingSwitchPreference mBackGestureHaptic;
     private SecureSettingSwitchPreference mAssistGlobalHandles;
     private SecureSettingSwitchPreference mAssistLockHandles;
     private SystemSettingSwitchPreference mPixelAnimationNavigation;
     private SecureSettingSwitchPreference mInvertNavigation;
+
+    private boolean mIsNavSwitchingMode = false;
+    private Handler mHandler;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -101,9 +111,42 @@ public class NavigationBar extends SettingsPreferenceFragment implements
             mInvertNavigation.setSummary(getString(R.string.gesture_invert_layout_summary));
             mPixelAnimationNavigation.setEnabled(false);
         }
+
+        mNavbarVisibility = (SwitchPreference) findPreference(NAVBAR_VISIBILITY);
+
+        boolean showing = Settings.System.getInt(getContentResolver(),
+                Settings.System.FORCE_SHOW_NAVBAR,
+                ActionUtils.hasNavbarByDefault(getActivity()) ? 1 : 0) != 0;
+        updateBarVisibleAndUpdatePrefs(showing);
+        mNavbarVisibility.setOnPreferenceChangeListener(this);
+
+        mHandler = new Handler();
+
     }
 
+    private void updateBarVisibleAndUpdatePrefs(boolean showing) {
+        mNavbarVisibility.setChecked(showing);
+    }
+
+    @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
+        if (preference.equals(mNavbarVisibility)) {
+            if (mIsNavSwitchingMode) {
+                return false;
+            }
+            mIsNavSwitchingMode = true;
+            boolean showing = ((Boolean)newValue);
+            Settings.System.putInt(getContentResolver(), Settings.System.FORCE_SHOW_NAVBAR,
+                    showing ? 1 : 0);
+            updateBarVisibleAndUpdatePrefs(showing);
+            mHandler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    mIsNavSwitchingMode = false;
+                }
+            }, 1500);
+            return true;
+        }
         return false;
     }
 

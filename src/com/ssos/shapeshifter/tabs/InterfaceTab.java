@@ -83,7 +83,7 @@ public class InterfaceTab extends SettingsPreferenceFragment implements
         if (!getResources().getBoolean(R.bool.pulse_category_isVisible)) {
             getPreferenceScreen().removePreference(mPulse);
         } else {
-            mRecents = (CardPreference) findPreference(PULSE_CATEGORY);
+            mPulse = (CardPreference) findPreference(PULSE_CATEGORY);
         }
     }
 

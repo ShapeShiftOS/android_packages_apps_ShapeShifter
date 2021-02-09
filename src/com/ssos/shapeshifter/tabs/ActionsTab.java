@@ -20,7 +20,9 @@ import android.os.Bundle;
 import android.preference.Preference.OnPreferenceChangeListener;
 
 import androidx.preference.Preference;
+import androidx.preference.PreferenceScreen;
 
+import com.android.internal.util.hwkeys.ActionUtils;
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
@@ -34,12 +36,14 @@ public class ActionsTab extends SettingsPreferenceFragment implements
     private static final String GESTURE_OPTIONS_CATEGORY = "gesture_settings";
     private static final String VOLUME_ROCKER_CATEGORY = "volume_rocker_category";
     private static final String HWKEY_CATEGORY = "hw_keys_category";
+    private static final String BUTTONS_CATEGORY = "buttonsettings_category";
 
     private CardPreference mPowerButton;
     private CardPreference mNavigation;
     private CardPreference mGestures;
     private CardPreference mVolumeRocker;
     private CardPreference mHwKeys;
+    private CardPreference mButtons;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -79,6 +83,14 @@ public class ActionsTab extends SettingsPreferenceFragment implements
             getPreferenceScreen().removePreference(mHwKeys);
         } else {
             mHwKeys = (CardPreference) findPreference(HWKEY_CATEGORY);
+        }
+
+        CardPreference mButtons = findPreference("buttonsettings_category");
+        if (!getResources().getBoolean(R.bool.buttons_category_isVisible)
+             && ActionUtils.hasNavbarByDefault(getActivity())) {
+            getPreferenceScreen().removePreference(mButtons);
+        } else {
+            mButtons = (CardPreference) findPreference(BUTTONS_CATEGORY);
         }
     }
 

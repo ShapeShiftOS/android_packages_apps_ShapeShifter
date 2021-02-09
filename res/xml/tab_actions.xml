@@ -52,4 +52,12 @@
         android:title="@string/hw_keys_title"
         android:summary="@string/hw_keys_summary" />
 
+
+    <com.android.settings.widget.CardPreference
+        android:key="buttonsettings_category"
+        android:fragment="com.ssos.shapeshifter.fragments.actions.ButtonSettings"
+        android:icon="@drawable/ic_buttons_background"
+        android:title="@string/hw_keys_title"
+        android:summary="@string/hw_keys_summary" />
+
 </PreferenceScreen>
