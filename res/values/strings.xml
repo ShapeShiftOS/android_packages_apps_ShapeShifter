@@ -638,6 +638,7 @@ Aggressive Standby is a feature that stops apps from running in the background a
     <string name="smart_pixels_shift">Burn-in protection interval</string>
 
     <!-- Fingerprint vibration -->
+    <string name="fprint_subcat">Fingerprint</string>
     <string name="fprint_error_vib_title">Fingerprint error vibration</string>
     <string name="fprint_error_vib_summary">Vibrate on error fingerprint authentication</string>
     <string name="fprint_success_vib_title">Fingerprint authentication vibration</string>
