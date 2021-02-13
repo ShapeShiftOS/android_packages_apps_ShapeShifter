@@ -46,7 +46,8 @@
     </PreferenceCategory>
 
     <PreferenceCategory
-        android:title="@string/notification_led_pref">
+        android:title="@string/notification_led_pref"
+        android:key="notification_led_pref">
 
         <com.ssos.support.preferences.SystemSettingMasterSwitchPreference
             android:key="battery_light_enabled"
