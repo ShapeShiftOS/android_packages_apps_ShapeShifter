@@ -87,7 +87,7 @@ public class ActionsTab extends SettingsPreferenceFragment implements
 
         CardPreference mButtons = findPreference("buttonsettings_category");
         if (!getResources().getBoolean(R.bool.buttons_category_isVisible)
-             && ActionUtils.hasNavbarByDefault(getActivity())) {
+             || ActionUtils.hasNavbarByDefault(getActivity())) {
             getPreferenceScreen().removePreference(mButtons);
         } else {
             mButtons = (CardPreference) findPreference(BUTTONS_CATEGORY);
