@@ -71,7 +71,7 @@ public class LockscreenGeneral extends SettingsPreferenceFragment implements
         final PackageManager mPm = getActivity().getPackageManager();
 
         boolean enableScreenOffFOD = getContext().getResources().
-                getBoolean(com.android.internal.R.bool.config_supportsInDisplayFingerprint);
+                getBoolean(R.bool.config_supportScreenOffFod);
         Preference ScreenOffFODPref = (Preference) findPreference("fod_gesture");
 
         if (!enableScreenOffFOD){
