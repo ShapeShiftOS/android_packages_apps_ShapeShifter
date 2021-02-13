@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2020 ShapeShiftOS
+ * Copyright (C) 2021 ShapeShiftOS
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -68,8 +68,8 @@ public class LockscreenGeneral extends SettingsPreferenceFragment implements
         PreferenceCategory overallPreferences = (PreferenceCategory) findPreference("fod_category");
         mResolver = getActivity().getContentResolver();
         Context mContext = getContext();
-        final PackageManager mPm = getActivity().getPackageManager();
-
+        final PackageManager mPm = getActivity().getPackageManager();                    
+            
         boolean enableScreenOffFOD = getContext().getResources().
                 getBoolean(R.bool.config_supportScreenOffFod);
         Preference ScreenOffFODPref = (Preference) findPreference("fod_gesture");
@@ -77,6 +77,14 @@ public class LockscreenGeneral extends SettingsPreferenceFragment implements
         if (!enableScreenOffFOD){
             overallPreferences.removePreference(ScreenOffFODPref);
         }
+
+        Preference AnimaTogglePref = (Preference) findPreference("fod_recognizing_animation");
+        Preference AnimaListPref = (Preference) findPreference("fod_recognizing_animation_list");            
+
+        if (!com.android.internal.util.ssos.Utils.isPackageInstalled(mContext,"com.ssos.fod.animations")) {
+            overallPreferences.removePreference(AnimaTogglePref);
+            overallPreferences.removePreference(AnimaListPref);                
+        }                
 
         if (!getResources().getBoolean(com.android.internal.R.bool.config_supportsInDisplayFingerprint)) {
             prefScreen.removePreference(findPreference("fod_category"));
@@ -115,7 +123,7 @@ public class LockscreenGeneral extends SettingsPreferenceFragment implements
                 mFingerprintVib.setOnPreferenceChangeListener(this);
             }
         } else {
-        prefScreen.removePreference(mFingerprintVib);
+          prefScreen.removePreference(mFingerprintVib);
         }
 
         mFingerprintManager = (FingerprintManager) getActivity().getSystemService(Context.FINGERPRINT_SERVICE);
