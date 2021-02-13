@@ -56,11 +56,9 @@ public class GeneralNotifications extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener, Indexable {
 
     private static final String KEY_EDGE_LIGHTNING = "pulse_ambient_light";
-    private static final String NOTIFICATION_HEADERS = "notification_headers";
     private static final String CENTER_NOTIFICATION_HEADERS = "center_notification_headers";
 
     private SystemSettingSwitchPreference mCenterNotificationHeader;
-    private SystemSettingSwitchPreference mNotificationHeader;
     private SystemSettingMasterSwitchPreference mEdgeLightning;
 
     @Override
@@ -77,11 +75,6 @@ public class GeneralNotifications extends SettingsPreferenceFragment implements
         mEdgeLightning.setChecked(enabled);
         mEdgeLightning.setOnPreferenceChangeListener(this);
 
-        mNotificationHeader = findPreference(NOTIFICATION_HEADERS);
-        mNotificationHeader.setChecked((Settings.System.getInt(resolver,
-                Settings.System.NOTIFICATION_HEADERS, 1) == 1));
-        mNotificationHeader.setOnPreferenceChangeListener(this);
-
         mCenterNotificationHeader = findPreference(CENTER_NOTIFICATION_HEADERS);
         mCenterNotificationHeader.setChecked((Settings.System.getInt(resolver,
                 Settings.System.CENTER_NOTIFICATION_HEADERS, 1) == 1));
@@ -94,12 +87,6 @@ public class GeneralNotifications extends SettingsPreferenceFragment implements
             boolean value = (Boolean) newValue;
             Settings.System.putIntForUser(resolver, KEY_EDGE_LIGHTNING,
                     value ? 1 : 0, UserHandle.USER_CURRENT);
-            return true;
-        } else if (preference == mNotificationHeader) {
-            boolean value = (Boolean) newValue;
-            Settings.System.putInt(resolver,
-                    Settings.System.NOTIFICATION_HEADERS, value ? 1 : 0);
-            Utils.showSystemUiRestartDialog(getContext());
             return true;
         } else if (preference == mCenterNotificationHeader) {
             boolean value = (Boolean) newValue;

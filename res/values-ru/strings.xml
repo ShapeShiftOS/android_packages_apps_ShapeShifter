@@ -317,7 +317,7 @@
     <!-- Notification headers -->
     <string name="notification_headers_section_title">Заголовки уведомлений</string>
     <string name="notification_headers_title">Заголовки уведомлений</string>
-    <string name="notification_headers_summary">Показывать заголовки в тени уведомлений\nОбязательна перезагрузка SystemUI</string>
+    <string name="notification_headers_summary">Показывать заголовки в тени уведомлений</string>
     <string name="center_notification_headers_title">Заголовки уведомлений по центру</string>
     <string name="center_notification_headers_summary">Расположение загловков уведомлений по центру\nобязательна перезагрузка SystemUI</string>
 
