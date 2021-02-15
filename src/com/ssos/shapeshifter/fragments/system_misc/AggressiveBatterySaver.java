@@ -39,10 +39,14 @@ import java.util.List;
 public class AggressiveBatterySaver extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener, Indexable {
 
+    private static final String FOOTER = "aggressive_battery_saver_footer";
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.aggressive_battery_saver);
+
+        findPreference(FOOTER).setTitle(R.string.aggressive_battery_saver_explainer);
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {

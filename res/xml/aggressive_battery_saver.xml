@@ -37,10 +37,9 @@
         android:summary="@string/aggressive_standby_summary"
         android:defaultValue="false" />
 
-   <Preference
-        android:icon="@drawable/ic_adaptive_playback_explainer"
-        android:selectable="false"        
-        android:persistent="false"
-        android:summary="@string/aggressive_battery_saver_explainer" />
+    <com.android.settingslib.widget.FooterPreference
+        android:key="aggressive_battery_saver_footer"
+        android:selectable="false"
+        settings:searchable="false" />
 
 </PreferenceScreen>
