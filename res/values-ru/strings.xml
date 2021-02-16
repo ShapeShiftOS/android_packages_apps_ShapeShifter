@@ -75,7 +75,7 @@
     <string name="changelog_title">Список изменений</string>
     <string name="changelog_summary">Список недавних изменений, внесённых в ShapeShiftOS</string>
     <string name="led_settings_title">Настройки LED</string>
-    <string name="led_settings_summary">Настроить светодиод для поддерживаемых параметров</string>
+    <string name="led_settings_summary">Настроить светодиоды для поддерживаемых параметров</string>
     <!-- OTHER -->
     <!-- Empty Preference Screen (if applicable) -->
     <string name="empty_category_title">Здесь пока нет дополнительных возможностей...</string>
@@ -210,7 +210,7 @@
     <string name="lockscreen_albumart_filter_blur">Размытие</string>
     <string name="lockscreen_albumart_filter_grayblur">Оттенки серого и размытые</string>
     <!-- Volume swap buttons -->
-    <string name="swap_volume_buttons_title">Reorient</string>
+    <string name="swap_volume_buttons_title">Автопереопределение</string>
     <string name="swap_volume_buttons_summary">Поменять местами кнопки громкости при повороте экрана</string>
     <!-- Heads up -->
     <string name="heads_up_notifications">Всплывающие уведомления</string>
@@ -274,6 +274,12 @@
     <string name="horizon_color_mode_notification">Цвет значков уведомлений</string>
     <string name="horizon_color_mode_custom">@string/horizon_light_color_title</string>
     <string name="horizon_light_color_title">Пользовательский цвет</string>
+    <string name="horizon_light_layout_title">Стиль анимации</string>
+    <string name="horizon_light_layout_solid">Сплошной</string>
+    <string name="horizon_light_layout_faded">Блеклый</string>
+    <string name="horizon_light_repeat_direction_title">Направление анимации</string>
+    <string name="horizon_light_repeat_direction_restart">Перезапуск</string>
+    <string name="horizon_light_repeat_direction_reverse">Обратное</string>
 
     <!-- Volume Steps -->
     <string name="volume_steps_summary">Количество шагов громкости</string>
@@ -311,8 +317,8 @@
     <string name="fod_gesture_summary">Разрешает разблокировать устройство без включения экрана</string>
 
     <!-- Lock icon -->
-    <string name="hide_lockicon_title">Скрывать значок блокировки</string>
-    <string name="hide_lockicon_summary">Скрывать значок блокировки на экране блокировки</string>
+    <string name="lockscreen_lock_icon_title">Значок блокировки</string>
+    <string name="lockscreen_lock_icon_summary">Показывать значок блокировки на экране блокировки</string>
 
     <!-- Notification headers -->
     <string name="notification_headers_section_title">Заголовки уведомлений</string>
@@ -394,7 +400,153 @@
     <string name="data_disabled_icon_summary">Показывать крест около индикатора мобильных данных когда они отключены</string>
 
     <!-- Show VoLTE switch -->
-    <string name="show_volte_title">Значок VoLTE</string>
-    <string name="show_volte_summary">Отображать значок VoLTE</string>
+    <string name="volte_switch_title">Значок VoLTE</string>
+    <string name="volte_switch_summary">Отображать значок VoLTE</string>
     <string name="volte_icon_style_title">Выберите значок VoLTE</string>
+
+    <!-- Lockscreen charging animation -->
+    <string name="lockscreen_charging_animation_title">Анимация зарядки на экране блокировки</string>
+    <string name="lockscreen_charging_animation_summary">Показывать анимацию на экране блокировки при подключенном зарядном устройстве</string>
+
+    <!-- Fingerprint authentication vibration -->
+    <string name="fprint_subcat">Сканер отпечатка пальца</string>
+    <string name="fprint_success_vib_title">Вибрация при успешной разблокировке</string>
+    <string name="fprint_success_vib_summary">Вибрировать при успешной разблокировке по отпечатку пальца</string>
+    <string name="fprint_error_vib_title">Вибрация при ошибке разблокировке</string>
+    <string name="fprint_error_vib_summary">Вибрировать при безуспешной попытке разблокировки по отпечатку пальца</string>
+
+    <!-- FOD icon picker -->
+    <string name="fod_icon_picker_title">Иконка отпечатка пальца</string>
+    <string name="fod_icon_picker_summary">Выберите понравившеюся иконку отпечатка пальца</string>
+
+    <!-- FOD animations -->
+    <string name="fod_recog_animation">Анимация отпечатка пальца</string>
+    <string name="fod_recog_animation_summary">Показывать анимацию при сканировании отпечатка пальца</string>
+    <string name="fod_recog_animation_effect_title">Выберите эффект анимации отпечатка пальца</string>
+    <string name="fod_recog_animation_miui_normal">Xiaomi по умолчанию</string>
+    <string name="fod_recog_animation_miui_aod">Xiaomi AOD</string>
+    <string name="fod_recog_animation_miui_aurora">Xiaomi Aurora (K30 Pro)</string>
+    <string name="fod_recog_animation_miui_aurora_cas">Xiaomi Aurora (Mi 10 Ultra)</string>
+    <string name="fod_recog_animation_miui_light">Xiaomi Светлая</string>
+    <string name="fod_recog_animation_miui_pop">Xiaomi Поп</string>
+    <string name="fod_recog_animation_miui_pulse">Xiaomi Пульс</string>
+    <string name="fod_recog_animation_miui_pulse_white">Xiaomi Пульс (белый)</string>
+    <string name="fod_recog_animation_miui_rhythm">Xiaomi Ритм</string>
+    <string name="fod_recog_animation_miui_star_cas">Xiaomi Звездный свет</string>
+    <string name="fod_recog_animation_op_cosmos">OnePlus Космос</string>
+    <string name="fod_recog_animation_op_energy">OnePlus Энергия</string>
+    <string name="fod_recog_animation_op_mclaren">OnePlus МаКларен</string>
+    <string name="fod_recog_animation_op_ripple">OnePlus Пульсация</string>
+    <string name="fod_recog_animation_op_scanning">OnePlus Cyberpunk 2077</string>
+    <string name="fod_recog_animation_op_stripe">OnePlus Полоса</string>
+    <string name="fod_recog_animation_op_wave">OnePlusВолна</string>
+    <string name="fod_recog_animation_pureview_dna">Nokia ДНК</string>
+    <string name="fod_recog_animation_pureview_future">Nokia Будущее</string>
+    <string name="fod_recog_animation_pureview_halo_ring">Nokia Кольцо Хало</string>
+    <string name="fod_recog_animation_pureview_molecular">Nokia Молекулярная</string>
+    <string name="fod_recog_animation_rog_fusion">Asus Слияние</string>
+    <string name="fod_recog_animation_rog_pulsar">Asus Пульсар</string>
+    <string name="fod_recog_animation_rog_supernova">Asus Сверхновая</string>
+
+    <string name="notification_led_pref">Индикатор уведомлений</string>
+
+    <!-- Battery light -->
+    <string name="light_settings_header">Настройки индикации батареи</string>
+    <string name="battery_light_settings">Индикатор зарядки батареи</string>
+    <string name="battery_light_summary">Включение или выключение индикации заряда батареи в режиме «Не беспокоить» и при низком заряде батареи</string>
+    <string name="battery_light_enable">Индикатор батареи</string>
+    <string name="battery_full_light_enabled">Индикатор батареи при полной зарядке</string>
+    <string name="battery_light_allow_on_dnd_title">Индикатор батареи в режиме «Не беспокоить»</string>
+    <string name="battery_light_low_blinking_title">Мигающий свет при низком заряде батареи</string>
+    <string name="battery_light_cat">Цвет индикатора батареи во время зарядки</string>
+    <string name="battery_light_low_color">Низкий заряд батареи</string>
+    <string name="battery_light_medium_color">Средний заряд батареи</string>
+    <string name="battery_light_full_color">Почти полный заряд батареи</string>
+    <string name="battery_light_reallyfull_color">Полный (100) заряд батареи</string>
+
+    <!-- NavBar Visibility -->
+    <string name="navbar_visibility">Включить панель навигации</string>
+
+    <!-- DoubleTap gestures -->
+    <string name="double_tap_title">Жесты двойного нажатия</string>
+    <string name="double_tap_sleep_gesture">Двойное нажатие на строке состояния для сна</string>
+    <string name="double_tap_sleep_gesture_summary">Дважды нажмите в любом месте на строке состояния, чтобы перевести устройство в спящий режим</string>
+    <string name="double_tap_sleep_lockscreen">Двойное нажатие на экране блокировки для сна</string>
+    <string name="double_tap_sleep_lockscreen_summary">Дважды нажмите в любом месте на экране блокировки, чтобы перевести устройство в спящий режим</string>
+    <string name="double_tap_summary">Включение и выключение дисплея с помощью жестов двойного нажатия</string>
+
+    <!-- Brightness control -->
+    <string name="status_bar_toggle_brightness">Управление яркостью</string>
+    <string name="status_bar_toggle_brightness_summary">Регулировка яркости движением по строке состояния</string>
+
+    <string name="back_gesture_arrow_message">Анимация жестов назад</string>
+    <string name="back_gesture_arrow_summary">Отображать анимацию для жеста назад</string>
+
+    <string name="gestures_navigation_bar_category">Жесты</string>
+
+    <string name="navigation_navigation_bar_category">Навигация</string>
+
+    <!-- Pulse -->
+    <string name="pulse_help_policy_notice_title">Об Pulse</string>
+    <string name="pulse_help_policy_notice_summary">Pulse - это графический визуализатор, который показам при воспроизведении мультимедии</string>
+    <string name="pulse_cat_title">Настройки Pulse</string>
+    <string name="pulse_settings_summary">Аудио графический визуализатор</string>
+    <string name="show_navbar_pulse_title">Визуализация в области панели навигации</string>
+    <string name="show_navbar_pulse_summary">Включить графический визуализатор на панели навигации</string>
+    <string name="show_lockscreen_pulse_title">Визуализация на экране блокировки</string>
+    <string name="show_lockscreen_pulse_summary">Включить графический визуализатор на экране блокировки</string>
+    <string name="show_ambient_pulse_title">Пульсация на Ambient Display</string>
+    <string name="show_ambient_pulse_summary">Включить графический визуализатор на Ambient Display</string>
+    <string name="pulse_render_mode_title">Режим визуализации</string>
+    <string name="pulse_render_mode_fading_bars">Затухающие блоки</string>
+    <string name="pulse_render_mode_solid_lines">Сплошные линии</string>
+    <string name="pulse_color_mode_title">Цвет</string>
+    <string name="pulse_color_mode">Цветовой режим</string>
+    <string name="pulse_color_accent">Цвет акцента</string>
+    <string name="pulse_color_custom">Пользовательский</string>
+    <string name="pulse_color_lava_lamp">Лавовая лампа</string>
+    <string name="pulse_color_auto">Обложка альбома</string>
+    <string name="pulse_color_user_title">Выбрать цвет</string>
+    <string name="pulse_smoothing_enabled_title">Включить сглаживание</string>
+    <string name="pulse_smoothing_enabled_summary">Более плавная анимация столбцов</string>
+    <string name="pulse_advanced_category">Дополнительно</string>
+    <string name="pulse_legacy_mode_advanced_category">Настройки режима затухающих блоков</string>
+    <string name="pulse_custom_fudge_factor">Уровень чувствительности</string>
+    <string name="pulse_lavalamp_speed_title">Скорость Лавовой лампы</string>
+    <string name="pulse_solid_units_count">Количество сплошных линий</string>
+    <string name="pulse_solid_units_opacity">Непрозрачность сплошных линий</string>
+    <string name="pulse_solid_dimen_category">Настройки режима сплошных линий</string>
+    <string name="pulse_custom_dimen">Ширина линий</string>
+    <string name="pulse_custom_div">Расстояние между линиями</string>
+    <string name="pulse_filled_block_size">Размер блока</string>
+    <string name="pulse_empty_block_size">Расстояние между блоками</string>
+
+    <!-- Accent colours -->
+    <string name="prebuilt_accents_title">Цвета акцента</string>
+    <string name="prebuilt_accents_summary">Выберите цвет акцента для всей системы</string>
+    <string name="themes_preview_button_text">ShapeShift</string>
+    <string name="preview_color_select_text">ВЫБОР ЦВЕТА</string>
+    <string name="preview_color_selected_accent">По умолчанию</string>
+
+    <string name="flashlight_category">Фонарик</string>
+
+    <!-- Blink flashlight for incoming calls -->
+    <string name="flashlight_on_call_title">Мигать при входящем звонке</string>
+    <string name="flashlight_on_call_disabled">Отключено</string>
+
+    <!-- Lock FP icon -->
+    <string name="lock_fp_icon_title">Значок отпечатка на экране блокировки</string>
+    <string name="lock_fp_icon_summary">Показывать значок отпечатка под датой в часах, когда возможна раблокировка отпечатком</string>
+    <string name="lock_fp_icon_fod_summary">Эта функция недоступна на устройствах со сканером отпечатка пальца под экраном</string>
+    <string name="lock_fp_icon_no_fp_summary">Эта функция недоступна на устройствах без сканера отпечатка пальца</string>
+    <string name="lock_fp_icon_rart_user_summary">Эта функция недоступна на устройствах без зарегистрированных отпечатков пальца</string>
+
+    <!-- Notification count -->
+    <string name="status_bar_notif_count_title">Показывать количество уведомлений</string>
+    <string name="status_bar_notif_count_summary">Показывать количество уведомлений приложения в строке состояния</string>
+
+    <!-- Don't touch headsup -->
+    <string name="dont_touch_headsup_title">Не трогать всплывающие уведомления</string>
+    <string name="dont_touch_headsup_summary">Не открывать приложения после нажатия на их всплывающее уведомление</string>
+
 </resources>
