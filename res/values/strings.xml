@@ -752,4 +752,9 @@ Aggressive Standby is a feature that stops apps from running in the background a
     <string name="fod_icon_picker_title">Fingerprint icon</string>
     <string name="fod_icon_picker_summary">Choose your favorite fingerprint icon</string>
     <string name="fod_icon_picker_footer">In order to add your own icon, select the top left icon and use the OnePlus 6T FP Customizer app to select the icon you want.</string>
+
+    <!-- QS battery estimates -->
+    <string name="qs_show_battery_estimate_title">Battery estimates</string>
+    <string name="qs_show_battery_estimate_summary">Show estimated remaining battery life next to the icon</string>
+
 </resources>

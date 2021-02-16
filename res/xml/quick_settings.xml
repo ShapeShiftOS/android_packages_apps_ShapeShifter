@@ -18,9 +18,6 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/quick_settings_title" >
 
-    <PreferenceCategory
-        android:title="@string/qs_media">
-
     <!-- QS media player -->
     <com.ssos.support.preferences.SystemSettingSwitchPreference
         android:key="qs_media_player"
@@ -29,34 +26,38 @@
         android:summaryOff="@string/qs_media_player_summary_off"
         android:defaultValue="true" />
 
-    </PreferenceCategory>
+    <com.ssos.support.preferences.SystemSettingSwitchPreference
+        android:key="qs_show_battery_estimate"
+        android:title="@string/qs_show_battery_estimate_title"
+        android:summary="@string/qs_show_battery_estimate_summary"
+        android:defaultValue="true"/>
 
     <PreferenceCategory
         android:title="@string/qs_tiles_title">
 
-    <com.ssos.support.preferences.SecureSettingSwitchPreference
-        android:key="qstile_requires_unlocking"
-        android:title="@string/qstile_requires_unlocking_title"
-        android:summary="@string/qstile_requires_unlocking_summary"
-        android:defaultValue="true"/>
+        <com.ssos.support.preferences.SecureSettingSwitchPreference
+            android:key="qstile_requires_unlocking"
+            android:title="@string/qstile_requires_unlocking_title"
+            android:summary="@string/qstile_requires_unlocking_summary"
+            android:defaultValue="true"/>
 
-    <com.ssos.support.preferences.SecureSettingSwitchPreference
-        android:key="quick_settings_vibrate"
-        android:title="@string/quick_settings_vibrate_title"
-        android:summary="@string/quick_settings_vibrate_summary"
-        android:defaultValue="false"/>
+        <com.ssos.support.preferences.SecureSettingSwitchPreference
+            android:key="quick_settings_vibrate"
+            android:title="@string/quick_settings_vibrate_title"
+            android:summary="@string/quick_settings_vibrate_summary"
+            android:defaultValue="false"/>
 
-    <com.ssos.support.preferences.SystemSettingSwitchPreference
-        android:key="qs_tile_title_visibility"
-        android:title="@string/qs_tile_title_visibility_title"
-        android:summary="@string/qs_tile_title_visibility_summary"
-        android:defaultValue="true" />
+        <com.ssos.support.preferences.SystemSettingSwitchPreference
+            android:key="qs_tile_title_visibility"
+            android:title="@string/qs_tile_title_visibility_title"
+            android:summary="@string/qs_tile_title_visibility_summary"
+            android:defaultValue="true" />
 
-    <com.ssos.support.preferences.SystemSettingSwitchPreference
-        android:key="qs_panel_bg_use_new_tint"
-        android:title="@string/qs_bg_use_new_tint"
-        android:summary="@string/qs_bg_use_new_tint_summary"
-        android:defaultValue="true" />
+        <com.ssos.support.preferences.SystemSettingSwitchPreference
+            android:key="qs_panel_bg_use_new_tint"
+            android:title="@string/qs_bg_use_new_tint"
+            android:summary="@string/qs_bg_use_new_tint_summary"
+            android:defaultValue="true" />
 
     </PreferenceCategory>
 
