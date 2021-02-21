@@ -52,6 +52,7 @@
     <bool name="miscellaneous_category_isVisible">true</bool>
     <bool name="changelog_category_isVisible">true</bool>
     <bool name="led_settings_category_isVisible">true</bool>
+    <bool name="gaming_category_isVisible">true</bool>
 
 <!-- BOOLEANS FOR FEATURES -->
     <!-- Whether to display Motion Sense setting -->

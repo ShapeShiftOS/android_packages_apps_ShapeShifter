@@ -45,4 +45,10 @@
         android:title="@string/led_settings_title"
         android:summary="@string/led_settings_summary" />
 
+    <com.android.settings.widget.CardPreference
+        android:key="gaming_mode"
+        android:icon="@drawable/ic_gaming_background"
+        android:title="@string/gaming_mode_title"
+        android:summary="@string/gaming_mode_summary"
+        android:fragment="com.ssos.shapeshifter.fragments.system_misc.gaming.GamingMode" />
 </PreferenceScreen>

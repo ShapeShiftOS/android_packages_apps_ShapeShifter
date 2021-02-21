@@ -34,12 +34,14 @@ public class SystemMiscTab extends SettingsPreferenceFragment implements
     private static final String MISCELLANEOUS_CATEGORY = "miscellaneous_category";
     private static final String CHANGELOG_CATEGORY = "changelog";
     private static final String LED_SETTINGS_CATEGORY = "led_settings";
+    private static final String GAMING_SETTINGS_CATEGORY = "gaming_mode";
 
     private CardPreference mAnimations;
     private CardPreference mGeneral;
     private CardPreference mMiscellaneous;
     private CardPreference mChangelog;
     private CardPreference mLedSettings;
+    private CardPreference mGamingMode;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -85,6 +87,13 @@ public class SystemMiscTab extends SettingsPreferenceFragment implements
             getPreferenceScreen().removePreference(mLedSettings);
         } else {
             mLedSettings = (CardPreference) findPreference(LED_SETTINGS_CATEGORY);
+        }
+
+        CardPreference mGamingMode = findPreference("gaming_mode");
+        if (!getResources().getBoolean(R.bool.gaming_category_isVisible)) {
+            getPreferenceScreen().removePreference(mGamingMode);
+        } else {
+            mGamingMode = (CardPreference) findPreference(GAMING_SETTINGS_CATEGORY);
         }
     }
 
