@@ -141,6 +141,7 @@
     <string name="enable_first">Please enable first</string>
     <string name="ok_string">Ok</string>
     <string name="default_string">Default</string>
+    <string name="disabled">Disabled</string>
     <string name="unsupported_gestures">Enable two button or three button navigation to use this feature</string>
     <string name="unsupported_navigation_bar">Enable gesture navigation to use this feature</string>
     <string name="unsupported_feature_summary">This feature is unsupported by your device</string>
@@ -763,4 +764,9 @@ Aggressive Standby is a feature that stops apps from running in the background a
     <string name="gaming_mode_notifications_all_title">Show toasts and notification</string>
     <string name="gaming_mode_dynamic_title">Dynamic mode</string>
     <string name="gaming_mode_dynamic_summary">Try detecting and adding gaming apps automatically</string>
+
+    <!-- AOD Schedule -->
+    <string name="always_on_display_schedule_title">Always on display schedule</string>
+    <string name="always_on_display_schedule_sunset">Sunset</string>
+    <string name="always_on_display_schedule_sunrise">Sunrise</string>
 </resources>

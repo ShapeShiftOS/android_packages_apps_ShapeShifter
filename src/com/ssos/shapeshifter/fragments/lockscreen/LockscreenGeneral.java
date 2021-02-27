@@ -22,6 +22,7 @@ import android.content.ContentResolver;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.SystemProperties;
+import android.os.UserHandle;
 import android.provider.SearchIndexableResource;
 import android.provider.Settings;
 import androidx.preference.*;
@@ -48,6 +49,7 @@ import java.util.List;
 public class LockscreenGeneral extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener, Indexable {
 
+    private static final String AOD_SCHEDULE_KEY = "always_on_display_schedule";
     private static final String LOCK_FP_ICON = "lock_fp_icon";
     private static final String FINGERPRINT_VIB = "fingerprint_success_vib";
     private static final String FINGERPRINT_ERROR_VIB = "fingerprint_error_vib";
@@ -55,7 +57,8 @@ public class LockscreenGeneral extends SettingsPreferenceFragment implements
     private SystemSettingSwitchPreference mLockFPIcon;
     private SwitchPreference mFingerprintVib;
     private SwitchPreference mFingerprintErrorVib;
-        
+    Preference mAODPref;
+
     private boolean mHasFod;
     private ContentResolver mResolver;
     private FingerprintManager mFingerprintManager;
@@ -67,7 +70,7 @@ public class LockscreenGeneral extends SettingsPreferenceFragment implements
         PreferenceScreen prefScreen = getPreferenceScreen();
         mResolver = getActivity().getContentResolver();
         Context mContext = getContext();
-        final PackageManager mPm = getActivity().getPackageManager();                    
+        final PackageManager mPm = getActivity().getPackageManager();
 
         mLockFPIcon = findPreference(LOCK_FP_ICON);
  	FingerprintManager fingerprintManager = (FingerprintManager) mContext.getSystemService(Context.FINGERPRINT_SERVICE);
@@ -118,6 +121,32 @@ public class LockscreenGeneral extends SettingsPreferenceFragment implements
             }
         } else {
             prefScreen.removePreference(mFingerprintErrorVib);
+        }
+
+        mAODPref = findPreference(AOD_SCHEDULE_KEY);
+        updateAlwaysOnSummary();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        updateAlwaysOnSummary();
+    }
+
+    private void updateAlwaysOnSummary() {
+        if (mAODPref == null) return;
+        int mode = Settings.Secure.getIntForUser(getActivity().getContentResolver(),
+                Settings.Secure.DOZE_ALWAYS_ON_AUTO_MODE, 0, UserHandle.USER_CURRENT);
+        switch (mode) {
+            case 0:
+                mAODPref.setSummary(R.string.disabled);
+                break;
+            case 1:
+                mAODPref.setSummary(R.string.night_display_auto_mode_twilight);
+                break;
+            case 2:
+                mAODPref.setSummary(R.string.night_display_auto_mode_custom);
+                break;
         }
     }
 
