@@ -71,7 +71,7 @@
     <string name="lockscreen_tuner_summary">Add or remove tuner parts of your lockscreen</string>
     <string name="lockscreen_weather_title">Weather options</string>
     <string name="lockscreen_weather_summary">Configure lockscreen weather</string>
-
+    <string name="lockscreen_fod_summary">Configure settings related to the FOD view</string>
     <!-- System/ Misc -->
     <string name="animations_category_title">Animations</string>
     <string name="animations_category_summary">Set custom animations for certain transitions</string>

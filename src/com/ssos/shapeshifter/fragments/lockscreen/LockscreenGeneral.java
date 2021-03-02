@@ -53,42 +53,21 @@ public class LockscreenGeneral extends SettingsPreferenceFragment implements
     private static final String FINGERPRINT_ERROR_VIB = "fingerprint_error_vib";
 
     private SystemSettingSwitchPreference mLockFPIcon;
-
+    private SwitchPreference mFingerprintVib;
+    private SwitchPreference mFingerprintErrorVib;
+        
     private boolean mHasFod;
     private ContentResolver mResolver;
     private FingerprintManager mFingerprintManager;
-    private SwitchPreference mFingerprintVib;
-    private SwitchPreference mFingerprintErrorVib;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.lockscreen_general);
         PreferenceScreen prefScreen = getPreferenceScreen();
-        PreferenceCategory overallPreferences = (PreferenceCategory) findPreference("fod_category");
         mResolver = getActivity().getContentResolver();
         Context mContext = getContext();
         final PackageManager mPm = getActivity().getPackageManager();                    
-            
-        boolean enableScreenOffFOD = getContext().getResources().
-                getBoolean(R.bool.config_supportScreenOffFod);
-        Preference ScreenOffFODPref = (Preference) findPreference("fod_gesture");
-
-        if (!enableScreenOffFOD){
-            overallPreferences.removePreference(ScreenOffFODPref);
-        }
-
-        Preference AnimaTogglePref = (Preference) findPreference("fod_recognizing_animation");
-        Preference AnimaListPref = (Preference) findPreference("fod_recognizing_animation_list");            
-
-        if (!com.android.internal.util.ssos.Utils.isPackageInstalled(mContext,"com.ssos.fod.animations")) {
-            overallPreferences.removePreference(AnimaTogglePref);
-            overallPreferences.removePreference(AnimaListPref);                
-        }                
-
-        if (!getResources().getBoolean(com.android.internal.R.bool.config_supportsInDisplayFingerprint)) {
-            prefScreen.removePreference(findPreference("fod_category"));
-        }
 
         mLockFPIcon = findPreference(LOCK_FP_ICON);
  	FingerprintManager fingerprintManager = (FingerprintManager) mContext.getSystemService(Context.FINGERPRINT_SERVICE);
