@@ -360,14 +360,6 @@
     <string name="fod_night_light_title">Disable night light when showing FOD</string>
     <string name="fod_night_light_summary">Disable night light on lockscreen if FOD is active. Disabling this option might affect your fingerprint accuracy with night light on.</string>
 
-    <!-- Assistant handles on lockscreen -->
-    <string name="assist_lock_handles_title">Hide assistant handles on lockscreen</string>
-    <string name="assist_lock_handles_summary">Allows hiding white grab handles on corners of the screen to active assistant on lockscreen</string>
-
-    <!-- Assistant handles on homescreen -->
-    <string name="assist_global_handles_title">Hide assistant handles on homescreen</string>
-    <string name="assist_global_handles_summary">Allows hiding white grab handles on corners of the screen to active assistant on homescreen</string>
-
     <!-- Status bar tuner-->
     <string name="statusbar_title">Icons</string>
     <string name="statusbar_items_summary">Add or remove status bar icons</string>
