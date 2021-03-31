@@ -16,15 +16,6 @@
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:title="@string/aggressive_battery_saver_title">
 
-    <com.android.settingslib.widget.LayoutPreference
-        android:key="aggressive_battery_saver_header"
-        android:layout="@layout/aggressive_battery_saver_header"
-        android:persistent="false"
-        android:selectable="false"
-        android:title="@string/summary_placeholder"
-        settings:allowDividerBelow="true"
-        settings:searchable="false"/>
-
     <com.ssos.support.preferences.GlobalSettingSwitchPreference
         android:key="aggressive_idle_enabled"
         android:title="@string/aggressive_idle_title"
