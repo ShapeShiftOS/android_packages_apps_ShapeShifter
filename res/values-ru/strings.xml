@@ -383,26 +383,9 @@
     <string name="network_traffic_refresh_interval_summary">Время, после которого скорость снова замерена</string>
     <string name="unit_seconds">секунд(ы)</string>
 
-    <!-- QS tint -->
-    <string name="qs_bg_use_new_tint">Оттенок плиток</string>
-    <string name="qs_bg_use_new_tint_summary">Применить оттенок акцента для плиток быстрых настроек</string>
-
-    <!-- Show LTE/4G switch -->
-    <string name="show_fourg_title">Показывать 4G вместо LTE</string>
-    <string name="show_fourg_summary">Заменяет LTE индикатор строки состояния на 4G</string>
-
-    <!-- Old style mobiletype indicator -->
-    <string name="use_old_mobiletype_title">Старый индикатор мобильных данных</string>
-    <string name="use_old_mobiletype_summary">Использовать старый индикатор мобильных данных (с 8го андроида) </string>
-
     <!-- Show data disabled icon -->
     <string name="data_disabled_icon_title">Показывать индикатор отключенных мобильных данных</string>
     <string name="data_disabled_icon_summary">Показывать крест около индикатора мобильных данных когда они отключены</string>
-
-    <!-- Show VoLTE switch -->
-    <string name="volte_switch_title">Значок VoLTE</string>
-    <string name="volte_switch_summary">Отображать значок VoLTE</string>
-    <string name="volte_icon_style_title">Выберите значок VoLTE</string>
 
     <!-- Lockscreen charging animation -->
     <string name="lockscreen_charging_animation_title">Анимация зарядки на экране блокировки</string>
