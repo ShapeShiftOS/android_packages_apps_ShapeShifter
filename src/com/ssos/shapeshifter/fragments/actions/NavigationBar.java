@@ -16,14 +16,24 @@
 
 package com.ssos.shapeshifter.fragments.actions;
 
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.app.DialogFragment;
 import android.content.Context;
+import android.content.ContentResolver;
+import android.content.DialogInterface;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.SystemProperties;
 import android.os.UserHandle;
 import android.provider.SearchIndexableResource;
 import android.provider.Settings;
 
 import androidx.preference.Preference;
+import androidx.preference.PreferenceCategory;
+import androidx.preference.PreferenceScreen;
 import androidx.preference.Preference.OnPreferenceChangeListener;
 import androidx.preference.SwitchPreference;
 
@@ -61,12 +71,20 @@ public class NavigationBar extends SettingsPreferenceFragment implements
 
     private boolean mIsNavSwitchingMode = false;
     private Handler mHandler;
+    private boolean mVibraSupported;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.navigation_bar);
 
+        final ContentResolver resolver = getActivity().getContentResolver();
+        final PreferenceScreen prefScreen = getPreferenceScreen();
+        final Resources res = getResources();
+        Context mContext = getContext();
+        
+        mVibraSupported = mContext.getResources().getBoolean(
+                com.android.internal.R.bool.config_vibrateOnIconAnimation);
         mPixelAnimationNavigation = findPreference(PIXEL_ANIMATION_NAVIGATION);
         mInvertNavigation = findPreference(INVERT_NAVIGATION);
         mBackGestureHaptic = findPreference(BACK_GESTURE_HAPTIC);
@@ -91,6 +109,8 @@ public class NavigationBar extends SettingsPreferenceFragment implements
         } else {
             mShowBackArrowGesture.setSummary(getString(R.string.back_gesture_arrow_summary));
             mBackGestureHaptic.setSummary(getString(R.string.back_gesture_haptic_summary));
+            if (mVibraSupported)
+                mBackGestureHaptic.setEnabled(false);
             mPixelAnimationNavigation.setSummary(getString(R.string.unsupported_gestures));
             mInvertNavigation.setSummary(getString(R.string.gesture_invert_layout_summary));
             mPixelAnimationNavigation.setEnabled(false);
