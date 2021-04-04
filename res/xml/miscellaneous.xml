@@ -30,6 +30,12 @@
         android:title="@string/usb_default_config_title"
         android:summary="@string/usb_default_config_summary"/>
 
+    <Preference
+        android:key="sensor_block_settings"
+        android:title="@string/sensor_block_title"
+        android:summary="@string/sensor_block_summary"
+        android:fragment="com.ssos.shapeshifter.fragments.system_misc.SensorBlockSettings"/>
+
     <ListPreference
         android:key="ringtone_focus_mode"
         android:title="@string/ringtone_focus_mode_title"
