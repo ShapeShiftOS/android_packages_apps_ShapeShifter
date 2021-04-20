@@ -15,14 +15,14 @@
 
     <item>
         <com.android.settingslib.widget.AdaptiveIconShapeDrawable
-            android:width="@dimen/dashboard_tile_image_size"
-            android:height="@dimen/dashboard_tile_image_size"
+            android:width="@dimen/ssos_dashboard_tile_image_size"
+            android:height="@dimen/ssos_dashboard_tile_image_size"
             android:color="@color/shapeshifter_volume_rocker_background" />
     </item>
 
     <item
-        android:width="@dimen/dashboard_tile_foreground_image_size"
-        android:height="@dimen/dashboard_tile_foreground_image_size"
+        android:width="@dimen/ssos_dashboard_tile_foreground_image_size"
+        android:height="@dimen/ssos_dashboard_tile_foreground_image_size"
         android:start="@dimen/shapeshifter_cat_icon_image_inset"
         android:top="@dimen/dashboard_tile_foreground_image_inset"
         android:drawable="@drawable/ic_volume_rocker_image" />

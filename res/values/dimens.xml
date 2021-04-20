@@ -31,4 +31,10 @@
     <dimen name="fod_picker_item_size">100dp</dimen>
     <dimen name="fod_picker_item_padding">20dp</dimen>
 
+    <!-- Dashboard image tile size -->
+    <dimen name="ssos_dashboard_tile_image_size">36dp</dimen>
+
+    <!-- Dashboard foreground image size -->
+    <dimen name="ssos_dashboard_tile_foreground_image_size">24dp</dimen>
+
 </resources>
