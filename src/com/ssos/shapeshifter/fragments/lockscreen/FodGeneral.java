@@ -20,6 +20,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.ContentResolver;
 import android.content.pm.PackageManager;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.os.SystemProperties;
 import android.provider.SearchIndexableResource;
@@ -51,6 +52,9 @@ public class FodGeneral extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener, Indexable {
 
     private ContentResolver mResolver;
+    private static final String SCREEN_OFF_FOD = "fod_gesture";
+    private static final String ANIMA_LIST = "fod_recognizing_animation_list";
+    private static final String ANIMA_TOGGLE = "fod_recognizing_animation";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -60,7 +64,7 @@ public class FodGeneral extends SettingsPreferenceFragment implements
         mResolver = getActivity().getContentResolver();
         Context mContext = getContext();
         final PackageManager mPm = getActivity().getPackageManager();                    
-            
+
         boolean enableScreenOffFOD = getContext().getResources().
                 getBoolean(R.bool.config_supportScreenOffFod);
         Preference ScreenOffFODPref = (Preference) findPreference("fod_gesture");
@@ -104,6 +108,13 @@ public class FodGeneral extends SettingsPreferenceFragment implements
             @Override
             public List<String> getNonIndexableKeys(Context context) {
                 final List<String> keys = super.getNonIndexableKeys(context);
+                final Resources res = context.getResources();
+
+                boolean enableScreenOffFOD = res.getBoolean(
+                        R.bool.config_supportScreenOffFod);
+                if (!enableScreenOffFOD)
+                    keys.add(SCREEN_OFF_FOD);
+
                 return keys;
             }
     };
