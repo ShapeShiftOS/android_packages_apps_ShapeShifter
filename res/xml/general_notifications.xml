@@ -34,6 +34,12 @@
         android:summary="@string/status_bar_notif_count_summary"
         android:defaultValue="false" />
 
+    <Preference
+        android:key="ticker_settings"
+        android:title="@string/ticker_screen_title"
+        android:summary="@string/ticker_screen_summary"
+        android:fragment="com.ssos.shapeshifter.fragments.statusbar.Ticker"/>
+
     <!-- Horizon notifications light -->
     <com.ssos.support.preferences.SystemSettingMasterSwitchPreference
         android:key="pulse_ambient_light"
