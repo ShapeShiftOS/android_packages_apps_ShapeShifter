@@ -15,7 +15,7 @@
 -->
 <resources>
     <color name="color_active">#FFE0E0E0</color>
-    <color name="color_inactive">#FFA0A0A0</color>
+    <color name="color_inactive">#FFA0A0A0</color> 
 
     <!-- Previews -->
     <color name="preview_container_border">#14FFFFFF</color>
@@ -80,7 +80,4 @@
     <color name="colorCheese">#ffFFD955</color>
 
     <color name="rgb_icon_tint_color">@*android:color/accent_device_default_dark</color>
-
-    <color name="fod_item_background_stroke_color">#555555</color>
-
 </resources>

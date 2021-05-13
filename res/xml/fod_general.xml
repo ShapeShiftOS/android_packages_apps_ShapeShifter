@@ -15,13 +15,6 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/lockscreen_fod_category" >
   
-          <!-- FOD icon picker -->
-        <Preference
-            android:key="fod_icon_picker_category"
-            android:title="@string/fod_icon_picker_title"
-            android:summary="@string/fod_icon_picker_summary"
-            android:fragment="com.ssos.shapeshifter.fragments.lockscreen.FODIconPickerFragment" />
-
         <com.ssos.support.preferences.SystemSettingSwitchPreference
             android:key="fod_recognizing_animation"
             android:title="@string/fod_recog_animation"

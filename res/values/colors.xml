@@ -16,12 +16,12 @@
 <resources>
     <color name="nav_bg_light">#32787878</color>
     <color name="color_active">#FF3A3A3A</color>
-    <color name="color_inactive">#BC606060</color>
+    <color name="color_inactive">#BC606060</color> 
     <color name="shapeshifter_navbar_color">@*android:color/notification_material_background_color</color>
 
     <color name="default_inactive_shape_color">#BC606060</color>
     <color name="default_inactive_color">#FFC8C8C8</color>
-    <color name="default_shape_inactive_color">#BC606060</color>
+    <color name="default_shape_inactive_color">#BC606060</color> 
     <color name="theme_accent">@*android:color/accent_device_default_light</color>
     <color name="preference_background_color">@*android:color/accent_device_default_light</color>
     <color name="dummycolorAccent">?android:attr/colorAccent</color>
@@ -82,7 +82,4 @@
     <color name="colorCheese">#ffFFC700</color>
 
     <color name="rgb_icon_tint_color">@*android:color/accent_device_default_light</color>
-
-    <!-- FOD icon picker -->
-    <color name="fod_item_background_stroke_color">#d6d6d6</color>
 </resources>
