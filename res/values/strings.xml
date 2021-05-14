@@ -777,4 +777,8 @@ Aggressive Standby is a feature that stops apps from running in the background a
     <string name="ticker_animation_mode_scroll">Scroll</string>
     <string name="ticker_tick_duration_title">Ticker duration</string>
 
+    <!-- FOD icon animation -->
+    <string name="fod_icon_animation_summary">Animate the FOD icon when turning on the screen</string>
+    <string name="fod_icon_animation">Animated FOD icon</string>
+
 </resources>
