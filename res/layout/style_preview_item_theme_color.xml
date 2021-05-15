@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <RadioGroup android:layout_gravity="center" android:orientation="horizontal" android:id="@+id/radiogroup_up" android:paddingBottom="@dimen/color_picker_item_padding_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <RadioButton android:layout_gravity="center_horizontal" android:id="@+id/radio_1" android:saveEnabled="false" android:layout_width="@dimen/color_picker_item_size_width" android:layout_height="@dimen/color_picker_item_size_height" android:button="@drawable/style_theme_color_picker_item_default"/>
+        <View android:layout_width="@dimen/color_picker_item_padding_horizontal" android:layout_height="match_parent"/>
+        <RadioButton android:layout_gravity="center_horizontal" android:id="@+id/radio_2" android:saveEnabled="false" android:layout_width="@dimen/color_picker_item_size_width" android:layout_height="@dimen/color_picker_item_size_height" android:button="@drawable/style_theme_color_picker_item_cinnamon"/>
+        <View android:layout_width="@dimen/color_picker_item_padding_horizontal" android:layout_height="match_parent"/>
+        <RadioButton android:layout_gravity="center_horizontal" android:id="@+id/radio_3" android:saveEnabled="false" android:layout_width="@dimen/color_picker_item_size_width" android:layout_height="@dimen/color_picker_item_size_height" android:button="@drawable/style_theme_color_picker_item_black"/>
+        <View android:layout_width="@dimen/color_picker_item_padding_horizontal" android:layout_height="match_parent"/>
+        <RadioButton android:layout_gravity="center_horizontal" android:id="@+id/radio_4" android:saveEnabled="false" android:layout_width="@dimen/color_picker_item_size_width" android:layout_height="@dimen/color_picker_item_size_height" android:button="@drawable/style_theme_color_picker_item_green"/>
+    </RadioGroup>
+    <RadioGroup android:layout_gravity="center" android:orientation="horizontal" android:id="@+id/radiogroup_down" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <RadioButton android:layout_gravity="center_horizontal" android:id="@+id/radio_5" android:saveEnabled="false" android:layout_width="@dimen/color_picker_item_size_width" android:layout_height="@dimen/color_picker_item_size_height" android:button="@drawable/style_theme_color_picker_item_ocean"/>
+        <View android:layout_width="@dimen/color_picker_item_padding_horizontal" android:layout_height="match_parent"/>
+        <RadioButton android:layout_gravity="center_horizontal" android:id="@+id/radio_6" android:saveEnabled="false" android:layout_width="@dimen/color_picker_item_size_width" android:layout_height="@dimen/color_picker_item_size_height" android:button="@drawable/style_theme_color_picker_item_space"/>
+        <View android:layout_width="@dimen/color_picker_item_padding_horizontal" android:layout_height="match_parent"/>
+        <RadioButton android:layout_gravity="center_horizontal" android:id="@+id/radio_7" android:saveEnabled="false" android:layout_width="@dimen/color_picker_item_size_width" android:layout_height="@dimen/color_picker_item_size_height" android:button="@drawable/style_theme_color_picker_item_orchid"/>
+        <View android:layout_width="@dimen/color_picker_item_padding_horizontal" android:layout_height="match_parent"/>
+        <RadioButton android:layout_gravity="center_horizontal" android:id="@+id/radio_8" android:saveEnabled="false" android:layout_width="@dimen/color_picker_item_size_width" android:layout_height="@dimen/color_picker_item_size_height" android:button="@drawable/style_theme_color_picker_item_asus"/>
+    </RadioGroup>
+</LinearLayout>

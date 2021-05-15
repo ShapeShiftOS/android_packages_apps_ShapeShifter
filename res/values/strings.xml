@@ -155,6 +155,9 @@
     <string name="accent_reset">Reset RGB accent</string>
     <string name="accent_reset_summary">Tap here to reset RGB accent color to use prebuilt accents</string>
     <string name="accent_reset_message_warning_summary">You are about to reset RGB accent color. Continue?</string>
+    <string name="display_style_color_hint_title">Choose color</string>
+    <string name="display_style_theme_color">Color</string>
+    <string name="overlay_option_device_default">Device default</string>
 
     <!-- SystemUI Restart -->
     <string name="systemui_restart_toast">This feature requires a SystemUI restart to be applied. We\'ll restart the SystemUI right now.</string>
@@ -393,6 +396,7 @@ Aggressive Standby is a feature that stops apps from running in the background a
     <string name="themes_preview_button_text">ShapeShift</string>
     <string name="preview_color_select_text">SELECT COLOUR</string>
     <string name="preview_color_selected_accent">Default</string>
+    <string name="btn_apply">Apply</string>
 
     <!-- Back gesture animation -->
     <string name="back_gesture_arrow_message">Back gesture animation</string>

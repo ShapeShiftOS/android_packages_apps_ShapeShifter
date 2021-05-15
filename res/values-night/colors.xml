@@ -80,4 +80,13 @@
     <color name="colorCheese">#ffFFD955</color>
 
     <color name="rgb_icon_tint_color">@*android:color/accent_device_default_dark</color>
+
+    <color name="accent_color_black_overlay_color">#869ab1</color>
+    <color name="accent_color_default_overlay_color">#725aff</color>
+    <color name="accent_color_cinnamon_overlay_color">#c3a6a2</color>
+    <color name="accent_color_green_overlay_color">#62ab67</color>
+    <color name="accent_color_ocean_overlay_color">#0fa6c0</color>
+    <color name="accent_color_orchid_overlay_color">#e076e7</color>
+    <color name="accent_color_asus_overlay_color">#89b5f7</color>
+    <color name="accent_color_space_overlay_color">#6b87b9</color>
 </resources>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:height="@dimen/color_picker_item_size_height" android:width="@dimen/color_picker_item_size_width" android:drawable="@drawable/color_picker_checkbox_off_asus"/>
+    <item android:height="@dimen/preview_item_icon_checked_size" android:width="@dimen/preview_item_icon_checked_size" android:drawable="@drawable/checkbox_checked" android:left="@dimen/preview_item_icon_checked_padding_start" android:top="@dimen/preview_item_icon_checked_padding_top" android:right="@dimen/preview_item_icon_checked_padding_end"/>
+</layer-list>

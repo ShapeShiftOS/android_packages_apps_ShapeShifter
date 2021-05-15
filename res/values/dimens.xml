@@ -37,4 +37,18 @@
     <!-- Dashboard foreground image size -->
     <dimen name="ssos_dashboard_tile_foreground_image_size">24dp</dimen>
 
+    <!-- Color picker -->
+    <dimen name="color_mode_preview_height">320dp</dimen>
+    <dimen name="color_picker_item_padding_horizontal">10dp</dimen>
+    <dimen name="color_picker_item_padding_vertical">10dp</dimen>
+    <dimen name="color_picker_item_size_height">55dp</dimen>
+    <dimen name="color_picker_item_size_width">53dp</dimen>
+
+    <!-- Preview item icon -->
+    <dimen name="preview_item_icon_checked_padding_end">5dp</dimen>
+    <dimen name="preview_item_icon_checked_padding_start">29dp</dimen>
+    <dimen name="preview_item_icon_checked_padding_top">5dp</dimen>
+    <dimen name="preview_item_icon_checked_size">20dp</dimen>
+    <dimen name="preview_icon_size">45dp</dimen>
+
 </resources>
