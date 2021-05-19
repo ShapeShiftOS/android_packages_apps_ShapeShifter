@@ -536,7 +536,7 @@
     <string name="pulse_smoothing_enabled_summary">Каждая полоса анимируется более плавно</string>
 
     <!-- Pulse config -->
-    <string name="unit_milliseconds">иллисекунд</string>
+    <string name="unit_milliseconds">миллисекунд</string>
     <string name="unit_pixels">пикс</string>
     <string name="pulse_custom_dimen">Ширина блоков</string>
     <string name="pulse_custom_div">Интервал блоков</string>
