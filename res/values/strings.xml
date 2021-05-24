@@ -130,6 +130,10 @@
     <string name="shapeshiftos_about_mezz_summary" translatable="false">Designer</string>
     <string name="shapeshiftos_about_san" translatable="false">san9scurtu</string>
     <string name="shapeshiftos_about_san_summary" translatable="false">Developer</string>
+    <string name="shapeshiftos_about_pp" translatable="false">Pavan Parmeshwar (pavanpaps)</string>
+    <string name="shapeshiftos_about_pp_summary" translatable="false">Source Maintainer</string>
+    <string name="shapeshiftos_about_neel" translatable="false">Neel Mandal</string>
+    <string name="shapeshiftos_about_neel_summary" translatable="false">Project Contributor</string>
     <string name="about_maintainer">Maintainer</string>
     <string name="shapeshiftos_about_maintainer">The maintainer for your device is</string>
     <string name="shapeshiftos_about_maintainer_summary" translatable="false">Too lazy to fill this up</string>
