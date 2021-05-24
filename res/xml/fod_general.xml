@@ -57,4 +57,9 @@
             android:summary="@string/fod_night_light_summary"
             android:defaultValue="@*android:bool/disable_fod_night_light"  />
 
-  </PreferenceScreen>
+        <com.android.settingslib.widget.FooterPreference
+            android:key="custom_fod_icon_footer"
+            android:selectable="false"
+            settings:searchable="false" />
+
+</PreferenceScreen>

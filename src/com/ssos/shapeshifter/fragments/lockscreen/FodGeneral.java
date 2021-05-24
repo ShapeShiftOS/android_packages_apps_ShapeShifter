@@ -56,6 +56,8 @@ public class FodGeneral extends SettingsPreferenceFragment implements
     private static final String ANIMA_LIST = "fod_recognizing_animation_list";
     private static final String ANIMA_TOGGLE = "fod_recognizing_animation";
 
+    private static final String FOOTER = "custom_fod_icon_footer";
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,7 +65,9 @@ public class FodGeneral extends SettingsPreferenceFragment implements
         PreferenceScreen prefScreen = getPreferenceScreen();
         mResolver = getActivity().getContentResolver();
         Context mContext = getContext();
-        final PackageManager mPm = getActivity().getPackageManager();                    
+        final PackageManager mPm = getActivity().getPackageManager();
+
+        findPreference(FOOTER).setTitle(R.string.custom_fod_icon_explainer);
 
         boolean enableScreenOffFOD = getContext().getResources().
                 getBoolean(R.bool.config_supportScreenOffFod);
@@ -74,14 +78,14 @@ public class FodGeneral extends SettingsPreferenceFragment implements
         }
 
         SystemSettingSwitchPreference AnimaTogglePref = (SystemSettingSwitchPreference) findPreference("fod_recognizing_animation");
-        SystemSettingListPreference AnimaListPref = (SystemSettingListPreference) findPreference("fod_recognizing_animation_list");            
+        SystemSettingListPreference AnimaListPref = (SystemSettingListPreference) findPreference("fod_recognizing_animation_list");
 
         if (!com.android.internal.util.ssos.Utils.isPackageInstalled(mContext,"com.ssos.fod.animations")) {
             prefScreen.removePreference(AnimaTogglePref);
-            prefScreen.removePreference(AnimaListPref);                
-        }                
+            prefScreen.removePreference(AnimaListPref);
+        }
 
-    }      
+    }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         ContentResolver resolver = getActivity().getContentResolver();
