@@ -70,6 +70,7 @@
     <color name="colorTangerine">#C85125</color>
     <color name="colorAquamarine">#23847D</color>
     <color name="colorBlack">#202020</color>
+    <color name="colorBlackInverse">#D7DEE6</color>
     <color name="colorGreen">#1B873B</color>
     <color name="colorOcean">#0C80A7</color>
     <color name="colorSpace">#47618A</color>
@@ -83,7 +84,6 @@
 
     <color name="rgb_icon_tint_color">@*android:color/accent_device_default_light</color>
 
-    <color name="accent_color_black_overlay_color">#202020</color>
     <color name="accent_color_default_overlay_color">#725aff</color>
     <color name="accent_color_cinnamon_overlay_color">#af6050</color>
     <color name="accent_color_green_overlay_color">#1b873b</color>

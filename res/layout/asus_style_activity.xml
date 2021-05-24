@@ -7,6 +7,6 @@
             <TextView android:textSize="14dp" android:textStyle="bold" android:textColor="?android:attr/textColorPrimary" android:layout_gravity="center_horizontal" android:id="@+id/preview_item_label" android:paddingBottom="32dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:elevation="2dp"/>
             <LinearLayout android:layout_gravity="center_horizontal" android:id="@+id/preview_item_content" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
         </LinearLayout>
-        <Button android:layout_gravity="center_horizontal" android:id="@+id/button_apply" android:layout_width="200dp" android:layout_height="wrap_content" android:textColor="#ffffff" android:text="@string/btn_apply"/>
+        <Button android:layout_gravity="center_horizontal" android:id="@+id/button_apply" android:layout_width="200dp" android:layout_height="wrap_content" android:textColor="@color/colorBlackInverse" android:text="@string/btn_apply"/>
     </LinearLayout>
 </ScrollView>

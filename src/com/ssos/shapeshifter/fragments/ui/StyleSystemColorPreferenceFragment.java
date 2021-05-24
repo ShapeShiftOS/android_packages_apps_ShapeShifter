@@ -51,7 +51,7 @@ import java.util.Comparator;
 import java.util.List;
 
 public class StyleSystemColorPreferenceFragment extends PreviewLayoutPreferenceFragment implements View.OnClickListener {
-    private static final int[] COLOR_OVERLAY = {-1, R.color.accent_color_default_overlay_color, R.color.accent_color_cinnamon_overlay_color, R.color.accent_color_black_overlay_color, R.color.accent_color_green_overlay_color, R.color.accent_color_ocean_overlay_color, R.color.accent_color_space_overlay_color, R.color.accent_color_orchid_overlay_color, R.color.accent_color_asus_overlay_color};
+    private static final int[] COLOR_OVERLAY = {-1, R.color.accent_color_default_overlay_color, R.color.accent_color_cinnamon_overlay_color, R.color.colorBlack, R.color.accent_color_green_overlay_color, R.color.accent_color_ocean_overlay_color, R.color.accent_color_space_overlay_color, R.color.accent_color_orchid_overlay_color, R.color.accent_color_asus_overlay_color};
     private static final int[] DRAWABLE_COLOR_OVERLAY = {-1, R.drawable.preview_sample_system_color_default, R.drawable.preview_sample_system_color_cinnamon, R.drawable.preview_sample_system_color_black, R.drawable.preview_sample_system_color_green, R.drawable.preview_sample_system_color_ocean, R.drawable.preview_sample_system_color_space, R.drawable.preview_sample_system_color_orchid, R.drawable.preview_sample_system_color_asus};
     private Button applyBt;
     private List<String> labels = new ArrayList();
