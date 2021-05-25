@@ -21,14 +21,14 @@
     <!-- Bottom Tabs -->
     <string name="navigation_actions_title">Eylemler</string>
     <string name="navigation_interface_title">Arayüz</string>
-    <string name="navigation_statusbar_title">Durum Çubuğu</string>
-    <string name="navigation_lockscreen_title">Kilit Ekranı</string>
+    <string name="navigation_statusbar_title">Durum çubuğu</string>
+    <string name="navigation_lockscreen_title">Kilit ekranı</string>
     <string name="navigation_system_title">Sistem/Çeşitli</string>
-    <string name="accessibility_description">Ekran Menüsü</string>
+    <string name="accessibility_description">Ekran menüsü</string>
     <string name="accessibility_item_description">%1$s menü öğesi</string>
     <!-- CATEGORIES -->
     <!-- Actions -->
-    <string name="powerbutton_title">Güç Tuşu</string>
+    <string name="powerbutton_title">Güç tuşu</string>
     <string name="powerbutton_summary">Ek seçenekler &amp; hareketler yapılandır</string>
     <string name="navigationbar_title">Gezinme</string>
     <string name="navigationbar_summary">Sistem gezinme ayarlarını yapılandır</string>
@@ -36,45 +36,45 @@
     <string name="gesture_options_summary">Hareketleri etkinleştir / devre dışı bırak</string>
     <string name="volume_rocker_title">Ses Seçenekleri</string>
     <string name="volume_rocker_summary">Ses tuşları için varsayılan davranış ve hareketleri yapılandır</string>
-    <string name="hw_keys_title">Donanım Tuşları</string>
+    <string name="hw_keys_title">Donanım tuşları</string>
     <string name="hw_keys_summary">Donanım tuşlarını yapılandır</string>
     <!-- Interface -->
-    <string name="quick_settings_title">Hızlı Ayarlar</string>
+    <string name="quick_settings_title">Hızlı ayarlar</string>
     <string name="quick_settings_summary">Genel görünümü &amp; işlevselliği yaplandır</string>
-    <string name="headsup_title">Bildirim Pencereleri</string>
+    <string name="headsup_title">Bildirim pencereleri</string>
     <string name="headsup_summary">Bildirim pencerelerini yapılandır</string>
-    <string name="recents_title">Son Uygulamalar Ekranı</string>
+    <string name="recents_title">Son Uygulamalar ekranı</string>
     <string name="recents_summary">Son uyuglamalar ekranını görünüm &amp; düzenini yapılandır</string>
     <string name="themer_title">Temalar</string>
     <string name="themer_summary">Yüklü temaları görüntüle ve seç</string>
     <!-- Statusbar -->
-    <string name="battery_options_title">Pil Seçenekleri</string>
+    <string name="battery_options_title">Pil seçenekleri</string>
     <string name="battery_options_summary">Pilin nasıl gösterileceğini düzenle</string>
-    <string name="clock_options_title">Saat Seçenekleri</string>
+    <string name="clock_options_title">Saat seçenekleri</string>
     <string name="clock_options_summary">Saat &amp; tarih görüntüleme seçenekleri</string>
-    <string name="traffic_title">Ağ Göstergesi</string>
+    <string name="traffic_title">Ağ göstergesi</string>
     <string name="traffic_summary">Ağ göstergesini etkinleştir &amp; düzenle</string>
-    <string name="status_bar_items_title">Durum Çubuğu</string>
+    <string name="status_bar_items_title">Durum çubuğu</string>
     <string name="status_bar_items_summary">Durum çubuğu öğelerini düzenle</string>
     <!-- Lockscreen -->
-    <string name="lockscreen_aosp_title">Yerel Kontroller</string>
+    <string name="lockscreen_aosp_title">Yerel kontroller</string>
     <string name="lockscreen_aosp_summary">Kilit ekranı &amp; Ortam ekranı AOSP seçenekleri</string>
-    <string name="lockscreen_general_title">Genel Seçenekler</string>
+    <string name="lockscreen_general_title">Genel seçenekler</string>
     <string name="lockscreen_general_summary">Kilit ekranına görsel öğe ekle veya kaldır</string>
-    <string name="lockscreen_tuner_title">Kilit Ekranı Ayarları</string>
+    <string name="lockscreen_tuner_title">Kilit ekranı ayarları</string>
     <string name="lockscreen_tuner_summary">Kilit ekranına kısayol ekle veya kaldır</string>
-    <string name="lockscreen_weather_title">Hava Durumu Seçenekleri</string>
+    <string name="lockscreen_weather_title">Hava durumu seçenekleri</string>
     <string name="lockscreen_weather_summary">Kilit ekranın hava durumunu yapılandır</string>
     <string name="lockscreen_fod_summary">FOD görüntüsü seçeneklerini düzenle</string>
     <!-- System/ Misc -->
     <string name="animations_category_title">Animasyonlar</string>
     <string name="animations_category_summary">Belirli geçişler için animasyon ayarla</string>
-    <string name="general_notifications_title">Genel Bildirimler</string>
+    <string name="general_notifications_title">Genel bildirimler</string>
     <string name="general_notifications_summary">Çeşitli bildirim kontrolleri</string>
-    <string name="notification_headers_section_title">Bildirim Başlıkları</string>
+    <string name="notification_headers_section_title">Bildirim başlıkları</string>
     <string name="miscellaneous_title">Çeşitli</string>
     <string name="miscellaneous_summary">Kategorize edilmemiş seçenekler</string>
-    <string name="changelog_title">Değişiklik Listesi</string>
+    <string name="changelog_title">Değişiklik listesi</string>
     <string name="changelog_summary">ShapeShiftOS\'a eklenen son işlemler listesi</string>
     <string name="led_settings_title">LED Ayarları</string>
     <string name="led_settings_summary">Desteklenen cihazlar için led ışığını düzenle</string>
@@ -84,22 +84,22 @@
     <string name="empty_category_description">Bununla birlikte, yeni özellikler yakında eklenecek. Gelecek güncellemelerden sonra tekrar kontrol et!</string>
     <string name="dummy_string"></string>
     <!-- Sub-Categorized XMLs - DO NOT REMOVE -->
-    <string name="active_edge_title">Aktif Kenar</string>
-    <string name="ambient_music_display">Müzik Şeridi</string>
-    <string name="aware_settings_title">Hareket Algılama</string>
+    <string name="active_edge_title">Aktif kenar</string>
+    <string name="ambient_music_display">Müzik şeridi</string>
+    <string name="aware_settings_title">Hareket algılama</string>
     <string name="battery_style_statusbar">Durum çubuğu pil</string>
     <string name="battery_style_qs">Hızlı ayarlar pil</string>
     <string name="brightness_control_category">Parlaklık Kontrolü</string>
-    <string name="custom_header_title">Özel Başlık</string>
+    <string name="custom_header_title">Özel başlık</string>
     <string name="led_notifications_title">LED Bildirimleri</string>
     <string name="led_battery_title">Pil LED</string>
-    <string name="lockscreen_visualizer_enable">Müzik Görselleştirici</string>
-    <string name="qs_panel_layout_category">Hızlı Ayar Panel düzeni</string>
-    <string name="volume_steps_title">Ses Basamakları</string>
-    <string name="power_menu_category">Güç Menüsü</string>
+    <string name="lockscreen_visualizer_enable">Müzik görselleştirici</string>
+    <string name="qs_panel_layout_category">Hızlı ayar panel düzeni</string>
+    <string name="volume_steps_title">Ses basamakları</string>
+    <string name="power_menu_category">Güç menüsü</string>
     <string name="pulse_settings">Pulse</string>
-    <string name="flashlight_category">El Feneri</string>
-    <string name="lockscreen_fod_category">Ekranda Parmak izi</string>
+    <string name="flashlight_category">El feneri</string>
+    <string name="lockscreen_fod_category">Ekranda parmak izi</string>
     <string name="navigation_navigation_bar_category">Gezinme</string>
     <string name="gestures_navigation_bar_category">Hareketler</string>
     <!-- ShapeShiftOS device info settings -->
@@ -117,7 +117,7 @@
     <string name="about_maintainer">Bakım</string>
     <string name="shapeshiftos_about_maintainer">Cihazınızın bakımcısı</string>
     <!-- Reusable strings -->
-    <string name="advanced_behavior_title">Gelişmiş Davranış</string>
+    <string name="advanced_behavior_title">Gelişmiş davranış</string>
     <string name="appearance_category">GÖRÜNÜŞ</string>
     <string name="behavior_category">DAVRANIŞ</string>
     <string name="enable_first">Lütfen önce etkinleştir</string>
@@ -142,7 +142,7 @@
     <string name="systemui_restart_toast">Bu özelliğin uygulanması için Sistem Arayüzünün yeniden başlatılması gerekir. Sistem Arayüzünü şimdi yeniden başlatacağız.</string>
     <!-- FEATURES -->
     <!-- Navbar Entries -->
-    <string name="navigation_tuner_title">Gezinti Çubuğu Ayarlayıcı</string>
+    <string name="navigation_tuner_title">Gezinti çubuğu ayarlayıcı</string>
     <string name="navigation_tuner_summary">Sistem gezinme öğeleri diğer ayarları</string>
     <string name="navbar_gestures_title">Gezinme hareket seçenekleri</string>
     <string name="navbar_gestures_summary">Cihazı kontrol etmek için tuşları veya hareketleri seç</string>
@@ -151,37 +151,37 @@
     <string name="navigation_bar_invert_layout_summary">Gezinme çubuğu ve diğer öğelerin düzenini tersine çevirir</string>
     <string name="gesture_invert_layout_summary">IME değiştirici düzenini tersine çevirir</string>
     <!-- Navbar Animation -->
-    <string name="pixel_navbar_anim_title">Pixel Animasyonu</string>
+    <string name="pixel_navbar_anim_title">Pixel animasyonu</string>
     <string name="pixel_navbar_anim_summary">Ana ekran tuşu animasyonunu değiştir</string>
     <!-- Quicksettings -->
-    <string name="qs_tiles_title">Hızlı Ayarlar Kareleri</string>
+    <string name="qs_tiles_title">Hızlı ayarlar kareleri</string>
     <string name="qs_tile_title_visibility_title">Başlıkları görüntüle</string>
     <string name="qs_tile_title_visibility_summary">Hızlı ayar karelerinin altında etiket göster</string>
     <!-- Notification headers -->
-    <string name="notification_headers_title">Bildirim Başlıkları</string>
+    <string name="notification_headers_title">Bildirim başlıkları</string>
     <string name="notification_headers_summary">Bildirim ayrıntısında başlıkları göster</string>
     <string name="center_notification_headers_title">Başlıkları ortala</string>
     <string name="center_notification_headers_summary">Bildirim başlıkları ortalansın mı?\nSistem Arayüzünün yeniden başlatılması gerekir</string>
     <!-- QS rows and columns -->
-    <string name="qs_columns_rows_category_title">Sütunlar ve Satırlar</string>
-    <string name="qs_rows_columns_title">Satırlar ve Sütunlar</string>
+    <string name="qs_columns_rows_category_title">Sütunlar ve satırlar</string>
+    <string name="qs_rows_columns_title">Satırlar ve sütunlar</string>
     <string name="qs_rows_portrait_title">Dikey satırlar</string>
     <string name="qs_rows_landscape_title">Yatay satırlar</string>
     <string name="qs_columns_portrait_title">Dikey sütunlar</string>
     <string name="qs_columns_landscape_title">Yatay sütunlar</string>
     <!-- QS tiles haptic feedback -->
-    <string name="quick_settings_vibrate_title">Dokunulduğunda Titret</string>
+    <string name="quick_settings_vibrate_title">Dokunulduğunda titret</string>
     <string name="quick_settings_vibrate_summary">Hızlı ayarlar karelerine dokununca titret</string>
     <!-- Statusbar Clock -->
-    <string name="status_bar_clock_date_title">Saat ve Tarih</string>
+    <string name="status_bar_clock_date_title">Saat ve tarih</string>
     <string name="status_bar_clock_date_summary">Durum çubuğu saat ve tarihi düzenle</string>
-    <string name="status_bar_clock_title">Saat Ayarları</string>
+    <string name="status_bar_clock_title">Saat ayarları</string>
     <string name="status_bar_clock_show">Saat ve tarihi göster</string>
     <string name="status_bar_clock_style_title">Saat stili</string>
     <string name="status_bar_clock_style_right">Sağ</string>
     <string name="status_bar_clock_style_center">Orta</string>
     <string name="status_bar_clock_style_left">Sol</string>
-    <string name="status_bar_date_title">Tarih Ayarları</string>
+    <string name="status_bar_date_title">Tarih ayarları</string>
     <string name="status_bar_am_pm_title">AM/PM stili</string>
     <string name="status_bar_am_pm_info">24 saat görünümü etkin</string>
     <string name="status_bar_am_pm_normal">Normal</string>
