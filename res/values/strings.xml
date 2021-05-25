@@ -794,5 +794,6 @@ Aggressive Standby is a feature that stops apps from running in the background a
     <string name="fod_icon_animation_miui_aod">Xiaomi MIUI</string>
     <string name="fod_icon_animation_zaid_oneui">Samsung OneUI 3</string>
     <string name="fod_icon_animation_oneui2">Samsung OneUI 2</string>
+    <string name="fod_icon_animation_oos">OnePlus OxygenOS 11</string>
 
 </resources>
