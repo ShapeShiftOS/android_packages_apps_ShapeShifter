@@ -23,7 +23,7 @@ import android.provider.SearchIndexableResource;
 import android.provider.Settings;
 
 import androidx.preference.Preference;
-import androidx.preference.SwitchPreference;
+import com.ssos.support.preferences.SwitchPreference;
 
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.gestures.GestureSettings;

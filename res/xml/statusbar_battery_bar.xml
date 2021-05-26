@@ -72,7 +72,7 @@
         settings:units="dp"
         android:persistent="false" />
 
-    <SwitchPreference
+    <com.ssos.support.preferences.SwitchPreference
         android:key="statusbar_battery_bar_animate"
         android:title="@string/battery_bar_animate_title" />
 

@@ -25,7 +25,9 @@ import android.os.SystemProperties;
 import android.os.UserHandle;
 import android.provider.SearchIndexableResource;
 import android.provider.Settings;
-import androidx.preference.*;
+import androidx.preference.Preference;
+import androidx.preference.PreferenceScreen;
+import androidx.preference.Preference.OnPreferenceChangeListener;
 
 import com.android.settings.R;
 import com.android.settings.search.BaseSearchIndexProvider;
@@ -40,6 +42,8 @@ import android.hardware.biometrics.BiometricSourceType;
 import android.hardware.fingerprint.FingerprintManager;
 
 import com.ssos.support.preferences.SystemSettingSwitchPreference;
+import com.ssos.support.preferences.SwitchPreference;
+
 import com.android.internal.util.custom.FodUtils;
 
 import java.util.ArrayList;
