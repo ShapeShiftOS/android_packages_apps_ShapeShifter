@@ -644,7 +644,7 @@
     <!-- Sensor block per-package -->
     <string name="sensor_block_title">Paket başına sensör engelleme</string>
     <string name="sensor_block_summary">Pil tasarrufu için bazı uygulamalar için belirli senörleri engelle</string>
-    <string name="sensor_block_app_picker_title">Bu yugulamalar için sensör engelle</string>
+    <string name="sensor_block_app_picker_title">Bu uygulamalar için sensör engelle</string>
     <string name="add_sensor_block_package_title">Sensör engelleme için uygulama ekle</string>
     <string name="add_sensor_block_package_summary">Hareket, ivme, doğrusal hız değişimi sensörleri bu uygulamalar için engellenecek</string>
     <!-- QS statusbar background -->
