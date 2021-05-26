@@ -471,7 +471,7 @@ Aggressive Standby is a feature that stops apps from running in the background a
 
     <!-- Volume Panel Plugin -->
     <string name="volume_panel">Volume panel style</string>
-    <string name="volume_panel_stock">Stock AOSP Panel</string>
+    <string name="volume_panel_stock">AOSPA</string>
     <string name="volume_panel_aosp">AOSP Expanded</string>
     <string name="volume_panel_compact">Compact</string>
     <string name="volume_panel_oreo">Oreo</string>
