@@ -71,7 +71,8 @@
     <string name="lockscreen_tuner_summary">Добавление или удаление ярлыков на экране блокировки</string>
     <string name="lockscreen_weather_title">Настройки погоды</string>
     <string name="lockscreen_weather_summary">Настройки погоды на экране блокировки</string>
-    <string name="lockscreen_fod_summary">Настройки параметров отображения FOD</string>
+    <string name="lockscreen_fod_summary">Настройки параметров отображения сканера пальца под экраном</string>
+	 <string name="custom_fod_icon_explainer">Чтобы использовать свой собственный статический значок для сканера пальца под экраном, используйте приложение OPFP. Убедитесь, что анимированный значок для сканера пальца под экраном отключен при использовании пользовательского значка в OPFP.</string>
     <!-- System/ Misc -->
     <string name="animations_category_title">Анимации</string>
     <string name="animations_category_summary">Установка пользовательских анимаций для определенных переходов</string>
@@ -454,7 +455,7 @@
 
     <!-- Volume Panel Plugin -->
     <string name="volume_panel">Стиль панели громкости</string>
-    <string name="volume_panel_stock">Стандартная панель AOSP</string>
+    <string name="volume_panel_stock">AOSPA</string>
     <string name="volume_panel_aosp">Расширенная панель AOSP</string>
     <string name="volume_panel_compact">Компактная</string>
     <string name="volume_panel_oreo">Oreo</string>
@@ -748,7 +749,9 @@
     <string name="ticker_tick_duration_title">Продолжительность бегущей строки</string>
 
     <!-- FOD icon animation -->
-    <string name="fod_icon_animation_summary">Анимация значка FOD при включении экрана</string>
-    <string name="fod_icon_animation">Анимация значка FOD</string>
+    <string name="fod_icon_animation_summary">Анимация значка сканера пальца под экраном при включении экрана</string>
+	<string name="fod_icon_animation_effect_title">Выберите эффект анимации значка сканера пальца под экраном</string>
+    <string name="fod_icon_animation">Анимация значка сканера пальца под экраном</string>
+	
 
 </resources>
