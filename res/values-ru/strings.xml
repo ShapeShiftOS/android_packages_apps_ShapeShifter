@@ -72,7 +72,9 @@
     <string name="lockscreen_weather_title">Настройки погоды</string>
     <string name="lockscreen_weather_summary">Настройки погоды на экране блокировки</string>
     <string name="lockscreen_fod_summary">Настройки параметров отображения сканера пальца под экраном</string>
-	 <string name="custom_fod_icon_explainer">Чтобы использовать свой собственный статический значок для сканера пальца под экраном, используйте приложение OPFP. Убедитесь, что анимированный значок для сканера пальца под экраном отключен при использовании пользовательского значка в OPFP.</string>
+    <string name="custom_fod_icon_explainer">Чтобы использовать свой собственный статический значок для сканера пальца под экраном, используйте приложение OPFP. Убедитесь, что анимированный значок для сканера пальца под экраном отключен при использовании пользовательского значка в OPFP.</string>
+    <string name="custom_fod_icon_png_explainer">Вы можете загрузить свои собственные пользовательские значки сканера отпечатка пальцев под экраном в формате PNG из каналов Telegram, таких как FODicons и OP_fps. Используйте локальную галерею, а не онлайн-сервисы, такие как Google Фото, для выбора значков сканера отпечатка пальцев под экраном.</string>
+	
     <!-- System/ Misc -->
     <string name="animations_category_title">Анимации</string>
     <string name="animations_category_summary">Установка пользовательских анимаций для определенных переходов</string>
@@ -299,7 +301,7 @@
 
     <!-- Horizon light -->
     <string name="horizon_light_title">Подсветка краёв экрана</string>
-    <string name="horizon_light_summary">Прдсветка краёв экрана при получении новых уведомлений</string>
+    <string name="horizon_light_summary">Подсветка краёв экрана при получении новых уведомлений</string>
     <string name="horizon_light_show_always_title">Показать для всех событий doze</string>
     <string name="horizon_light_show_always_summary">Показывать подсветку краев экрана для всех событий doze, а не только для уведомлений</string>
     <string name="horizon_light_enabled_title">Показывать на Всегда включененом экране</string>
@@ -498,7 +500,7 @@
     <string name="allow_signature_fake_summary">Разрешите приложениям обходить системы безопасности, выдавая себя за другое приложение.</string>
 
     <!-- QS media player -->
-    <string name="qs_media">Меди в панели быстрого доступа</string>
+    <string name="qs_media">Медиа в панели быстрого доступа</string>
     <string name="qs_media_player_title">Медиаплеер</string>
     <string name="qs_media_player_summary_on">Показать медиаплеер в панели быстрого доступа\nТребуется перезапуск SystemUI</string>
     <string name="qs_media_player_summary_off">Показывать медиаплеер как уведомление\nТребуется перезапуск SystemUI</string>
@@ -750,8 +752,11 @@
 
     <!-- FOD icon animation -->
     <string name="fod_icon_animation_summary">Анимация значка сканера пальца под экраном при включении экрана</string>
-	<string name="fod_icon_animation_effect_title">Выберите эффект анимации значка сканера пальца под экраном</string>
+    <string name="fod_icon_animation_effect_title">Выберите эффект анимации значка сканера пальца под экраном</string>
     <string name="fod_icon_animation">Анимация значка сканера пальца под экраном</string>
+	
+       <!-- FOD icon picker -->
+    <string name="fod_icon_picker_title">Значок сканера пальца</string>
 	
 
 </resources>
