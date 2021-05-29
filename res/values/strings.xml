@@ -800,4 +800,7 @@ Aggressive Standby is a feature that stops apps from running in the background a
     <!-- FOD icon picker -->
     <string name="fod_icon_picker_title">Fingerprint icon</string>
 
+    <!-- Lockscreen blur -->
+    <string name="lockscreen_blur_title">Background blur</string>
+
 </resources>
