@@ -71,7 +71,6 @@ public class StyleSystemColorPreferenceFragment extends PreviewLayoutPreferenceF
     private WeakReference<Context> mWeakContext;
     private List<String> pkgs = new ArrayList();
     private int recentId = 1;
-    private String selectedPkg;
 
     @Override
     public int getMetricsCategory() {
@@ -80,7 +79,23 @@ public class StyleSystemColorPreferenceFragment extends PreviewLayoutPreferenceF
 
     @Override
     public int getPreviewSampleResIds() {
-        return R.layout.style_preview_sample_color;
+        if (com.android.internal.util.ssos.Utils.isThemeEnabled("com.android.theme.color.cinnamon")) {
+            return R.layout.style_preview_sample_color_cinnamon;
+        } else if (com.android.internal.util.ssos.Utils.isThemeEnabled("com.android.theme.color.black")) {
+            return R.layout.style_preview_sample_color_black;
+        } else if (com.android.internal.util.ssos.Utils.isThemeEnabled("com.android.theme.color.green")) {
+            return R.layout.style_preview_sample_color_green;
+        } else if (com.android.internal.util.ssos.Utils.isThemeEnabled("com.android.theme.color.ocean")) {
+            return R.layout.style_preview_sample_color_ocean;
+        } else if (com.android.internal.util.ssos.Utils.isThemeEnabled("com.android.theme.color.space")) {
+            return R.layout.style_preview_sample_color_space;
+        } else if (com.android.internal.util.ssos.Utils.isThemeEnabled("com.android.theme.color.orchid")) {
+            return R.layout.style_preview_sample_color_orchid;
+        } else if (com.android.internal.util.ssos.Utils.isThemeEnabled("com.android.theme.color.asus")) {
+            return R.layout.style_preview_sample_color_asus;
+        } else {
+            return R.layout.style_preview_sample_color;
+        }
     }
 
     @Override
@@ -96,12 +111,12 @@ public class StyleSystemColorPreferenceFragment extends PreviewLayoutPreferenceF
     @Override
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
-        getActivity().setTitle(R.string.display_style_theme_color);
+        getActivity().setTitle(R.string.prebuilt_accents_title);
         this.mPackageManager = getContext().getPackageManager();
         this.mWeakContext = new WeakReference<>(getContext());
         mOverlayManager = IOverlayManager.Stub.asInterface(
                 ServiceManager.getService(Context.OVERLAY_SERVICE));
-        this.recentId = getIdFromPkg(this.selectedPkg);
+        this.recentId = getIdFromPkg();
     }
 
     @Override
@@ -185,20 +200,28 @@ public class StyleSystemColorPreferenceFragment extends PreviewLayoutPreferenceF
     public void commit() {
         if (this.recentId == 1) {
             setDefaultAccentColor(mOverlayManager);
+            this.recentId = 1;
         } else if (this.recentId == 2) {
             enableAccentColor(mOverlayManager, "com.android.theme.color.cinnamon");
+            this.recentId = 2;
         } else if (this.recentId == 3) {
             enableAccentColor(mOverlayManager, "com.android.theme.color.black");
+            this.recentId = 3;
         } else if (this.recentId == 4) {
             enableAccentColor(mOverlayManager, "com.android.theme.color.green");
+            this.recentId = 4;
         } else if (this.recentId == 5) {
             enableAccentColor(mOverlayManager, "com.android.theme.color.ocean");
+            this.recentId = 5;
         } else if (this.recentId == 6) {
             enableAccentColor(mOverlayManager, "com.android.theme.color.space");
+            this.recentId = 6;
         } else if (this.recentId == 7) {
             enableAccentColor(mOverlayManager, "com.android.theme.color.orchid");
+            this.recentId = 7;
         } else if (this.recentId == 8) {
             enableAccentColor(mOverlayManager, "com.android.theme.color.asus");
+            this.recentId = 8;
         }
     }
 
@@ -242,7 +265,7 @@ public class StyleSystemColorPreferenceFragment extends PreviewLayoutPreferenceF
 
     @Override
     public int getHelpResource() {
-        return R.string.display_style_theme_color;
+        return R.string.prebuilt_accents_title;
     }
 
     public void onClick(View view) {
@@ -290,32 +313,24 @@ public class StyleSystemColorPreferenceFragment extends PreviewLayoutPreferenceF
         }
     }
 
-    private int getIdFromPkg(String str) {
-        if ("package_device_default".equals(str)) {
+    private int getIdFromPkg() {
+        if (com.android.internal.util.ssos.Utils.isThemeEnabled("com.android.theme.color.cinnamon")) {
+            return 2;
+        } else if (com.android.internal.util.ssos.Utils.isThemeEnabled("com.android.theme.color.black")) {
+            return 3;
+        } else if (com.android.internal.util.ssos.Utils.isThemeEnabled("com.android.theme.color.green")) {
+            return 4;
+        } else if (com.android.internal.util.ssos.Utils.isThemeEnabled("com.android.theme.color.ocean")) {
+            return 5;
+        } else if (com.android.internal.util.ssos.Utils.isThemeEnabled("com.android.theme.color.space")) {
+            return 6;
+        } else if (com.android.internal.util.ssos.Utils.isThemeEnabled("com.android.theme.color.orchid")) {
+            return 7;
+        } else if (com.android.internal.util.ssos.Utils.isThemeEnabled("com.android.theme.color.asus")) {
+            return 8;
+        } else {
             return 1;
         }
-        if ("com.android.theme.color.cinnamon".equals(str)) {
-            return 2;
-        }
-        if ("com.android.theme.color.black".equals(str)) {
-            return 3;
-        }
-        if ("com.android.theme.color.green".equals(str)) {
-            return 4;
-        }
-        if ("com.android.theme.color.ocean".equals(str)) {
-            return 5;
-        }
-        if ("com.android.theme.color.space".equals(str)) {
-            return 6;
-        }
-        if ("com.android.theme.color.orchid".equals(str)) {
-            return 7;
-        }
-        if ("com.android.theme.color.asus".equals(str)) {
-            return 8;
-        }
-        return 1;
     }
 
     public void tintPreview(int i) {
