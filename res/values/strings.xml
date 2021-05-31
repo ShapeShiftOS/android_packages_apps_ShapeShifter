@@ -397,11 +397,11 @@ Aggressive Standby is a feature that stops apps from running in the background a
     <string name="double_tap_sleep_lockscreen">Double tap to sleep on lockscreen</string>
     <string name="double_tap_sleep_lockscreen_summary">Power display off by double tapping on lockscreen</string>
 
-    <!-- Accent colours -->
-    <string name="prebuilt_accents_title">Accent colours</string>
+    <!-- Accent colors -->
+    <string name="prebuilt_accents_title">Accent colors</string>
     <string name="prebuilt_accents_summary">Choose an accent to apply system-wide</string>
     <string name="themes_preview_button_text">ShapeShift</string>
-    <string name="preview_color_select_text">SELECT COLOUR</string>
+    <string name="preview_color_select_text">SELECT COLOR</string>
     <string name="preview_color_selected_accent">Default</string>
     <string name="btn_apply">Apply</string>
 
