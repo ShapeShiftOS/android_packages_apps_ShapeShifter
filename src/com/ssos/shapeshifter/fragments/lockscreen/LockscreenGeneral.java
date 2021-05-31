@@ -17,14 +17,17 @@
 package com.ssos.shapeshifter.fragments.lockscreen;
 
 import android.app.Activity;
+import android.app.WallpaperManager;
 import android.content.Context;
 import android.content.ContentResolver;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.os.ParcelFileDescriptor;
 import android.os.SystemProperties;
 import android.os.UserHandle;
 import android.provider.SearchIndexableResource;
 import android.provider.Settings;
+
 import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
 import androidx.preference.Preference.OnPreferenceChangeListener;
@@ -37,6 +40,7 @@ import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.Utils;
 
 import com.android.internal.logging.nano.MetricsProto;
+import com.android.internal.util.custom.FodUtils;
 
 import android.hardware.biometrics.BiometricSourceType;
 import android.hardware.fingerprint.FingerprintManager;
@@ -44,8 +48,6 @@ import android.hardware.fingerprint.FingerprintManager;
 import com.ssos.support.preferences.SystemSettingSwitchPreference;
 import com.ssos.support.preferences.SystemSettingSeekBarPreference;
 import com.ssos.support.preferences.SwitchPreference;
-
-import com.android.internal.util.custom.FodUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -84,6 +86,7 @@ public class LockscreenGeneral extends SettingsPreferenceFragment implements
         PreferenceScreen prefScreen = getPreferenceScreen();
         mResolver = getActivity().getContentResolver();
         Context mContext = getContext();
+        WallpaperManager manager = WallpaperManager.getInstance(mContext);
         final PackageManager mPm = getActivity().getPackageManager();
 
         mLockFPIcon = findPreference(LOCK_FP_ICON);
@@ -137,8 +140,9 @@ public class LockscreenGeneral extends SettingsPreferenceFragment implements
             prefScreen.removePreference(mFingerprintErrorVib);
         }
 
+        ParcelFileDescriptor pfd = manager.getWallpaperFile(WallpaperManager.FLAG_LOCK);
         mLockscreenBlur = (SystemSettingSeekBarPreference) findPreference(KEY_LOCKSCREEN_BLUR);
-        if (!com.ssos.shapeshifter.utils.Utils.isBlurSupported()) {
+        if (!com.ssos.shapeshifter.utils.Utils.isBlurSupported() || pfd != null) {
             mLockscreenBlur.setVisible(false);
         }
 
@@ -178,7 +182,7 @@ public class LockscreenGeneral extends SettingsPreferenceFragment implements
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         ContentResolver resolver = getActivity().getContentResolver();
-    if (preference == mFingerprintVib) {
+        if (preference == mFingerprintVib) {
             boolean value = (Boolean) newValue;
             Settings.System.putInt(resolver,
                     Settings.System.FINGERPRINT_SUCCESS_VIB, value ? 1 : 0);
