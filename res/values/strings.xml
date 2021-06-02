@@ -478,6 +478,7 @@ Aggressive Standby is a feature that stops apps from running in the background a
     <string name="volume_panel_oreo">Oreo</string>
     <string name="volume_panel_tiled">Tiled</string>
     <string name="volume_panel_miui">MIUI Compact</string>
+    <string name="volume_panel_ssos">ShapeShift</string>
 
     <!-- Volume Panel Plugin Values -->
     <string name="volume_panel_stock_val" translatable="false">com.android.systemui.volume</string>
@@ -486,6 +487,7 @@ Aggressive Standby is a feature that stops apps from running in the background a
     <string name="volume_panel_oreo_val" translatable="false">co.potatoproject.plugin.volume.oreo</string>
     <string name="volume_panel_tiled_val" translatable="false">co.potatoproject.plugin.volume.tiled</string>
     <string name="volume_panel_miui_val" translatable="false">co.potatoproject.plugin.volume.miui</string>
+    <string name="volume_panel_ssos_val" translatable="false">co.potatoproject.plugin.volume.ssos</string>
 
     <!-- Brightness control -->
     <string name="status_bar_toggle_brightness">Brightness Control</string>
