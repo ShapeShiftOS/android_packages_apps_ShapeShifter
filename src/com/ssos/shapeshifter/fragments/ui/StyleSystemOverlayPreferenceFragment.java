@@ -125,17 +125,35 @@ public class StyleSystemOverlayPreferenceFragment extends DashboardFragment impl
                 Settings.System.STYLE_OVERLAY_SETTINGS_CARDS, 0, UserHandle.USER_CURRENT) == 0;
         boolean settingsCardsInvisible = Settings.System.getIntForUser(getContext().getContentResolver(),
                 Settings.System.STYLE_OVERLAY_SETTINGS_CARDS, 0, UserHandle.USER_CURRENT) == 1;
+        boolean settingsCardsNone = Settings.System.getIntForUser(getContext().getContentResolver(),
+                Settings.System.STYLE_OVERLAY_SETTINGS_CARDS, 0, UserHandle.USER_CURRENT) == 2;
 
         if (settingsCardsVisible) {
             setDefaultSettingsCard(mOverlayManager);
+            setDefaultSettingsCardIntell(mOverlayManager);
         } else if (settingsCardsInvisible) {
             enableSettingsCard(mOverlayManager, "com.android.theme.settings_card.invisible");
+            setDefaultSettingsCardIntell(mOverlayManager);
+        } else if (settingsCardsNone) {
+            enableSettingsCard(mOverlayManager, "com.android.theme.settings_card.elevation");
+            enableSettingsCardIntell(mOverlayManager, "com.android.theme.settings_card.elevationintell");
         }
     }
 
     public static void setDefaultSettingsCard(IOverlayManager overlayManager) {
         for (int i = 0; i < CARDS.length; i++) {
             String card = CARDS[i];
+            try {
+                overlayManager.setEnabled(card, false, USER_SYSTEM);
+            } catch (RemoteException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public static void setDefaultSettingsCardIntell(IOverlayManager overlayManager) {
+        for (int i = 0; i < CARDS_INTELL.length; i++) {
+            String card = CARDS_INTELL[i];
             try {
                 overlayManager.setEnabled(card, false, USER_SYSTEM);
             } catch (RemoteException e) {
@@ -160,6 +178,22 @@ public class StyleSystemOverlayPreferenceFragment extends DashboardFragment impl
         }
     }
 
+    public static void enableSettingsCardIntell(IOverlayManager overlayManager, String overlayName) {
+        try {
+            for (int i = 0; i < CARDS_INTELL.length; i++) {
+                String card = CARDS_INTELL[i];
+                try {
+                    overlayManager.setEnabled(card, false, USER_SYSTEM);
+                } catch (RemoteException e) {
+                    e.printStackTrace();
+                }
+            }
+            overlayManager.setEnabled(overlayName, true, USER_SYSTEM);
+        } catch (RemoteException e) {
+            e.printStackTrace();
+        }
+    }
+
     public static void handleOverlays(String packagename, Boolean state, IOverlayManager mOverlayManager) {
         try {
             mOverlayManager.setEnabled(packagename,
@@ -170,7 +204,12 @@ public class StyleSystemOverlayPreferenceFragment extends DashboardFragment impl
     }
 
     public static final String[] CARDS = {
-        "com.android.theme.settings_card.invisible"
+        "com.android.theme.settings_card.invisible",
+        "com.android.theme.settings_card.elevation"
+    };
+
+    public static final String[] CARDS_INTELL = {
+        "com.android.theme.settings_card.elevationintell"
     };
 
     @Override
