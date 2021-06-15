@@ -124,15 +124,8 @@
     <string name="shapeshiftos_github_summary"><a href="https://www.github.com/ShapeShiftOS">Zobacz kod źródłowy ShapeShiftOS</a></string>
     <string name="shapeshiftos_about_info_summary">ShapeShiftOS to nowy Custom ROM, który ma na celu zapewnienie czystego doświadczenia. Jesteśmy nowym Custom ROMem opartym na AOSP, wyposażonym w najnowsze funkcje z całej społeczności programistów Androida. Jakość i stabilność to nasz priorytet, ponieważ naszym celem jest dostarczanie Ci wszystkiego, co najlepsze w Androidzie.</string>
     <string name="shapeshiftos_about_team">Zespół ShapeShiftOS</string>
-    <string name="shapeshiftos_about_ashutosh" translatable="false">AshutoshSundresh (surfaceflinger)</string>
-    <string name="shapeshiftos_about_ashutosh_summary" translatable="false">Główny Developer</string>
-    <string name="shapeshiftos_about_mezz" translatable="false">MezzLasha</string>
-    <string name="shapeshiftos_about_mezz_summary" translatable="false">Projektant</string>
-    <string name="shapeshiftos_about_san" translatable="false">san9scurtu</string>
-    <string name="shapeshiftos_about_san_summary" translatable="false">Developer</string>
     <string name="about_maintainer">Opiekun</string>
     <string name="shapeshiftos_about_maintainer">Opiekun tego ROMa na twoje urządzenie to:</string>
-    <string name="shapeshiftos_about_maintainer_summary" translatable="false">Zbyt leniwy aby to wypełnić</string>
 
 
      <!-- Reusable strings -->
@@ -470,14 +463,6 @@ Agresywne czuwanie to funkcja, która w takim samym stopniu uniemożliwia aplika
     <string name="volume_panel_tiled">Kafelkowy</string>
     <string name="volume_panel_miui">Kompaktowy MIUI</string>
 
-    
-    <!-- Volume Panel Plugin Values -->
-    <string name="volume_panel_stock_val" translatable="false">com.android.systemui.volume</string>
-    <string name="volume_panel_aosp_val" translatable="false">co.potatoproject.plugin.volume.aosp</string>
-    <string name="volume_panel_compact_val" translatable="false">co.potatoproject.plugin.volume.compact</string>
-    <string name="volume_panel_oreo_val" translatable="false">co.potatoproject.plugin.volume.oreo</string>
-    <string name="volume_panel_tiled_val" translatable="false">co.potatoproject.plugin.volume.tiled</string>
-    <string name="volume_panel_miui_val" translatable="false">co.potatoproject.plugin.volume.miui</string>
 
     <!-- Brightness control -->
     <string name="status_bar_toggle_brightness">Kontrola Jasności</string>
@@ -618,15 +603,6 @@ Agresywne czuwanie to funkcja, która w takim samym stopniu uniemożliwia aplika
     <string name="button_backlight_on_touch_only_summary">Włącz podświetlenie z limitem czasu tylko po dotknięciu przycisku</string>
 
     <!-- HW Keys customization -->
-    <string name="action_value_default_action" translatable="false">default</string>
-    <string name="action_value_select_app" translatable="false">app</string>
-    <string name="action_value_custom_action" translatable="false">custom</string>
-    <string name="action_value_back" translatable="false">task_back</string>
-    <string name="action_value_home" translatable="false">task_home</string>
-    <string name="action_value_search_assist" translatable="false">task_assist</string>
-    <string name="action_value_recent_apps" translatable="false">task_recents</string>
-    <string name="action_value_voice_search" translatable="false">task_voice_search</string>
-    <string name="action_value_menu" translatable="false">task_menu</string>
     <string name="picker_activities">Aktywności</string>
     <string name="select_custom_app_title">Wybierz inną aplikację</string>
     <string name="select_custom_activity_title">Wybierz inną aktywność</string>
