@@ -70,8 +70,11 @@ public class StyleSystemOverlayPreferenceFragment extends DashboardFragment impl
     private IOverlayManager mOverlayManager;
     private PackageManager mPackageManager;
     private static final String STYLE_OVERLAY_SETTINGS_CARDS = "style_overlay_settings_cards";
+    private static final String STYLE_OVERLAY_SETTINGS_DASHBOARD_ICONS = "style_overlay_settings_dashboard_icons";
 
     private SystemSettingListPreference mCards;
+    private SystemSettingListPreference mDashboardIcons;
+
     private Handler mHandler;
 
     @Override
@@ -82,6 +85,7 @@ public class StyleSystemOverlayPreferenceFragment extends DashboardFragment impl
         mOverlayManager = IOverlayManager.Stub.asInterface(
                 ServiceManager.getService(Context.OVERLAY_SERVICE));
         mCards = (SystemSettingListPreference) findPreference(STYLE_OVERLAY_SETTINGS_CARDS);
+        mDashboardIcons = (SystemSettingListPreference) findPreference(STYLE_OVERLAY_SETTINGS_DASHBOARD_ICONS);
 
         mCustomSettingsObserver.observe();
     }
@@ -99,12 +103,17 @@ public class StyleSystemOverlayPreferenceFragment extends DashboardFragment impl
             resolver.registerContentObserver(Settings.System.getUriFor(
                     Settings.System.STYLE_OVERLAY_SETTINGS_CARDS),
                     false, this, UserHandle.USER_ALL);
+            resolver.registerContentObserver(Settings.System.getUriFor(
+                    Settings.System.STYLE_OVERLAY_SETTINGS_DASHBOARD_ICONS),
+                    false, this, UserHandle.USER_ALL);
         }
 
         @Override
         public void onChange(boolean selfChange, Uri uri) {
             if (uri.equals(Settings.System.getUriFor(Settings.System.STYLE_OVERLAY_SETTINGS_CARDS))) {
                 updateSettingsCards();
+            } else if (uri.equals(Settings.System.getUriFor(Settings.System.STYLE_OVERLAY_SETTINGS_DASHBOARD_ICONS))) {
+                updateSettingsIcons();
             }
         }
     }
@@ -112,6 +121,9 @@ public class StyleSystemOverlayPreferenceFragment extends DashboardFragment impl
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         ContentResolver resolver = getActivity().getContentResolver();
         if (preference == mCards) {
+            mCustomSettingsObserver.observe();
+            return true;
+        } else if (preference == mDashboardIcons) {
             mCustomSettingsObserver.observe();
             return true;
         }
@@ -140,9 +152,35 @@ public class StyleSystemOverlayPreferenceFragment extends DashboardFragment impl
         }
     }
 
+    private void updateSettingsIcons() {
+        ContentResolver resolver = getActivity().getContentResolver();
+
+        boolean dashboardAOSP = Settings.System.getIntForUser(getContext().getContentResolver(),
+                Settings.System.STYLE_OVERLAY_SETTINGS_DASHBOARD_ICONS, 0, UserHandle.USER_CURRENT) == 1;
+        boolean dashboardOOS11 = Settings.System.getIntForUser(getContext().getContentResolver(),
+                Settings.System.STYLE_OVERLAY_SETTINGS_DASHBOARD_ICONS, 0, UserHandle.USER_CURRENT) == 0;
+
+        if (dashboardOOS11) {
+            setDefaultSettingsDashboardIcons(mOverlayManager);
+        } else if (dashboardAOSP) {
+            enableSettingsDashboardIcons(mOverlayManager, "com.android.theme.settings_dashboard.aosp");
+        }
+    }
+
     public static void setDefaultSettingsCard(IOverlayManager overlayManager) {
         for (int i = 0; i < CARDS.length; i++) {
             String card = CARDS[i];
+            try {
+                overlayManager.setEnabled(card, false, USER_SYSTEM);
+            } catch (RemoteException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public static void setDefaultSettingsDashboardIcons(IOverlayManager overlayManager) {
+        for (int i = 0; i < DASHBOARD_ICONS.length; i++) {
+            String card = DASHBOARD_ICONS[i];
             try {
                 overlayManager.setEnabled(card, false, USER_SYSTEM);
             } catch (RemoteException e) {
@@ -194,6 +232,22 @@ public class StyleSystemOverlayPreferenceFragment extends DashboardFragment impl
         }
     }
 
+    public static void enableSettingsDashboardIcons(IOverlayManager overlayManager, String overlayName) {
+        try {
+            for (int i = 0; i < DASHBOARD_ICONS.length; i++) {
+                String overlayrro = DASHBOARD_ICONS[i];
+                try {
+                    overlayManager.setEnabled(overlayrro, false, USER_SYSTEM);
+                } catch (RemoteException e) {
+                    e.printStackTrace();
+                }
+            }
+            overlayManager.setEnabled(overlayName, true, USER_SYSTEM);
+        } catch (RemoteException e) {
+            e.printStackTrace();
+        }
+    }
+
     public static void handleOverlays(String packagename, Boolean state, IOverlayManager mOverlayManager) {
         try {
             mOverlayManager.setEnabled(packagename,
@@ -210,6 +264,10 @@ public class StyleSystemOverlayPreferenceFragment extends DashboardFragment impl
 
     public static final String[] CARDS_INTELL = {
         "com.android.theme.settings_card.elevationintell"
+    };
+
+    public static final String[] DASHBOARD_ICONS = {
+        "com.android.theme.settings_dashboard.aosp"
     };
 
     @Override

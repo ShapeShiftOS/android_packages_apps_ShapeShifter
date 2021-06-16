@@ -38,6 +38,13 @@
 	    android:entryValues="@array/settings_card_values"
             android:defaultValue="0" />
 
+        <com.ssos.support.preferences.SystemSettingListPreference
+            android:key="style_overlay_settings_dashboard_icons"
+            android:title="@string/settings_dashboard"
+            android:entries="@array/settings_dashboard_entries"
+            android:entryValues="@array/settings_dashboard_values"
+            android:defaultValue="0" />
+
     </PreferenceCategory>
 
 </PreferenceScreen>
