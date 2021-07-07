@@ -202,14 +202,7 @@ public class StyleSystemOverlayPreferenceFragment extends DashboardFragment impl
 
     public static void enableSettingsCard(IOverlayManager overlayManager, String overlayName) {
         try {
-            for (int i = 0; i < CARDS.length; i++) {
-                String card = CARDS[i];
-                try {
-                    overlayManager.setEnabled(card, false, USER_SYSTEM);
-                } catch (RemoteException e) {
-                    e.printStackTrace();
-                }
-            }
+            setDefaultSettingsCard(overlayManager);
             overlayManager.setEnabled(overlayName, true, USER_SYSTEM);
         } catch (RemoteException e) {
             e.printStackTrace();
@@ -218,14 +211,7 @@ public class StyleSystemOverlayPreferenceFragment extends DashboardFragment impl
 
     public static void enableSettingsCardIntell(IOverlayManager overlayManager, String overlayName) {
         try {
-            for (int i = 0; i < CARDS_INTELL.length; i++) {
-                String card = CARDS_INTELL[i];
-                try {
-                    overlayManager.setEnabled(card, false, USER_SYSTEM);
-                } catch (RemoteException e) {
-                    e.printStackTrace();
-                }
-            }
+            setDefaultSettingsCardIntell(overlayManager);
             overlayManager.setEnabled(overlayName, true, USER_SYSTEM);
         } catch (RemoteException e) {
             e.printStackTrace();
@@ -234,14 +220,7 @@ public class StyleSystemOverlayPreferenceFragment extends DashboardFragment impl
 
     public static void enableSettingsDashboardIcons(IOverlayManager overlayManager, String overlayName) {
         try {
-            for (int i = 0; i < DASHBOARD_ICONS.length; i++) {
-                String overlayrro = DASHBOARD_ICONS[i];
-                try {
-                    overlayManager.setEnabled(overlayrro, false, USER_SYSTEM);
-                } catch (RemoteException e) {
-                    e.printStackTrace();
-                }
-            }
+            setDefaultSettingsDashboardIcons(overlayManager);
             overlayManager.setEnabled(overlayName, true, USER_SYSTEM);
         } catch (RemoteException e) {
             e.printStackTrace();

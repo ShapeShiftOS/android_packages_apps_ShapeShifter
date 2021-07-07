@@ -239,14 +239,7 @@ public class StyleSystemColorPreferenceFragment extends PreviewLayoutPreferenceF
 
     public static void enableAccentColor(IOverlayManager overlayManager, String accentPicker) {
         try {
-            for (int i = 0; i < ACCENTS.length; i++) {
-                String accent = ACCENTS[i];
-                try {
-                    overlayManager.setEnabled(accent, false, USER_SYSTEM);
-                } catch (RemoteException e) {
-                    e.printStackTrace();
-                }
-            }
+            setDefaultAccentColor(overlayManager);
             overlayManager.setEnabled(accentPicker, true, USER_SYSTEM);
         } catch (RemoteException e) {
             e.printStackTrace();
