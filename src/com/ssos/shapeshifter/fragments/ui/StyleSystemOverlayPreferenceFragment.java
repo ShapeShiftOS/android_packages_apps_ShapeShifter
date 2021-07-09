@@ -135,16 +135,11 @@ public class StyleSystemOverlayPreferenceFragment extends DashboardFragment impl
 
         boolean settingsCardsVisible = Settings.System.getIntForUser(getContext().getContentResolver(),
                 Settings.System.STYLE_OVERLAY_SETTINGS_CARDS, 0, UserHandle.USER_CURRENT) == 0;
-        boolean settingsCardsInvisible = Settings.System.getIntForUser(getContext().getContentResolver(),
-                Settings.System.STYLE_OVERLAY_SETTINGS_CARDS, 0, UserHandle.USER_CURRENT) == 1;
         boolean settingsCardsNone = Settings.System.getIntForUser(getContext().getContentResolver(),
-                Settings.System.STYLE_OVERLAY_SETTINGS_CARDS, 0, UserHandle.USER_CURRENT) == 2;
+                Settings.System.STYLE_OVERLAY_SETTINGS_CARDS, 0, UserHandle.USER_CURRENT) == 1;
 
         if (settingsCardsVisible) {
             setDefaultSettingsCard(mOverlayManager);
-            setDefaultSettingsCardIntell(mOverlayManager);
-        } else if (settingsCardsInvisible) {
-            enableSettingsCard(mOverlayManager, "com.android.theme.settings_card.invisible");
             setDefaultSettingsCardIntell(mOverlayManager);
         } else if (settingsCardsNone) {
             enableSettingsCard(mOverlayManager, "com.android.theme.settings_card.elevation");
@@ -237,7 +232,6 @@ public class StyleSystemOverlayPreferenceFragment extends DashboardFragment impl
     }
 
     public static final String[] CARDS = {
-        "com.android.theme.settings_card.invisible",
         "com.android.theme.settings_card.elevation"
     };
 
