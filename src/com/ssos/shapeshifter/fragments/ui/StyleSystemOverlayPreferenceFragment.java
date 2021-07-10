@@ -137,11 +137,16 @@ public class StyleSystemOverlayPreferenceFragment extends DashboardFragment impl
                 Settings.System.STYLE_OVERLAY_SETTINGS_CARDS, 0, UserHandle.USER_CURRENT) == 0;
         boolean settingsCardsNone = Settings.System.getIntForUser(getContext().getContentResolver(),
                 Settings.System.STYLE_OVERLAY_SETTINGS_CARDS, 0, UserHandle.USER_CURRENT) == 1;
+        boolean settingsOOS10Dividers = Settings.System.getIntForUser(getContext().getContentResolver(),
+                Settings.System.STYLE_OVERLAY_SETTINGS_CARDS, 0, UserHandle.USER_CURRENT) == 2;
 
         if (settingsCardsVisible) {
             setDefaultSettingsCard(mOverlayManager);
             setDefaultSettingsCardIntell(mOverlayManager);
         } else if (settingsCardsNone) {
+            enableSettingsCard(mOverlayManager, "com.android.theme.settings_card.elevation");
+            enableSettingsCardIntell(mOverlayManager, "com.android.theme.settings_card.elevationintell");
+        } else if (settingsOOS10Dividers) {
             enableSettingsCard(mOverlayManager, "com.android.theme.settings_card.elevation");
             enableSettingsCardIntell(mOverlayManager, "com.android.theme.settings_card.elevationintell");
         }
