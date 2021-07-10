@@ -143,12 +143,15 @@ public class StyleSystemOverlayPreferenceFragment extends DashboardFragment impl
         if (settingsCardsVisible) {
             setDefaultSettingsCard(mOverlayManager);
             setDefaultSettingsCardIntell(mOverlayManager);
+            setDefaultWavePurifier(mOverlayManager);
         } else if (settingsCardsNone) {
             enableSettingsCard(mOverlayManager, "com.android.theme.settings_card.elevation");
             enableSettingsCardIntell(mOverlayManager, "com.android.theme.settings_card.elevationintell");
+            enableWavePurifier(mOverlayManager, "com.android.theme.wave.purifier");
         } else if (settingsOOS10Dividers) {
             enableSettingsCard(mOverlayManager, "com.android.theme.settings_card.elevation");
             enableSettingsCardIntell(mOverlayManager, "com.android.theme.settings_card.elevationintell");
+            enableWavePurifier(mOverlayManager, "com.android.theme.wave.purifier");
         }
     }
 
@@ -159,11 +162,24 @@ public class StyleSystemOverlayPreferenceFragment extends DashboardFragment impl
                 Settings.System.STYLE_OVERLAY_SETTINGS_DASHBOARD_ICONS, 0, UserHandle.USER_CURRENT) == 1;
         boolean dashboardOOS11 = Settings.System.getIntForUser(getContext().getContentResolver(),
                 Settings.System.STYLE_OVERLAY_SETTINGS_DASHBOARD_ICONS, 0, UserHandle.USER_CURRENT) == 0;
+        boolean dashboardOOS10 = Settings.System.getIntForUser(getContext().getContentResolver(),
+                Settings.System.STYLE_OVERLAY_SETTINGS_DASHBOARD_ICONS, 0, UserHandle.USER_CURRENT) == 2;
+
+        boolean settingsCardsVisible = Settings.System.getIntForUser(getContext().getContentResolver(),
+                Settings.System.STYLE_OVERLAY_SETTINGS_CARDS, 0, UserHandle.USER_CURRENT) == 0;
+
 
         if (dashboardOOS11) {
             setDefaultSettingsDashboardIcons(mOverlayManager);
         } else if (dashboardAOSP) {
             enableSettingsDashboardIcons(mOverlayManager, "com.android.theme.settings_dashboard.aosp");
+        } else if (dashboardOOS10) {
+            enableSettingsDashboardIcons(mOverlayManager, "com.android.theme.settings_dashboard.oos10");
+            if (!settingsCardsVisible) {
+                enableWavePurifier(mOverlayManager, "com.android.theme.wave.purifier");
+            } else {
+                setDefaultWavePurifier(mOverlayManager);
+            }
         }
     }
 
@@ -200,9 +216,29 @@ public class StyleSystemOverlayPreferenceFragment extends DashboardFragment impl
         }
     }
 
+    public static void setDefaultWavePurifier(IOverlayManager overlayManager) {
+        for (int i = 0; i < WAVE_PURIFIER.length; i++) {
+            String rro = WAVE_PURIFIER[i];
+            try {
+                overlayManager.setEnabled(rro, false, USER_SYSTEM);
+            } catch (RemoteException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
     public static void enableSettingsCard(IOverlayManager overlayManager, String overlayName) {
         try {
             setDefaultSettingsCard(overlayManager);
+            overlayManager.setEnabled(overlayName, true, USER_SYSTEM);
+        } catch (RemoteException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void enableWavePurifier(IOverlayManager overlayManager, String overlayName) {
+        try {
+            setDefaultWavePurifier(overlayManager);
             overlayManager.setEnabled(overlayName, true, USER_SYSTEM);
         } catch (RemoteException e) {
             e.printStackTrace();
@@ -245,7 +281,12 @@ public class StyleSystemOverlayPreferenceFragment extends DashboardFragment impl
     };
 
     public static final String[] DASHBOARD_ICONS = {
-        "com.android.theme.settings_dashboard.aosp"
+        "com.android.theme.settings_dashboard.aosp",
+        "com.android.theme.settings_dashboard.oos10"
+    };
+
+    public static final String[] WAVE_PURIFIER = {
+        "com.android.theme.wave.purifier"
     };
 
     @Override
