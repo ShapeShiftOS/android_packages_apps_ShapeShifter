@@ -808,8 +808,8 @@ Aggressive Standby is a feature that stops apps from running in the background a
     <!-- Theme overlays -->
     <string name="overlay_theme_title">Theme overlays</string>
     <string name="overlay_theme_summary">Enable different overlays to customize your device</string>
-    <string name="settings_card">Settings homepage cards</string>
-    <string name="settings_card_gray">Gray (Default)</string>
+    <string name="settings_card">Settings homepage dividers</string>
+    <string name="settings_card_gray">Gray cards (Default)</string>
     <string name="settings_card_none">None</string>
     <string name="theme_customization_systemui_title">Primary theme</string>
     <string name="settings_dashboard_oos11">OxygenOS 11 (Default)</string>

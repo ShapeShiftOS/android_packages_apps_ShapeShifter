@@ -775,9 +775,6 @@ Agresywne czuwanie to funkcja, która w takim samym stopniu uniemożliwia aplika
     <!-- Theme overlays -->
     <string name="overlay_theme_title">Nakładki motywów</string>
     <string name="overlay_theme_summary">Włącz różne nakładki, aby dostosować urządzenie</string>
-    <string name="settings_card">Karty na stronie głównej ustawień</string>
-    <string name="settings_card_gray">Szary (Domyślny)</string>
-    <string name="settings_card_transparent">Przezroczysty</string>
     <string name="settings_card_none">Żadna</string>
     <string name="theme_customization_systemui_title">Motyw główny</string>
 
