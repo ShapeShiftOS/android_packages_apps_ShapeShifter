@@ -369,9 +369,11 @@
 
     <!-- Aggressive battery -->
     <string name="aggressive_battery_saver_title">Agresywne oszczędzanie baterii</string>
-    <string name="aggressive_battery_saver_explainer">„Agresywne bezczynność to funkcja, która sprawia, że ​​stałe bezczynności urządzenie jest bardziej agresywne i ignoruje ruch urządzenia po przejściu w tryb drzemki.
+    <string name="aggressive_battery_saver_explainer">"Agresywne bezczynność to funkcja, która sprawia, że ​​stałe bezczynności urządzenie jest bardziej agresywne i ignoruje ruch urządzenia po przejściu w tryb drzemki.
 
-Agresywne czuwanie to funkcja, która w takim samym stopniu uniemożliwia aplikacjom działanie w tle”.</string>
+Agresywne czuwanie to funkcja, która w takim samym stopniu uniemożliwia aplikacjom działanie w tle.
+
+Są to opcje oszczędzania baterii. Mogą one wpłynąć na aplikacje działające w tle, np. nawigację samochodową. Możesz wykluczyć aplikacje które zostaną zoptymalizowane w ustawieniach baterii."</string>
 
     <!-- Gestures -->
     <string name="double_tap_title">Podwójne stuknięcie</string>

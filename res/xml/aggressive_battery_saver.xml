@@ -17,16 +17,25 @@
     android:title="@string/aggressive_battery_saver_title">
 
     <com.ssos.support.preferences.GlobalSettingSwitchPreference
+        android:key="aggressive_battery_saver"
+        android:title="@string/aggressive_battery_saver_title_secondaire"
+        android:summary="@string/aggressive_battery_saver_summary"
+        android:defaultValue="true"
+        android:disableDependentsState="true" />
+
+    <com.ssos.support.preferences.GlobalSettingSwitchPreference
         android:key="aggressive_idle_enabled"
         android:title="@string/aggressive_idle_title"
         android:summary="@string/aggressive_idle_summary"
-        android:defaultValue="false" />
+        android:defaultValue="false"
+        android:dependency="aggressive_battery_saver" />
 
-   <com.ssos.support.preferences.GlobalSettingSwitchPreference
+    <com.ssos.support.preferences.GlobalSettingSwitchPreference
         android:key="aggressive_standby_enabled"
         android:title="@string/aggressive_standby_title"
         android:summary="@string/aggressive_standby_summary"
-        android:defaultValue="false" />
+        android:defaultValue="false"
+        android:dependency="aggressive_battery_saver" />
 
     <com.android.settingslib.widget.FooterPreference
         android:key="aggressive_battery_saver_footer"

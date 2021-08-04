@@ -329,9 +329,6 @@
     <string name="lock_fp_icon_rart_user_summary">Ця функція недоступна на пристроях без зареєстрованих відбитків пальця</string>
     <!-- Aggressive battery -->
     <string name="aggressive_battery_saver_title">Включати автоматично в режимі економії заряду</string>
-    <string name="aggressive_battery_saver_explainer">"Агресивний режим очікування - це функція, яка робить систему простою пристрою більш агресивними і ігнорує датчики пристрої при переході в сплячий режим.
-
-Агресивний режим очікування - це функція, яка не дозволяє програмам працювати у фоновому режимі."</string>
     <!-- Gestures -->
     <string name="double_tap_title">Жести подвійного натискання</string>
     <string name="double_tap_summary">Включення і вимикання дисплея за допомогою жестів подвійного натискання</string>
