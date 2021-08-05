@@ -18,7 +18,10 @@ package com.ssos.shapeshifter.fragments.ui;
 
 import android.content.ContentResolver;
 import android.content.Context;
+import android.database.ContentObserver;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.os.UserHandle;
 import android.provider.SearchIndexableResource;
 import android.provider.Settings;
@@ -49,9 +52,10 @@ import java.util.List;
 public class QuickSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener, Indexable {
 
-    private static final String QS_MEDIA_PLAYER = "qs_media_player";
+    private static final String MEDIA_CONTROLLER = "media_controls_summary";
+    private Preference mMediaController;
 
-    private SystemSettingSwitchPreference mQSMediaPlayer;
+    private Handler mHandler;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -59,22 +63,57 @@ public class QuickSettings extends SettingsPreferenceFragment implements
         addPreferencesFromResource(R.xml.quick_settings);
         PreferenceScreen prefScreen = getPreferenceScreen();
         final ContentResolver resolver = getActivity().getContentResolver();
+        boolean MediaVisible = Settings.System.getIntForUser(getContext().getContentResolver(),
+                Settings.System.QS_MEDIA_PLAYER, 1, UserHandle.USER_CURRENT) == 1;
+        mMediaController = findPreference(MEDIA_CONTROLLER);
 
-        mQSMediaPlayer = findPreference(QS_MEDIA_PLAYER);
-        mQSMediaPlayer.setChecked((Settings.System.getInt(resolver,
-                Settings.System.QS_MEDIA_PLAYER, 1) == 1));
-        mQSMediaPlayer.setOnPreferenceChangeListener(this);
+        if (MediaVisible) {
+            mMediaController.setSummary(getString(R.string.qs_media_player_summary_on_controller));
+        } else {
+            mMediaController.setSummary(getString(R.string.qs_media_player_summary_off_controller));
+        }
+        mCustomSettingsObserver.observe();
+    }
+
+    private CustomSettingsObserver mCustomSettingsObserver = new CustomSettingsObserver(mHandler);
+    private class CustomSettingsObserver extends ContentObserver {
+
+        CustomSettingsObserver(Handler handler) {
+            super(handler);
+        }
+
+        void observe() {
+            Context mContext = getContext();
+            ContentResolver resolver = mContext.getContentResolver();
+            resolver.registerContentObserver(Settings.System.getUriFor(
+                    Settings.System.QS_MEDIA_PLAYER),
+                    false, this, UserHandle.USER_ALL);
+        }
+
+        @Override
+        public void onChange(boolean selfChange, Uri uri) {
+            if (uri.equals(Settings.System.getUriFor(Settings.System.QS_MEDIA_PLAYER))) {
+                updateMediaSummary();
+            }
+        }
+    }
+
+    private void updateMediaSummary() {
+        ContentResolver resolver = getActivity().getContentResolver();
+
+        boolean MediaVisible = Settings.System.getIntForUser(getContext().getContentResolver(),
+                Settings.System.QS_MEDIA_PLAYER, 1, UserHandle.USER_CURRENT) == 1;
+        mMediaController = findPreference(MEDIA_CONTROLLER);
+
+        if (MediaVisible) {
+            mMediaController.setSummary(getString(R.string.qs_media_player_summary_on_controller));
+        } else {
+            mMediaController.setSummary(getString(R.string.qs_media_player_summary_off_controller));
+        }
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         ContentResolver resolver = getActivity().getContentResolver();
-        if (preference == mQSMediaPlayer) {
-            boolean value = (Boolean) newValue;
-            Settings.System.putInt(resolver,
-                    Settings.System.QS_MEDIA_PLAYER, value ? 1 : 0);
-            com.ssos.shapeshifter.utils.Utils.showSystemUiRestartDialog(getContext());
-            return true;
-        }
         return false;
     }
 

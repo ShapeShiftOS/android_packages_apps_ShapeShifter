@@ -18,13 +18,10 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/quick_settings_title" >
 
-    <!-- QS media player -->
-    <com.ssos.support.preferences.SystemSettingSwitchPreference
-        android:key="qs_media_player"
-        android:title="@string/qs_media_player_title"
-        android:summaryOn="@string/qs_media_player_summary_on"
-        android:summaryOff="@string/qs_media_player_summary_off"
-        android:defaultValue="true" />
+    <Preference
+        android:key="media_controls_summary"
+        android:title="@string/media_controls_title"
+        android:fragment="com.android.settings.sound.MediaControlsSettings"/>
 
     <com.ssos.support.preferences.SystemSettingSwitchPreference
         android:key="qs_show_battery_estimate"

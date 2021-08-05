@@ -504,8 +504,6 @@
     <!-- QS media player -->
     <string name="qs_media">Медиа в панели быстрого доступа</string>
     <string name="qs_media_player_title">Медиаплеер</string>
-    <string name="qs_media_player_summary_on">Показать медиаплеер в панели быстрого доступа\nТребуется перезапуск SystemUI</string>
-    <string name="qs_media_player_summary_off">Показывать медиаплеер как уведомление\nТребуется перезапуск SystemUI</string>
 
     <!-- Pulse navigation bar music visualizer -->
     <string name="pulse_cat_title">Визуализатор</string>
