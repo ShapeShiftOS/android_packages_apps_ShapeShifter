@@ -755,8 +755,27 @@
     <string name="fod_icon_animation_effect_title">Выберите эффект анимации значка сканера пальца под экраном</string>
     <string name="fod_icon_animation">Анимация значка сканера пальца под экраном</string>
 	
-       <!-- FOD icon picker -->
+    <!-- FOD icon picker -->
     <string name="fod_icon_picker_title">Значок сканера пальца</string>
 	
+    <!-- Lockscreen blur -->
+    <string name="lockscreen_blur_title">Рзмытие фона</string>
+
+    <!-- Theme overlays -->
+    <string name="overlay_theme_title">Стили тем</string>
+    <string name="overlay_theme_summary">Выберите различные стили чтобы настроить ваше устройство</string>
+    <string name="settings_card">Разделители главной страницы настроек</string>
+    <string name="settings_card_gray">Серые разделители (По-умолчанию)</string>
+    <string name="settings_card_oos10">OxygenOS 10 разделители</string>
+    <string name="settings_card_none">Отключено</string>
+    <string name="theme_customization_systemui_title">Тема интерфейса</string>
+    <string name="settings_dashboard_oos11">OxygenOS 11 (По-умолчанию)</string>
+    <string name="settings_dashboard_oos10">OxygenOS 10</string>
+    <string name="settings_dashboard_aosp">AOSP</string>
+    <string name="settings_dashboard">Значки пунктов настроек</string>
+
+    <!-- 4G icon -->
+    <string name="show_fourg_icon_title">Значок 4G</string>
+    <string name="show_fourg_icon_summary">Отображать значок 4G в индикаторе мобильной сети вместо значка LTE</string>
 
 </resources>
