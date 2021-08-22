@@ -516,6 +516,7 @@
         <item>@string/qs_tint_accent</item>
         <item>@string/qs_tint_oos</item>
         <item>@string/qs_tint_twelve</item>
+        <item>@string/qs_tint_multi</item>
     </string-array>
 
     <string-array name="qs_tint_values" translatable="false">
@@ -523,6 +524,7 @@
         <item>1</item>
         <item>2</item>
         <item>3</item>
+        <item>4</item>
     </string-array>
 
     <!-- AOD Schedule -->
