@@ -747,6 +747,8 @@ These are power saving features. They may interfere with services intended to ru
     <string name="gaming_mode_notifications_notif_title">Show notification</string>
     <string name="gaming_mode_notifications_toast_title">Show toasts</string>
     <string name="gaming_mode_notifications_all_title">Show toasts and notification</string>
+    <string name="gaming_mode_adb_title">Disable USB debugging</string>
+    <string name="gaming_mode_adb_summary">Disable USB debugging when Gaming mode is turned on</string>
     <string name="gaming_mode_dynamic_title">Dynamic mode</string>
     <string name="gaming_mode_dynamic_summary">Try detecting and adding gaming apps automatically</string>
 

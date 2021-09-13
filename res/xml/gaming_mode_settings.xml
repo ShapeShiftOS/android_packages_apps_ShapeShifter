@@ -50,6 +50,14 @@
         android:dependency="gaming_mode_enabled"
         android:defaultValue="true" />
 
+    <!-- ADB -->
+    <com.ssos.support.preferences.SystemSettingSwitchPreference
+        android:key="gaming_mode_adb_toggle"
+        android:title="@string/gaming_mode_adb_title"
+        android:summary="@string/gaming_mode_adb_summary"
+        android:dependency="gaming_mode_enabled"
+        android:defaultValue="false" />
+
     <com.ssos.support.preferences.SystemSettingListPreference
         android:key="gaming_mode_ringer_mode"
         android:title="@string/gaming_mode_ringer_title"
