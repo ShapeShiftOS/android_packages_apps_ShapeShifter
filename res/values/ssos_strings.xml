@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2022 ShapeShiftOS
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- ShapeShiftOS dashboard -->
+    <string name="shapeshifter_title">ShapeShifter</string>
+    <string name="shapeshiftos_title">ShapeShiftOS Settings</string>
+
+    <!-- Bottom Tabs -->
+    <string name="navigation_actions_title">Actions</string>
+    <string name="navigation_interface_title">Interface</string>
+    <string name="navigation_statusbar_title">Statusbar</string>
+    <string name="navigation_lockscreen_title">Lockscreen</string>
+    <string name="navigation_system_title">System/Misc</string>
+    <string name="accessibility_description">Screen menu</string>
+    <string name="accessibility_item_description">%1$s menu item</string>
+
+<!-- CATEGORIES -->
+    <!-- Actions -->
+
+    <!-- Interface -->
+
+    <!-- Statusbar -->
+
+    <!-- Lockscreen -->
+
+    <!-- System/ Misc -->
+
+
+<!-- OTHER -->
+    <!-- Empty Preference Screen (if applicable) -->
+    <string name="empty_category_title">No extra features yet...</string>
+    <string name="empty_category_description">However, new features may be added here soon. Check back after future updates!</string>
+    <string name="dummy_string"> </string>
+
+    <!-- ShapeShiftOS device info settings -->
+    <string name="shapeshiftos_version">ShapeShiftOS version</string>
+    <string name="shapeshiftos_version_default">Unknown</string>
+
+    <!-- Reusable strings -->
+    <string name="advanced_behavior_title">Advanced behavior</string>
+    <string name="appearance_category">APPEARANCE</string>
+    <string name="behavior_category">BEHAVIOR</string>
+    <string name="enable_first">Please enable first</string>
+    <string name="ok_string">Ok</string>
+
+</resources>
