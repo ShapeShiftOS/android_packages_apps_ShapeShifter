@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/actions"
+        android:title="@string/navigation_actions_title"
+        android:icon="@drawable/navigation_actions"/>
+    <item
+        android:id="@+id/tab_ssos_interface"
+        android:title="@string/navigation_interface_title"
+        android:icon="@drawable/navigation_interface"/>
+    <item
+        android:id="@+id/statusbar"
+        android:title="@string/navigation_statusbar_title"
+        android:icon="@drawable/navigation_statusbar"/>
+    <item
+        android:id="@+id/lockscreen"
+        android:title="@string/navigation_lockscreen_title"
+        android:icon="@drawable/navigation_lockscreen"/>
+    <item
+        android:id="@+id/misc"
+        android:title="@string/navigation_system_title"
+        android:icon="@drawable/navigation_system"/>
+</menu>

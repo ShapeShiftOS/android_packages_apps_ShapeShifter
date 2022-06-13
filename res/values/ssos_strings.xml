@@ -21,7 +21,7 @@
     <string name="navigation_interface_title">Interface</string>
     <string name="navigation_statusbar_title">Statusbar</string>
     <string name="navigation_lockscreen_title">Lockscreen</string>
-    <string name="navigation_system_title">System/Misc</string>
+    <string name="navigation_system_title">System</string>
     <string name="accessibility_description">Screen menu</string>
     <string name="accessibility_item_description">%1$s menu item</string>
 
